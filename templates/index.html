@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security+ SY0-701 Flashcards</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Security+ SY0-701</h1>
+        <nav>
+            <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+            <button class="nav-btn" data-view="selector">Study</button>
+            <button class="nav-btn" data-view="settings">Settings</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- VIEW 1: Dashboard -->
+        <section id="view-dashboard" class="view active">
+            <div class="overall-progress">
+                <h2>Overall Progress</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overall-bar">
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+                <p id="overall-stats">0 / 0 cards mastered</p>
+            </div>
+
+            <div class="domain-list" id="domain-progress">
+                <!-- Domain progress bars injected by JS -->
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn btn-primary" id="btn-study-all">Start Study Session</button>
+                <button class="btn btn-secondary" id="btn-review-due">Review Due Cards (<span id="due-count">0</span>)</button>
+            </div>
+        </section>
+
+        <!-- VIEW 2: Domain/Objective Selector -->
+        <section id="view-selector" class="view">
+            <h2>Select What to Study</h2>
+            <div id="objective-checklist">
+                <!-- Checkboxes injected by JS -->
+            </div>
+            <div class="selector-summary">
+                <p>Cards selected: <span id="selected-count">0</span> | Due: <span id="selected-due">0</span> | New: <span id="selected-new">0</span></p>
+            </div>
+            <button class="btn btn-primary" id="btn-start-session">Start Session</button>
+        </section>
+
+        <!-- VIEW 3: Study Session -->
+        <section id="view-session" class="view">
+            <div class="session-header">
+                <span id="session-objective">1.1 - Security Controls</span>
+                <span id="session-counter">Card 1 of 20</span>
+                <button class="btn btn-small" id="btn-end-session">End Session</button>
+            </div>
+
+            <div class="card-container" id="card-container">
+                <div class="card" id="flashcard">
+                    <div class="card-face card-front">
+                        <p id="card-question">Question goes here</p>
+                    </div>
+                    <div class="card-face card-back">
+                        <p id="card-answer">Answer goes here</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="tap-hint" id="tap-hint">Tap card to reveal answer</p>
+
+            <div class="rating-buttons hidden" id="rating-buttons">
+                <button class="btn btn-again" data-quality="0">Again</button>
+                <button class="btn btn-hard" data-quality="2">Hard</button>
+                <button class="btn btn-good" data-quality="4">Good</button>
+            </div>
+        </section>
+
+        <!-- VIEW 4: Session Complete -->
+        <section id="view-complete" class="view">
+            <h2>Session Complete</h2>
+            <div class="session-results" id="session-results">
+                <!-- Results injected by JS -->
+            </div>
+            <button class="btn btn-primary" id="btn-back-dashboard">Back to Dashboard</button>
+        </section>
+
+        <!-- VIEW 5: Settings -->
+        <section id="view-settings" class="view">
+            <h2>Progress Management</h2>
+            <div class="settings-actions">
+                <button class="btn btn-primary" id="btn-export">Export Progress as JSON</button>
+                <button class="btn btn-secondary" id="btn-import">Import Progress from JSON</button>
+                <button class="btn btn-danger" id="btn-reset">Reset All Progress</button>
+            </div>
+
+            <div class="study-stats" id="study-stats">
+                <h3>Statistics</h3>
+                <ul>
+                    <li>Total reviews: <span id="stat-reviews">0</span></li>
+                    <li>Cards mastered: <span id="stat-mastered">0</span></li>
+                    <li>Study streak: <span id="stat-streak">0</span> days</li>
+                    <li>Last studied: <span id="stat-last">Never</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/js/spaced_repetition.js"></script>
+    <script src="/static/js/progress.js"></script>
+    <script src="/static/js/flashcards.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
