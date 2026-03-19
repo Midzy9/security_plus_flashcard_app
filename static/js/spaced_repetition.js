@@ -60,42 +60,45 @@ const SpacedRepetition = (() => {
     function buildSessionQueue(allCards, progressData, maxCards = 20) {
         const due = [];
         const newCards = [];
-        const notDue = [];
+        const learning = []; // reviewed but not yet due
 
         for (const card of allCards) {
             const prog = progressData.cards[card.id];
             const classification = classifyCard(prog);
 
-            if (classification === 'mastered' && prog && prog.next_review > todayStr()) {
-                notDue.push(card);
-            } else if (classification === 'new') {
+            if (classification === 'new') {
                 newCards.push(card);
-            } else if (classification === 'due' || (prog && prog.interval === 0)) {
+            } else if (classification === 'mastered') {
+                // exclude mastered cards from sessions
+            } else if (isDue(prog)) {
                 due.push(card);
             } else {
-                notDue.push(card);
+                learning.push(card);
             }
         }
 
-        // Shuffle within groups
         shuffle(due);
         shuffle(newCards);
+        shuffle(learning);
 
-        // Interleave: 3 due cards, then 1 new card
         const queue = [];
-        let dueIdx = 0;
-        let newIdx = 0;
 
-        while (queue.length < maxCards && (dueIdx < due.length || newIdx < newCards.length)) {
-            // Add up to 3 due cards
-            for (let i = 0; i < 3 && dueIdx < due.length && queue.length < maxCards; i++) {
-                queue.push(due[dueIdx++]);
-            }
-            // Add 1 new card
-            if (newIdx < newCards.length && queue.length < maxCards) {
-                queue.push(newCards[newIdx++]);
-            }
+        // 1. Due cards always go in first (they need review)
+        for (const card of due) {
+            if (queue.length >= maxCards) break;
+            queue.push(card);
         }
+
+        // 2. Fill remaining slots with a random mix of new and learning cards
+        const filler = [...newCards, ...learning];
+        shuffle(filler);
+        for (const card of filler) {
+            if (queue.length >= maxCards) break;
+            queue.push(card);
+        }
+
+        // 3. Shuffle the full queue so card types are interleaved
+        shuffle(queue);
 
         return queue;
     }
