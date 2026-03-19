@@ -232,11 +232,10 @@ const App = (() => {
 
     function flipCard() {
         const card = document.getElementById('flashcard');
-        if (!card.classList.contains('flipped')) {
-            card.classList.add('flipped');
-            document.getElementById('rating-buttons').classList.remove('hidden');
-            document.getElementById('tap-hint').textContent = 'How well did you know it?';
-        }
+        card.classList.toggle('flipped');
+        const isFlipped = card.classList.contains('flipped');
+        document.getElementById('rating-buttons').classList.toggle('hidden', !isFlipped);
+        document.getElementById('tap-hint').textContent = isFlipped ? 'How well did you know it?' : 'Tap card to reveal answer';
     }
 
     function rateCard(quality) {
