@@ -8,3 +8,4 @@ Each topic has its own file. Quiz answers are intentionally omitted for self-tes
 | File | Topic | Domains |
 |------|-------|---------|
 | [zero_trust_architecture.md](zero_trust_architecture.md) | Zero Trust Architecture | 1.2, 3.1, 4.6 |
+| [control_types.md](control_types.md) | Control Types (Categories & Functions), IDS vs. IPS | 1.1, 3.2 |
