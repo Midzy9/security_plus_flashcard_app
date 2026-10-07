@@ -1,0 +1,1288 @@
+{
+  "domains": [
+    {
+      "id": "1.0",
+      "name": "General Security Concepts",
+      "weight": 12,
+      "objectives": [
+        {
+          "id": "1.1",
+          "title": "Compare and contrast various types of security controls.",
+          "cards": [
+            {
+              "id": "1.1.001",
+              "question": "What are the four categories of security controls?",
+              "answer": "Technical (logical), Managerial (administrative), Operational, and Physical.",
+              "tags": ["controls", "categories"]
+            },
+            {
+              "id": "1.1.002",
+              "question": "What is a preventive control? Give an example.",
+              "answer": "A control that stops an incident before it happens. Examples: firewalls, access control lists, locked doors.",
+              "tags": ["controls", "preventive"]
+            },
+            {
+              "id": "1.1.003",
+              "question": "What is a detective control? Give an example.",
+              "answer": "A control that identifies and alerts on incidents after or during occurrence. Examples: IDS, audit logs, motion sensors.",
+              "tags": ["controls", "detective"]
+            },
+            {
+              "id": "1.1.004",
+              "question": "What is a corrective control? Give an example.",
+              "answer": "A control that minimizes damage and restores systems after an incident. Examples: backups, patch management, incident response.",
+              "tags": ["controls", "corrective"]
+            },
+            {
+              "id": "1.1.005",
+              "question": "What is a deterrent control? Give an example.",
+              "answer": "A control that discourages an attacker without directly preventing access. Examples: warning banners, security cameras, guard dogs.",
+              "tags": ["controls", "deterrent"]
+            },
+            {
+              "id": "1.1.006",
+              "question": "What is a compensating control?",
+              "answer": "A substitute control used when the primary control cannot be implemented. It provides an alternate means of achieving the same security objective.",
+              "tags": ["controls", "compensating"]
+            },
+            {
+              "id": "1.1.007",
+              "question": "What is a directive control? Give an example.",
+              "answer": "A control that instructs people on how to behave. Examples: policies, procedures, security awareness training.",
+              "tags": ["controls", "directive"]
+            },
+            {
+              "id": "1.1.008",
+              "question": "A company cannot patch a legacy system. They add network segmentation to isolate it. What type of control is this?",
+              "answer": "Compensating control — it substitutes for the unavailable patch (primary control).",
+              "tags": ["controls", "compensating", "scenario"]
+            }
+          ]
+        },
+        {
+          "id": "1.2",
+          "title": "Summarize fundamental security concepts.",
+          "cards": [
+            {
+              "id": "1.2.001",
+              "question": "What does the CIA triad stand for?",
+              "answer": "Confidentiality (only authorized access), Integrity (data is unaltered), Availability (systems are accessible when needed).",
+              "tags": ["cia-triad", "fundamentals"]
+            },
+            {
+              "id": "1.2.002",
+              "question": "What is non-repudiation?",
+              "answer": "The assurance that someone cannot deny the validity of their actions or messages. Typically enforced with digital signatures.",
+              "tags": ["non-repudiation", "fundamentals"]
+            },
+            {
+              "id": "1.2.003",
+              "question": "What are the three components of AAA in security?",
+              "answer": "Authentication (who are you?), Authorization (what can you do?), Accounting/Auditing (what did you do?).",
+              "tags": ["aaa", "fundamentals"]
+            },
+            {
+              "id": "1.2.004",
+              "question": "What is the principle of least privilege?",
+              "answer": "Users and systems should be granted only the minimum access rights necessary to perform their job functions.",
+              "tags": ["least-privilege", "fundamentals"]
+            },
+            {
+              "id": "1.2.005",
+              "question": "What is Zero Trust?",
+              "answer": "A security model that assumes no user or system is trusted by default, even inside the network. Every access request must be verified.",
+              "tags": ["zero-trust", "fundamentals"]
+            },
+            {
+              "id": "1.2.006",
+              "question": "What is a honeypot?",
+              "answer": "A deception technology — a fake system designed to lure attackers, detect intrusion attempts, and gather threat intelligence.",
+              "tags": ["deception", "honeypot"]
+            },
+            {
+              "id": "1.2.007",
+              "question": "What is the difference between authentication and authorization?",
+              "answer": "Authentication verifies identity (who you are). Authorization determines what an authenticated user is permitted to do.",
+              "tags": ["aaa", "authentication", "authorization"]
+            },
+            {
+              "id": "1.2.008",
+              "question": "What is a gap analysis in security?",
+              "answer": "A comparison of current security posture against a desired baseline or framework to identify deficiencies that need to be addressed.",
+              "tags": ["gap-analysis", "fundamentals"]
+            }
+          ]
+        },
+        {
+          "id": "1.3",
+          "title": "Explain the importance of change management processes and the impact to security.",
+          "cards": [
+            {
+              "id": "1.3.001",
+              "question": "What is a Change Advisory Board (CAB)?",
+              "answer": "A group of stakeholders who review, approve, or reject proposed changes to IT systems to minimize risk and ensure business continuity.",
+              "tags": ["change-management", "cab"]
+            },
+            {
+              "id": "1.3.002",
+              "question": "What is the difference between a standard change and an emergency change?",
+              "answer": "A standard change is pre-approved and low-risk (e.g., routine patch). An emergency change bypasses normal approval to address a critical issue quickly.",
+              "tags": ["change-management", "change-types"]
+            },
+            {
+              "id": "1.3.003",
+              "question": "Why is a backout/rollback plan required for changes?",
+              "answer": "To restore the system to its previous state if a change causes unexpected problems or outages, minimizing downtime and impact.",
+              "tags": ["change-management", "rollback"]
+            },
+            {
+              "id": "1.3.004",
+              "question": "What is configuration management in the context of change management?",
+              "answer": "Tracking and maintaining records of hardware/software configurations to ensure systems are in a known, approved state and changes are documented.",
+              "tags": ["change-management", "configuration"]
+            },
+            {
+              "id": "1.3.005",
+              "question": "How does an allow list (whitelist) differ from a deny list (blacklist)?",
+              "answer": "An allow list permits only explicitly approved items; everything else is denied. A deny list blocks specific known-bad items; everything else is allowed.",
+              "tags": ["change-management", "allow-list", "deny-list"]
+            },
+            {
+              "id": "1.3.006",
+              "question": "What security risk does inadequate change management introduce?",
+              "answer": "Untracked changes can introduce vulnerabilities, misconfigurations, or open attack vectors that go undetected and unmitigated.",
+              "tags": ["change-management", "risk"]
+            }
+          ]
+        },
+        {
+          "id": "1.4",
+          "title": "Explain the importance of using appropriate cryptographic solutions.",
+          "cards": [
+            {
+              "id": "1.4.001",
+              "question": "What is the difference between symmetric and asymmetric encryption?",
+              "answer": "Symmetric uses the same key for encryption and decryption (fast, e.g., AES). Asymmetric uses a public/private key pair (slower, e.g., RSA).",
+              "tags": ["cryptography", "symmetric", "asymmetric"]
+            },
+            {
+              "id": "1.4.002",
+              "question": "What is hashing, and how does it differ from encryption?",
+              "answer": "Hashing produces a fixed-length digest from data; it is one-way and cannot be reversed. Encryption is two-way — data can be decrypted with the correct key.",
+              "tags": ["cryptography", "hashing"]
+            },
+            {
+              "id": "1.4.003",
+              "question": "What is a digital signature used for?",
+              "answer": "To verify the integrity and authenticity of a message. The sender encrypts a hash with their private key; the recipient decrypts it with the sender's public key.",
+              "tags": ["cryptography", "digital-signature", "non-repudiation"]
+            },
+            {
+              "id": "1.4.004",
+              "question": "What is a Public Key Infrastructure (PKI)?",
+              "answer": "A framework of policies, hardware, software, and procedures to create, manage, distribute, and revoke digital certificates that bind keys to identities.",
+              "tags": ["cryptography", "pki"]
+            },
+            {
+              "id": "1.4.005",
+              "question": "What is the purpose of a Certificate Authority (CA)?",
+              "answer": "A trusted third party that issues and signs digital certificates, vouching for the binding of a public key to an entity's identity.",
+              "tags": ["cryptography", "pki", "ca"]
+            },
+            {
+              "id": "1.4.006",
+              "question": "What is perfect forward secrecy (PFS)?",
+              "answer": "A property ensuring that session keys are not compromised even if the server's private key is compromised later. Achieved with ephemeral key exchange (e.g., ECDHE).",
+              "tags": ["cryptography", "pfs", "tls"]
+            },
+            {
+              "id": "1.4.007",
+              "question": "What is salting in cryptography?",
+              "answer": "Adding a random value to a password before hashing to prevent rainbow table attacks and ensure identical passwords produce different hashes.",
+              "tags": ["cryptography", "hashing", "salting"]
+            },
+            {
+              "id": "1.4.008",
+              "question": "What is the difference between encryption at rest and encryption in transit?",
+              "answer": "Encryption at rest protects stored data (e.g., disk encryption). Encryption in transit protects data moving across a network (e.g., TLS/HTTPS).",
+              "tags": ["cryptography", "data-states"]
+            }
+          ]
+        }
+      ]
+    }
+  ,
+    {
+      "id": "2.0",
+      "name": "Threats, Vulnerabilities, and Mitigations",
+      "weight": 22,
+      "objectives": [
+        {
+          "id": "2.1",
+          "title": "Compare and contrast common threat actors and motivations.",
+          "cards": [
+            {
+              "id": "2.1.001",
+              "question": "What is a nation-state threat actor?",
+              "answer": "A government-sponsored attacker with significant resources and advanced capabilities. Motivated by espionage, sabotage, or political objectives.",
+              "tags": ["threat-actors", "nation-state"]
+            },
+            {
+              "id": "2.1.002",
+              "question": "What is a hacktivist?",
+              "answer": "An attacker motivated by ideology, politics, or social causes. Goals include disruption, embarrassment, or raising awareness (e.g., defacing websites).",
+              "tags": ["threat-actors", "hacktivist"]
+            },
+            {
+              "id": "2.1.003",
+              "question": "What distinguishes an insider threat from external threat actors?",
+              "answer": "Insider threats have authorized access to systems. They may be malicious (disgruntled employee) or unintentional (accidental data disclosure).",
+              "tags": ["threat-actors", "insider-threat"]
+            },
+            {
+              "id": "2.1.004",
+              "question": "What is a script kiddie?",
+              "answer": "An unskilled attacker who uses pre-made tools and exploits without deep technical knowledge. Motivated by curiosity or notoriety.",
+              "tags": ["threat-actors", "script-kiddie"]
+            },
+            {
+              "id": "2.1.005",
+              "question": "What does 'threat actor sophistication' refer to?",
+              "answer": "The technical skill level and resources of an attacker — ranging from unskilled (script kiddies) to highly advanced (APT/nation-state groups).",
+              "tags": ["threat-actors", "sophistication", "apt"]
+            },
+            {
+              "id": "2.1.006",
+              "question": "What is an Advanced Persistent Threat (APT)?",
+              "answer": "A prolonged, targeted attack in which an intruder gains access and remains undetected for an extended period to steal data or cause damage.",
+              "tags": ["threat-actors", "apt"]
+            },
+            {
+              "id": "2.1.007",
+              "question": "What motivates most financially-driven cybercriminals?",
+              "answer": "Profit — through ransomware, data theft, fraud, credential sale, or extortion.",
+              "tags": ["threat-actors", "motivation", "cybercriminal"]
+            }
+          ]
+        },
+        {
+          "id": "2.2",
+          "title": "Explain common threat vectors and attack surfaces.",
+          "cards": [
+            {
+              "id": "2.2.001",
+              "question": "What is a threat vector?",
+              "answer": "The path or method an attacker uses to gain access to a target. Examples: phishing email, vulnerable software, removable media.",
+              "tags": ["threat-vectors", "attack-surface"]
+            },
+            {
+              "id": "2.2.002",
+              "question": "What is a supply chain attack?",
+              "answer": "An attack targeting a less-secure element in the supply chain (vendor, software update, hardware component) to compromise the ultimate target.",
+              "tags": ["threat-vectors", "supply-chain"]
+            },
+            {
+              "id": "2.2.003",
+              "question": "What is phishing, and how does spear phishing differ?",
+              "answer": "Phishing is a broad, untargeted email scam. Spear phishing is targeted at a specific individual or organization using personalized information.",
+              "tags": ["threat-vectors", "phishing", "social-engineering"]
+            },
+            {
+              "id": "2.2.004",
+              "question": "What is vishing?",
+              "answer": "Voice phishing — social engineering conducted over the phone to trick victims into revealing sensitive information or performing actions.",
+              "tags": ["threat-vectors", "vishing", "social-engineering"]
+            },
+            {
+              "id": "2.2.005",
+              "question": "What is smishing?",
+              "answer": "SMS phishing — social engineering via text messages containing malicious links or requests for sensitive information.",
+              "tags": ["threat-vectors", "smishing", "social-engineering"]
+            },
+            {
+              "id": "2.2.006",
+              "question": "What is an unsecured network as a threat vector?",
+              "answer": "Open or poorly secured wireless networks allow attackers to intercept traffic (on-path attacks) or gain unauthorized network access.",
+              "tags": ["threat-vectors", "wireless", "network"]
+            },
+            {
+              "id": "2.2.007",
+              "question": "What is a watering hole attack?",
+              "answer": "An attacker compromises a website frequently visited by the target group, then waits for victims to visit and get infected.",
+              "tags": ["threat-vectors", "watering-hole"]
+            },
+            {
+              "id": "2.2.008",
+              "question": "What is pretexting?",
+              "answer": "Creating a fabricated scenario (pretext) to manipulate a victim into disclosing information or performing an action. A form of social engineering.",
+              "tags": ["threat-vectors", "pretexting", "social-engineering"]
+            }
+          ]
+        },
+        {
+          "id": "2.3",
+          "title": "Explain various types of vulnerabilities.",
+          "cards": [
+            {
+              "id": "2.3.001",
+              "question": "What is a zero-day vulnerability?",
+              "answer": "A vulnerability that is unknown to the vendor and has no available patch. It can be exploited before defenders are aware of it.",
+              "tags": ["vulnerabilities", "zero-day"]
+            },
+            {
+              "id": "2.3.002",
+              "question": "What is an SQL injection vulnerability?",
+              "answer": "A flaw where attacker-supplied input is interpreted as SQL commands, allowing unauthorized database access, data theft, or manipulation.",
+              "tags": ["vulnerabilities", "sqli", "application"]
+            },
+            {
+              "id": "2.3.003",
+              "question": "What is a buffer overflow vulnerability?",
+              "answer": "When a program writes more data to a buffer than it can hold, overwriting adjacent memory — potentially allowing arbitrary code execution.",
+              "tags": ["vulnerabilities", "buffer-overflow", "application"]
+            },
+            {
+              "id": "2.3.004",
+              "question": "What is a race condition vulnerability?",
+              "answer": "A flaw where the outcome depends on the timing or sequence of events. Attackers exploit the window between a check and a use (TOCTOU).",
+              "tags": ["vulnerabilities", "race-condition"]
+            },
+            {
+              "id": "2.3.005",
+              "question": "What is a misconfiguration vulnerability?",
+              "answer": "Insecure default settings, open permissions, unnecessary services, or improper configurations that create exploitable weaknesses.",
+              "tags": ["vulnerabilities", "misconfiguration"]
+            },
+            {
+              "id": "2.3.006",
+              "question": "What is a weak or default credential vulnerability?",
+              "answer": "Using factory-default or easily guessable usernames/passwords on systems, which attackers can exploit to gain unauthorized access.",
+              "tags": ["vulnerabilities", "credentials"]
+            },
+            {
+              "id": "2.3.007",
+              "question": "What is an insecure direct object reference (IDOR)?",
+              "answer": "A web vulnerability where an attacker manipulates a reference (e.g., URL parameter) to access objects they are not authorized to view.",
+              "tags": ["vulnerabilities", "idor", "application"]
+            }
+          ]
+        },
+        {
+          "id": "2.4",
+          "title": "Given a scenario, analyze indicators of malicious activity.",
+          "cards": [
+            {
+              "id": "2.4.001",
+              "question": "What is ransomware, and what is its primary indicator?",
+              "answer": "Malware that encrypts victim files and demands payment for the key. Primary indicators: files renamed with unknown extensions, ransom note files.",
+              "tags": ["malware", "ransomware", "indicators"]
+            },
+            {
+              "id": "2.4.002",
+              "question": "What is a trojan horse in malware terms?",
+              "answer": "Malware disguised as legitimate software. It appears useful but executes malicious code in the background when run.",
+              "tags": ["malware", "trojan"]
+            },
+            {
+              "id": "2.4.003",
+              "question": "What is a rootkit?",
+              "answer": "Malware that hides its presence and other malicious activity by modifying the OS at a low level. Very difficult to detect and remove.",
+              "tags": ["malware", "rootkit"]
+            },
+            {
+              "id": "2.4.004",
+              "question": "What is a botnet?",
+              "answer": "A network of compromised machines (bots) controlled by an attacker (botmaster) via a command-and-control (C2) server, used for DDoS, spam, etc.",
+              "tags": ["malware", "botnet", "c2"]
+            },
+            {
+              "id": "2.4.005",
+              "question": "What indicators suggest a denial-of-service (DoS) attack?",
+              "answer": "Sudden spike in traffic, service unavailability, high CPU/memory on servers, network flooding from one or many sources (DDoS).",
+              "tags": ["dos", "ddos", "indicators"]
+            },
+            {
+              "id": "2.4.006",
+              "question": "What is an on-path (man-in-the-middle) attack indicator?",
+              "answer": "Unexpected SSL certificate warnings, ARP cache poisoning, unusual latency, or traffic being routed through unexpected hosts.",
+              "tags": ["on-path", "mitm", "indicators"]
+            },
+            {
+              "id": "2.4.007",
+              "question": "What is a fileless malware attack?",
+              "answer": "Malware that runs entirely in memory without writing to disk, using legitimate tools (e.g., PowerShell) to evade traditional file-based detection.",
+              "tags": ["malware", "fileless"]
+            },
+            {
+              "id": "2.4.008",
+              "question": "What is a command-and-control (C2) callback indicator?",
+              "answer": "Unusual outbound connections to unknown IPs, beaconing at regular intervals, encrypted traffic to unexpected destinations.",
+              "tags": ["malware", "c2", "indicators"]
+            }
+          ]
+        },
+        {
+          "id": "2.5",
+          "title": "Explain the purpose of mitigation techniques used to secure the enterprise.",
+          "cards": [
+            {
+              "id": "2.5.001",
+              "question": "What is network segmentation and why is it used?",
+              "answer": "Dividing a network into isolated zones to contain breaches, limit lateral movement, and reduce the blast radius of an attack.",
+              "tags": ["mitigation", "segmentation"]
+            },
+            {
+              "id": "2.5.002",
+              "question": "What is endpoint detection and response (EDR)?",
+              "answer": "Security software on endpoints that continuously monitors, records activity, detects threats, and enables rapid response and investigation.",
+              "tags": ["mitigation", "edr", "endpoint"]
+            },
+            {
+              "id": "2.5.003",
+              "question": "What is patch management and why is it a key mitigation?",
+              "answer": "The process of regularly applying updates to fix known vulnerabilities. Unpatched systems are one of the most common attack vectors.",
+              "tags": ["mitigation", "patching"]
+            },
+            {
+              "id": "2.5.004",
+              "question": "What is the purpose of an intrusion prevention system (IPS)?",
+              "answer": "An IPS monitors network traffic and actively blocks detected threats in real time (unlike an IDS, which only detects and alerts).",
+              "tags": ["mitigation", "ips", "ids"]
+            },
+            {
+              "id": "2.5.005",
+              "question": "What is the principle of network access control (NAC)?",
+              "answer": "Enforcing security policy on devices before allowing network access — checking for patches, AV, and compliance before granting entry.",
+              "tags": ["mitigation", "nac"]
+            },
+            {
+              "id": "2.5.006",
+              "question": "What is application allow-listing as a mitigation?",
+              "answer": "Only permitting explicitly approved applications to run on a system, preventing unauthorized or malicious executables from executing.",
+              "tags": ["mitigation", "allow-listing"]
+            },
+            {
+              "id": "2.5.007",
+              "question": "What is the purpose of user and entity behavior analytics (UEBA)?",
+              "answer": "Uses machine learning to establish behavioral baselines and detect anomalies that may indicate insider threats or compromised accounts.",
+              "tags": ["mitigation", "ueba"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3.0",
+      "name": "Security Architecture",
+      "weight": 18,
+      "objectives": [
+        {
+          "id": "3.1",
+          "title": "Compare and contrast security implications of different architecture models.",
+          "cards": [
+            {
+              "id": "3.1.001",
+              "question": "What are the security implications of a cloud-shared responsibility model?",
+              "answer": "The cloud provider secures the underlying infrastructure; the customer is responsible for securing data, identities, and configurations within the cloud.",
+              "tags": ["architecture", "cloud", "shared-responsibility"]
+            },
+            {
+              "id": "3.1.002",
+              "question": "What is infrastructure as code (IaC) and its security risk?",
+              "answer": "IaC provisions infrastructure via code/scripts. Security risk: misconfigurations in templates can be deployed at scale instantly.",
+              "tags": ["architecture", "iac", "cloud"]
+            },
+            {
+              "id": "3.1.003",
+              "question": "What is a microservices architecture and its primary security challenge?",
+              "answer": "An application built as many small, independent services. Challenge: large attack surface — each service-to-service communication must be secured.",
+              "tags": ["architecture", "microservices"]
+            },
+            {
+              "id": "3.1.004",
+              "question": "What is a serverless architecture?",
+              "answer": "Code runs in ephemeral, provider-managed containers (e.g., AWS Lambda). The provider manages OS/runtime; the developer only secures the function code and permissions.",
+              "tags": ["architecture", "serverless", "cloud"]
+            },
+            {
+              "id": "3.1.005",
+              "question": "What is an edge computing architecture and its security concern?",
+              "answer": "Processing data close to the source rather than a central data center. Security concern: distributed nodes are harder to manage and physically secure.",
+              "tags": ["architecture", "edge-computing"]
+            },
+            {
+              "id": "3.1.006",
+              "question": "What is a software-defined network (SDN)?",
+              "answer": "A network architecture where the control plane is separated from the data plane, managed via software. Enables dynamic policy enforcement but centralizes a critical attack target.",
+              "tags": ["architecture", "sdn", "network"]
+            },
+            {
+              "id": "3.1.007",
+              "question": "What is a Zero Trust architecture?",
+              "answer": "A model where no implicit trust is granted based on network location. Every access request is authenticated, authorized, and continuously validated.",
+              "tags": ["architecture", "zero-trust"]
+            }
+          ]
+        },
+        {
+          "id": "3.2",
+          "title": "Given a scenario, apply security principles to secure enterprise infrastructure.",
+          "cards": [
+            {
+              "id": "3.2.001",
+              "question": "What is defense in depth?",
+              "answer": "A layered security strategy using multiple, overlapping controls so that if one layer fails, others still provide protection.",
+              "tags": ["architecture", "defense-in-depth"]
+            },
+            {
+              "id": "3.2.002",
+              "question": "What is a screened subnet (DMZ)?",
+              "answer": "A network zone between the internet and the internal network that hosts public-facing services (web servers), isolating them from internal systems.",
+              "tags": ["architecture", "dmz", "network"]
+            },
+            {
+              "id": "3.2.003",
+              "question": "What is the purpose of a jump server (bastion host)?",
+              "answer": "A hardened, monitored server used as a secure gateway for administrators to access systems in a protected network zone.",
+              "tags": ["architecture", "jump-server", "bastion"]
+            },
+            {
+              "id": "3.2.004",
+              "question": "What is network address translation (NAT) and its security benefit?",
+              "answer": "NAT maps private internal IPs to a public IP. Security benefit: internal IP addresses are hidden from the internet, reducing direct exposure.",
+              "tags": ["architecture", "nat", "network"]
+            },
+            {
+              "id": "3.2.005",
+              "question": "What is port security on a managed switch?",
+              "answer": "Restricting which MAC addresses can connect to a switch port, preventing unauthorized devices from connecting to the network.",
+              "tags": ["architecture", "port-security", "network"]
+            },
+            {
+              "id": "3.2.006",
+              "question": "What is the difference between an IDS and an IPS?",
+              "answer": "IDS (Intrusion Detection System) detects and alerts on threats passively. IPS (Intrusion Prevention System) actively blocks threats inline.",
+              "tags": ["architecture", "ids", "ips"]
+            },
+            {
+              "id": "3.2.007",
+              "question": "What is a next-generation firewall (NGFW)?",
+              "answer": "A firewall with deep packet inspection, application awareness, user identity tracking, and integrated IPS capabilities beyond traditional port/protocol filtering.",
+              "tags": ["architecture", "ngfw", "firewall"]
+            }
+          ]
+        },
+        {
+          "id": "3.3",
+          "title": "Compare and contrast concepts and strategies to protect data.",
+          "cards": [
+            {
+              "id": "3.3.001",
+              "question": "What are the three states of data and how is each protected?",
+              "answer": "Data at rest (stored) — encryption. Data in transit (moving) — TLS/VPN. Data in use (processing) — access controls, trusted execution environments.",
+              "tags": ["data-protection", "data-states"]
+            },
+            {
+              "id": "3.3.002",
+              "question": "What is data loss prevention (DLP)?",
+              "answer": "Technology that monitors and controls data transfers to prevent unauthorized disclosure of sensitive information (e.g., blocking SSNs in emails).",
+              "tags": ["data-protection", "dlp"]
+            },
+            {
+              "id": "3.3.003",
+              "question": "What is data classification?",
+              "answer": "Categorizing data by sensitivity (e.g., public, internal, confidential, top secret) to apply appropriate handling and protection controls.",
+              "tags": ["data-protection", "classification"]
+            },
+            {
+              "id": "3.3.004",
+              "question": "What is tokenization?",
+              "answer": "Replacing sensitive data (e.g., credit card numbers) with a non-sensitive placeholder (token). The original data is stored securely elsewhere.",
+              "tags": ["data-protection", "tokenization"]
+            },
+            {
+              "id": "3.3.005",
+              "question": "What is data masking?",
+              "answer": "Replacing sensitive data with realistic but fictitious data (e.g., for testing environments) so the original values are not exposed.",
+              "tags": ["data-protection", "masking"]
+            },
+            {
+              "id": "3.3.006",
+              "question": "What is a data retention policy?",
+              "answer": "Defines how long data must be kept and when it must be securely destroyed, balancing legal/compliance requirements against storage risk.",
+              "tags": ["data-protection", "retention"]
+            },
+            {
+              "id": "3.3.007",
+              "question": "What is the purpose of rights management (IRM/DRM)?",
+              "answer": "Controls how digital content can be used — restricting copying, printing, forwarding, or access based on user identity or expiration dates.",
+              "tags": ["data-protection", "irm", "drm"]
+            }
+          ]
+        },
+        {
+          "id": "3.4",
+          "title": "Explain the importance of resilience and recovery in security architecture.",
+          "cards": [
+            {
+              "id": "3.4.001",
+              "question": "What is the difference between RTO and RPO?",
+              "answer": "RTO (Recovery Time Objective): maximum acceptable downtime. RPO (Recovery Point Objective): maximum acceptable data loss measured in time.",
+              "tags": ["resilience", "rto", "rpo", "bcdr"]
+            },
+            {
+              "id": "3.4.002",
+              "question": "What is a hot site, warm site, and cold site?",
+              "answer": "Hot: fully operational backup site (immediate failover). Warm: partially configured (hours to activate). Cold: empty facility (days to weeks to activate).",
+              "tags": ["resilience", "recovery-sites", "bcdr"]
+            },
+            {
+              "id": "3.4.003",
+              "question": "What is the 3-2-1 backup rule?",
+              "answer": "Keep 3 copies of data, on 2 different media types, with 1 copy stored offsite.",
+              "tags": ["resilience", "backup", "321-rule"]
+            },
+            {
+              "id": "3.4.004",
+              "question": "What is high availability (HA)?",
+              "answer": "System design ensuring continuous operation with minimal downtime, typically using redundancy, failover clustering, and load balancing.",
+              "tags": ["resilience", "high-availability"]
+            },
+            {
+              "id": "3.4.005",
+              "question": "What is the difference between full, incremental, and differential backups?",
+              "answer": "Full: all data. Incremental: only changes since last backup (any type). Differential: all changes since last full backup. Incremental is fastest to back up; differential is faster to restore.",
+              "tags": ["resilience", "backup"]
+            },
+            {
+              "id": "3.4.006",
+              "question": "What is geographic dispersion in resilience planning?",
+              "answer": "Distributing systems, data centers, or backups across different physical locations to survive regional disasters or outages.",
+              "tags": ["resilience", "geographic-dispersion"]
+            },
+            {
+              "id": "3.4.007",
+              "question": "What is a tabletop exercise?",
+              "answer": "A discussion-based simulation where stakeholders walk through a disaster or incident scenario to evaluate response plans without deploying actual resources.",
+              "tags": ["resilience", "tabletop", "bcdr"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4.0",
+      "name": "Security Operations",
+      "weight": 28,
+      "objectives": [
+        {
+          "id": "4.1",
+          "title": "Given a scenario, apply common security techniques to computing resources.",
+          "cards": [
+            {
+              "id": "4.1.001",
+              "question": "What is hardening a system?",
+              "answer": "Reducing the attack surface by disabling unnecessary services, closing unused ports, removing default accounts, and applying the principle of least privilege.",
+              "tags": ["hardening", "operations"]
+            },
+            {
+              "id": "4.1.002",
+              "question": "What is a secure baseline configuration?",
+              "answer": "A documented, approved set of security settings for a system type (e.g., CIS Benchmarks) used to ensure consistent hardening across deployments.",
+              "tags": ["hardening", "baseline", "operations"]
+            },
+            {
+              "id": "4.1.003",
+              "question": "What is sandboxing?",
+              "answer": "Isolating an application or process in a restricted environment so it cannot affect the host system — used for testing suspicious code or untrusted applications.",
+              "tags": ["operations", "sandboxing"]
+            },
+            {
+              "id": "4.1.004",
+              "question": "What is the purpose of group policy in a Windows environment?",
+              "answer": "Centrally enforces security settings (password policies, software restrictions, firewall rules) across all domain-joined systems from Active Directory.",
+              "tags": ["operations", "group-policy", "windows"]
+            },
+            {
+              "id": "4.1.005",
+              "question": "What is mobile device management (MDM)?",
+              "answer": "A solution that enforces security policies on mobile devices — enabling remote wipe, enforcing encryption, controlling app installs, and managing configurations.",
+              "tags": ["operations", "mdm", "mobile"]
+            },
+            {
+              "id": "4.1.006",
+              "question": "What is containerization and its security benefit?",
+              "answer": "Packaging an application with its dependencies into an isolated container. Security benefit: applications are isolated from each other and the host OS.",
+              "tags": ["operations", "containers", "docker"]
+            }
+          ]
+        },
+        {
+          "id": "4.2",
+          "title": "Explain the security implications of proper hardware, software, and data asset management.",
+          "cards": [
+            {
+              "id": "4.2.001",
+              "question": "Why is asset inventory critical to security?",
+              "answer": "You cannot protect what you don't know you have. Unknown assets (shadow IT) can be exploited without detection.",
+              "tags": ["asset-management", "inventory"]
+            },
+            {
+              "id": "4.2.002",
+              "question": "What is end-of-life (EOL) software risk?",
+              "answer": "EOL software no longer receives security patches, leaving known vulnerabilities permanently unmitigated.",
+              "tags": ["asset-management", "eol", "patching"]
+            },
+            {
+              "id": "4.2.003",
+              "question": "What is data sanitization and when is it required?",
+              "answer": "Securely removing data from media before disposal or reuse. Required to prevent data recovery from decommissioned drives.",
+              "tags": ["asset-management", "sanitization", "disposal"]
+            },
+            {
+              "id": "4.2.004",
+              "question": "What is the difference between data destruction methods: wiping, degaussing, and shredding?",
+              "answer": "Wiping: overwrites data (software). Degaussing: destroys magnetic fields (magnetic media only). Shredding/pulverizing: physical destruction.",
+              "tags": ["asset-management", "destruction", "disposal"]
+            },
+            {
+              "id": "4.2.005",
+              "question": "What is a software bill of materials (SBOM)?",
+              "answer": "A formal inventory of all components, libraries, and dependencies in a software product — used to identify vulnerable components quickly.",
+              "tags": ["asset-management", "sbom", "software"]
+            }
+          ]
+        },
+        {
+          "id": "4.3",
+          "title": "Explain various activities associated with vulnerability management.",
+          "cards": [
+            {
+              "id": "4.3.001",
+              "question": "What is the difference between a vulnerability scan and a penetration test?",
+              "answer": "A vulnerability scan identifies potential weaknesses automatically. A penetration test actively exploits vulnerabilities to determine real-world impact.",
+              "tags": ["vulnerability-management", "scanning", "pentest"]
+            },
+            {
+              "id": "4.3.002",
+              "question": "What is CVSS and what does it measure?",
+              "answer": "Common Vulnerability Scoring System — a standardized 0–10 score rating the severity of a vulnerability based on exploitability and impact.",
+              "tags": ["vulnerability-management", "cvss"]
+            },
+            {
+              "id": "4.3.003",
+              "question": "What is a CVE?",
+              "answer": "Common Vulnerabilities and Exposures — a publicly assigned identifier (e.g., CVE-2021-44228) for a known security vulnerability.",
+              "tags": ["vulnerability-management", "cve"]
+            },
+            {
+              "id": "4.3.004",
+              "question": "What does vulnerability remediation prioritization involve?",
+              "answer": "Ranking vulnerabilities by severity (CVSS), exploitability, asset criticality, and exposure to determine which to patch first.",
+              "tags": ["vulnerability-management", "remediation", "prioritization"]
+            },
+            {
+              "id": "4.3.005",
+              "question": "What is a false positive in vulnerability scanning?",
+              "answer": "A reported vulnerability that does not actually exist. It wastes remediation effort and can cause alert fatigue.",
+              "tags": ["vulnerability-management", "false-positive"]
+            },
+            {
+              "id": "4.3.006",
+              "question": "What is threat intelligence and how does it support vulnerability management?",
+              "answer": "Curated information about active threats and adversary TTPs. Helps prioritize patching based on which vulnerabilities are actively being exploited in the wild.",
+              "tags": ["vulnerability-management", "threat-intelligence"]
+            }
+          ]
+        },
+        {
+          "id": "4.4",
+          "title": "Explain security alerting and monitoring concepts and tools.",
+          "cards": [
+            {
+              "id": "4.4.001",
+              "question": "What is a SIEM?",
+              "answer": "Security Information and Event Management — aggregates and correlates logs from multiple sources to detect threats, generate alerts, and support investigations.",
+              "tags": ["monitoring", "siem"]
+            },
+            {
+              "id": "4.4.002",
+              "question": "What is the difference between SIEM and SOAR?",
+              "answer": "SIEM collects/correlates logs and alerts. SOAR (Security Orchestration, Automation, and Response) automates response playbooks triggered by SIEM alerts.",
+              "tags": ["monitoring", "siem", "soar"]
+            },
+            {
+              "id": "4.4.003",
+              "question": "What is NetFlow and how is it used in security monitoring?",
+              "answer": "A protocol that records metadata about network flows (IPs, ports, bytes) without capturing packet contents — used to detect anomalies and suspicious traffic patterns.",
+              "tags": ["monitoring", "netflow", "network"]
+            },
+            {
+              "id": "4.4.004",
+              "question": "What is a security baseline and how is it used in alerting?",
+              "answer": "A documented normal state of system/network behavior. Deviations from baseline trigger alerts for potential incidents.",
+              "tags": ["monitoring", "baseline"]
+            },
+            {
+              "id": "4.4.005",
+              "question": "What is log aggregation?",
+              "answer": "Collecting logs from multiple sources into a central repository for unified search, correlation, retention, and analysis.",
+              "tags": ["monitoring", "logging"]
+            }
+          ]
+        },
+        {
+          "id": "4.5",
+          "title": "Given a scenario, modify enterprise capabilities to enhance security.",
+          "cards": [
+            {
+              "id": "4.5.001",
+              "question": "What is DNS filtering and how does it protect users?",
+              "answer": "Blocking resolution of malicious or prohibited domains at the DNS level, preventing users from connecting to known bad sites.",
+              "tags": ["operations", "dns", "filtering"]
+            },
+            {
+              "id": "4.5.002",
+              "question": "What is a web application firewall (WAF)?",
+              "answer": "A firewall that inspects HTTP/S traffic and blocks common web attacks such as SQL injection, XSS, and CSRF against web applications.",
+              "tags": ["operations", "waf", "application"]
+            },
+            {
+              "id": "4.5.003",
+              "question": "What is email security and what does SPF/DKIM/DMARC do?",
+              "answer": "SPF verifies authorized sending servers. DKIM adds a cryptographic signature. DMARC tells receivers how to handle failures — together they prevent email spoofing.",
+              "tags": ["operations", "email", "spf", "dkim", "dmarc"]
+            },
+            {
+              "id": "4.5.004",
+              "question": "What is TLS inspection (SSL/TLS decryption) and why is it controversial?",
+              "answer": "Decrypting encrypted traffic at a proxy to inspect for threats, then re-encrypting. Controversial because it breaks end-to-end encryption and requires trust in the proxy.",
+              "tags": ["operations", "tls", "inspection"]
+            },
+            {
+              "id": "4.5.005",
+              "question": "What is a secure DNS resolver (e.g., DNS over HTTPS)?",
+              "answer": "Encrypts DNS queries to prevent eavesdropping and manipulation. DoH sends DNS queries over HTTPS; DoT uses TLS.",
+              "tags": ["operations", "dns", "doh", "dot"]
+            }
+          ]
+        },
+        {
+          "id": "4.6",
+          "title": "Given a scenario, implement and maintain identity and access management.",
+          "cards": [
+            {
+              "id": "4.6.001",
+              "question": "What is multi-factor authentication (MFA)?",
+              "answer": "Requiring two or more factors from different categories: something you know (password), something you have (token), something you are (biometric).",
+              "tags": ["iam", "mfa", "authentication"]
+            },
+            {
+              "id": "4.6.002",
+              "question": "What is single sign-on (SSO)?",
+              "answer": "Allows a user to authenticate once and access multiple systems without re-entering credentials. Reduces password fatigue but creates a single point of failure.",
+              "tags": ["iam", "sso", "federation"]
+            },
+            {
+              "id": "4.6.003",
+              "question": "What is privileged access management (PAM)?",
+              "answer": "Controls and monitors the use of privileged (admin) accounts — vaulting credentials, enforcing just-in-time access, and auditing privileged sessions.",
+              "tags": ["iam", "pam", "privileged-access"]
+            },
+            {
+              "id": "4.6.004",
+              "question": "What is the difference between role-based access control (RBAC) and attribute-based access control (ABAC)?",
+              "answer": "RBAC grants access based on job role. ABAC grants access based on multiple attributes (user, resource, environment) for finer-grained control.",
+              "tags": ["iam", "rbac", "abac", "access-control"]
+            },
+            {
+              "id": "4.6.005",
+              "question": "What is a directory service and what role does it play in IAM?",
+              "answer": "A centralized repository of user identities and access rights (e.g., Active Directory, LDAP) used to authenticate users and enforce access policies.",
+              "tags": ["iam", "directory", "active-directory"]
+            },
+            {
+              "id": "4.6.006",
+              "question": "What is federation in identity management?",
+              "answer": "Establishing trust between different organizations' identity systems so users from one domain can access resources in another (e.g., using SAML or OAuth).",
+              "tags": ["iam", "federation", "saml", "oauth"]
+            }
+          ]
+        },
+        {
+          "id": "4.7",
+          "title": "Explain the importance of automation and orchestration related to secure operations.",
+          "cards": [
+            {
+              "id": "4.7.001",
+              "question": "What is security orchestration, automation, and response (SOAR)?",
+              "answer": "Platforms that automate repetitive security tasks (e.g., blocking an IP, creating a ticket) using playbooks triggered by alerts, reducing response time.",
+              "tags": ["automation", "soar"]
+            },
+            {
+              "id": "4.7.002",
+              "question": "What is a security playbook?",
+              "answer": "A documented, step-by-step procedure for responding to a specific security event or incident type — can be automated via SOAR.",
+              "tags": ["automation", "playbook", "incident-response"]
+            },
+            {
+              "id": "4.7.003",
+              "question": "What is continuous integration/continuous deployment (CI/CD) and its security relevance?",
+              "answer": "Automated pipelines for building, testing, and deploying code. Security relevance: security tests (SAST, DAST) can be embedded to catch issues before production.",
+              "tags": ["automation", "cicd", "devsecops"]
+            },
+            {
+              "id": "4.7.004",
+              "question": "What is the benefit of automating user account provisioning/deprovisioning?",
+              "answer": "Ensures accounts are created with correct permissions and immediately disabled when an employee leaves — reducing risk of orphaned accounts.",
+              "tags": ["automation", "iam", "provisioning"]
+            },
+            {
+              "id": "4.7.005",
+              "question": "What is a risk of over-automation in security operations?",
+              "answer": "Automated responses can block legitimate traffic, cause outages, or be manipulated by attackers who understand the automation logic.",
+              "tags": ["automation", "risk"]
+            }
+          ]
+        },
+        {
+          "id": "4.8",
+          "title": "Explain appropriate incident response activities.",
+          "cards": [
+            {
+              "id": "4.8.001",
+              "question": "What are the six phases of the NIST incident response lifecycle?",
+              "answer": "Preparation → Detection & Analysis → Containment → Eradication → Recovery → Post-Incident Activity (lessons learned).",
+              "tags": ["incident-response", "nist"]
+            },
+            {
+              "id": "4.8.002",
+              "question": "What is the purpose of containment in incident response?",
+              "answer": "To limit the spread and impact of an incident — isolating affected systems, blocking attacker access, and preventing further damage while preserving evidence.",
+              "tags": ["incident-response", "containment"]
+            },
+            {
+              "id": "4.8.003",
+              "question": "What is the chain of custody in incident response?",
+              "answer": "A documented record of who handled evidence, when, and how — ensuring evidence is admissible in legal proceedings and has not been tampered with.",
+              "tags": ["incident-response", "forensics", "chain-of-custody"]
+            },
+            {
+              "id": "4.8.004",
+              "question": "What is a lessons learned review?",
+              "answer": "A post-incident meeting to analyze what happened, what worked, what failed, and what improvements should be made to prevent recurrence.",
+              "tags": ["incident-response", "lessons-learned"]
+            },
+            {
+              "id": "4.8.005",
+              "question": "What is the first priority when responding to an active incident?",
+              "answer": "Containment — stopping the bleeding. Preserving evidence is secondary to preventing ongoing damage, though both should be balanced.",
+              "tags": ["incident-response", "containment", "priorities"]
+            },
+            {
+              "id": "4.8.006",
+              "question": "What is a computer security incident response team (CSIRT)?",
+              "answer": "A designated group responsible for coordinating and executing incident response activities within an organization.",
+              "tags": ["incident-response", "csirt"]
+            }
+          ]
+        },
+        {
+          "id": "4.9",
+          "title": "Given a scenario, use data sources to support an investigation.",
+          "cards": [
+            {
+              "id": "4.9.001",
+              "question": "What is a packet capture (PCAP) and when is it used in investigations?",
+              "answer": "A full recording of network traffic at the packet level. Used to reconstruct attacker activity, identify exfiltrated data, or confirm an attack vector.",
+              "tags": ["investigation", "pcap", "forensics"]
+            },
+            {
+              "id": "4.9.002",
+              "question": "What types of logs are most useful in a security investigation?",
+              "answer": "Firewall logs, authentication logs, endpoint/EDR logs, DNS logs, web proxy logs, and application logs — each reveals a different layer of activity.",
+              "tags": ["investigation", "logging", "forensics"]
+            },
+            {
+              "id": "4.9.003",
+              "question": "What is the significance of timestamps in forensic investigations?",
+              "answer": "Timestamps establish a timeline of events. Log sources must be time-synchronized (NTP) to correlate events accurately across systems.",
+              "tags": ["investigation", "forensics", "timestamps", "ntp"]
+            },
+            {
+              "id": "4.9.004",
+              "question": "What is endpoint forensics?",
+              "answer": "Examining system artifacts — running processes, registry keys, file timestamps, browser history, prefetch files — to reconstruct what occurred on a host.",
+              "tags": ["investigation", "forensics", "endpoint"]
+            },
+            {
+              "id": "4.9.005",
+              "question": "What is threat hunting?",
+              "answer": "Proactively searching through logs and telemetry for signs of threats that have evaded automated detection — hypothesis-driven rather than alert-driven.",
+              "tags": ["investigation", "threat-hunting"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.0",
+      "name": "Security Program Management and Oversight",
+      "weight": 20,
+      "objectives": [
+        {
+          "id": "5.1",
+          "title": "Summarize elements of effective security governance.",
+          "cards": [
+            {
+              "id": "5.1.001",
+              "question": "What is a security policy?",
+              "answer": "A high-level document that defines an organization's security objectives, requirements, and management direction. It is mandatory and enforced.",
+              "tags": ["governance", "policy"]
+            },
+            {
+              "id": "5.1.002",
+              "question": "What is the difference between a policy, a standard, and a procedure?",
+              "answer": "Policy: high-level 'what and why' (mandatory). Standard: specific measurable requirements. Procedure: step-by-step 'how to' implement the standard.",
+              "tags": ["governance", "policy", "standard", "procedure"]
+            },
+            {
+              "id": "5.1.003",
+              "question": "What is a security framework, and give two examples.",
+              "answer": "A structured set of guidelines for managing cybersecurity risk. Examples: NIST CSF (Cybersecurity Framework), ISO 27001.",
+              "tags": ["governance", "framework", "nist", "iso27001"]
+            },
+            {
+              "id": "5.1.004",
+              "question": "What is the role of a Chief Information Security Officer (CISO)?",
+              "answer": "Senior executive responsible for establishing and maintaining the organization's security vision, strategy, and program.",
+              "tags": ["governance", "ciso"]
+            },
+            {
+              "id": "5.1.005",
+              "question": "What is separation of duties?",
+              "answer": "Dividing critical tasks among multiple people so no single person can complete a sensitive process alone — reducing fraud and error risk.",
+              "tags": ["governance", "separation-of-duties"]
+            },
+            {
+              "id": "5.1.006",
+              "question": "What is job rotation and its security benefit?",
+              "answer": "Moving employees through different roles periodically. Security benefit: detects fraud, reduces over-reliance on single individuals, limits insider threat buildup.",
+              "tags": ["governance", "job-rotation"]
+            },
+            {
+              "id": "5.1.007",
+              "question": "What is mandatory vacation (forced leave) as a security control?",
+              "answer": "Requiring employees to take leave so another person covers their duties — exposing any fraudulent activity that depends on the absent employee's ongoing presence.",
+              "tags": ["governance", "mandatory-vacation"]
+            }
+          ]
+        },
+        {
+          "id": "5.2",
+          "title": "Explain elements of the risk management process.",
+          "cards": [
+            {
+              "id": "5.2.001",
+              "question": "What is the formula for risk?",
+              "answer": "Risk = Likelihood (probability of occurrence) × Impact (magnitude of harm).",
+              "tags": ["risk-management", "risk-formula"]
+            },
+            {
+              "id": "5.2.002",
+              "question": "What are the four risk response strategies?",
+              "answer": "Accept (tolerate the risk), Transfer (e.g., insurance), Avoid (eliminate the activity), Mitigate (reduce likelihood or impact).",
+              "tags": ["risk-management", "risk-response"]
+            },
+            {
+              "id": "5.2.003",
+              "question": "What is the difference between quantitative and qualitative risk assessment?",
+              "answer": "Quantitative uses numeric values (e.g., ALE = SLE × ARO). Qualitative uses subjective ratings (High/Medium/Low) based on expert judgment.",
+              "tags": ["risk-management", "quantitative", "qualitative"]
+            },
+            {
+              "id": "5.2.004",
+              "question": "What is residual risk?",
+              "answer": "The remaining risk after security controls have been applied. No control eliminates all risk — residual risk must be accepted or further treated.",
+              "tags": ["risk-management", "residual-risk"]
+            },
+            {
+              "id": "5.2.005",
+              "question": "What is a risk register?",
+              "answer": "A document that lists identified risks, their likelihood, impact, owner, and treatment status — used to track and communicate risk across the organization.",
+              "tags": ["risk-management", "risk-register"]
+            },
+            {
+              "id": "5.2.006",
+              "question": "What is ALE, SLE, and ARO?",
+              "answer": "SLE (Single Loss Expectancy): cost of one incident. ARO (Annual Rate of Occurrence): how often per year. ALE = SLE × ARO (expected annual loss).",
+              "tags": ["risk-management", "ale", "sle", "aro"]
+            }
+          ]
+        },
+        {
+          "id": "5.3",
+          "title": "Explain the processes associated with third-party risk assessment and management.",
+          "cards": [
+            {
+              "id": "5.3.001",
+              "question": "What is a vendor risk assessment?",
+              "answer": "Evaluating a third party's security posture before engaging them — reviewing policies, controls, certifications (SOC 2, ISO 27001), and questionnaires.",
+              "tags": ["third-party-risk", "vendor"]
+            },
+            {
+              "id": "5.3.002",
+              "question": "What is a right-to-audit clause?",
+              "answer": "A contract provision giving an organization the right to audit a vendor's security controls to verify compliance with agreed requirements.",
+              "tags": ["third-party-risk", "audit", "contract"]
+            },
+            {
+              "id": "5.3.003",
+              "question": "What is a business associate agreement (BAA)?",
+              "answer": "A HIPAA-required contract with vendors who handle protected health information (PHI), ensuring they meet required security and privacy obligations.",
+              "tags": ["third-party-risk", "baa", "hipaa", "compliance"]
+            },
+            {
+              "id": "5.3.004",
+              "question": "What is a memorandum of understanding (MOU) in a security context?",
+              "answer": "A non-binding agreement between organizations establishing mutual expectations for sharing information or services, often a precursor to a formal contract.",
+              "tags": ["third-party-risk", "mou"]
+            },
+            {
+              "id": "5.3.005",
+              "question": "What is supply chain risk management (SCRM)?",
+              "answer": "Identifying, assessing, and mitigating security risks introduced by vendors, suppliers, and partners throughout the product/service supply chain.",
+              "tags": ["third-party-risk", "scrm", "supply-chain"]
+            },
+            {
+              "id": "5.3.006",
+              "question": "What is a SOC 2 report and why is it relevant to vendor risk?",
+              "answer": "An independent audit of a service organization's controls around security, availability, and confidentiality. Type II covers a period of time and is more valuable than Type I.",
+              "tags": ["third-party-risk", "soc2", "audit"]
+            }
+          ]
+        },
+        {
+          "id": "5.4",
+          "title": "Summarize elements of effective security compliance.",
+          "cards": [
+            {
+              "id": "5.4.001",
+              "question": "What does PCI DSS govern?",
+              "answer": "Payment Card Industry Data Security Standard — protects cardholder data. Applies to any organization that stores, processes, or transmits credit card information.",
+              "tags": ["compliance", "pci-dss"]
+            },
+            {
+              "id": "5.4.002",
+              "question": "What does HIPAA govern?",
+              "answer": "Health Insurance Portability and Accountability Act — protects the privacy and security of protected health information (PHI) in the US healthcare sector.",
+              "tags": ["compliance", "hipaa"]
+            },
+            {
+              "id": "5.4.003",
+              "question": "What is GDPR and who does it apply to?",
+              "answer": "General Data Protection Regulation — EU law governing the processing of personal data. Applies to any organization handling data of EU residents, regardless of where the org is based.",
+              "tags": ["compliance", "gdpr"]
+            },
+            {
+              "id": "5.4.004",
+              "question": "What is the difference between a compliance requirement and a security best practice?",
+              "answer": "Compliance is a mandatory legal/regulatory minimum. Best practice may exceed compliance requirements — an organization can be compliant but still not secure.",
+              "tags": ["compliance", "best-practice"]
+            },
+            {
+              "id": "5.4.005",
+              "question": "What is data sovereignty?",
+              "answer": "The concept that data is subject to the laws of the country in which it is stored. Cloud deployments must account for where data physically resides.",
+              "tags": ["compliance", "data-sovereignty", "cloud"]
+            },
+            {
+              "id": "5.4.006",
+              "question": "What is a privacy impact assessment (PIA)?",
+              "answer": "A process to identify privacy risks before deploying a new system or process that handles personal data, ensuring compliance with privacy regulations.",
+              "tags": ["compliance", "pia", "privacy"]
+            }
+          ]
+        },
+        {
+          "id": "5.5",
+          "title": "Explain types and purposes of audits and assessments.",
+          "cards": [
+            {
+              "id": "5.5.001",
+              "question": "What is the difference between an internal and external audit?",
+              "answer": "Internal audits are conducted by the organization's own staff. External audits are performed by independent third parties, providing unbiased validation.",
+              "tags": ["audits", "internal", "external"]
+            },
+            {
+              "id": "5.5.002",
+              "question": "What is a penetration test and what are its phases?",
+              "answer": "A simulated attack to find exploitable vulnerabilities. Phases: Reconnaissance → Scanning/Enumeration → Exploitation → Post-exploitation → Reporting.",
+              "tags": ["audits", "pentest"]
+            },
+            {
+              "id": "5.5.003",
+              "question": "What is the difference between a black box, white box, and gray box pentest?",
+              "answer": "Black box: no prior knowledge (simulates external attacker). White box: full knowledge (internal audit). Gray box: partial knowledge (simulates insider threat).",
+              "tags": ["audits", "pentest", "black-box", "white-box", "gray-box"]
+            },
+            {
+              "id": "5.5.004",
+              "question": "What is a security assessment vs. a security audit?",
+              "answer": "Assessment: evaluates effectiveness of controls against a standard, often informal. Audit: formal, evidence-based review of compliance with specific requirements.",
+              "tags": ["audits", "assessment"]
+            },
+            {
+              "id": "5.5.005",
+              "question": "What is attestation in the context of security compliance?",
+              "answer": "A formal declaration by a responsible party confirming that systems or processes meet required security standards — often a signed statement or formal report.",
+              "tags": ["audits", "attestation", "compliance"]
+            }
+          ]
+        },
+        {
+          "id": "5.6",
+          "title": "Given a scenario, implement security awareness practices.",
+          "cards": [
+            {
+              "id": "5.6.001",
+              "question": "What is the purpose of security awareness training?",
+              "answer": "To educate employees about security threats, policies, and behaviors — making them the first line of defense rather than the weakest link.",
+              "tags": ["awareness", "training"]
+            },
+            {
+              "id": "5.6.002",
+              "question": "What is a phishing simulation?",
+              "answer": "A controlled exercise where security teams send fake phishing emails to employees to measure susceptibility and reinforce training.",
+              "tags": ["awareness", "phishing", "simulation"]
+            },
+            {
+              "id": "5.6.003",
+              "question": "What is social engineering awareness and why is it critical?",
+              "answer": "Training employees to recognize manipulation tactics (pretexting, phishing, tailgating) — because technical controls cannot stop humans being deceived.",
+              "tags": ["awareness", "social-engineering"]
+            },
+            {
+              "id": "5.6.004",
+              "question": "What is tailgating (piggybacking) and how is it prevented?",
+              "answer": "An attacker follows an authorized person through a secured entry without badging in. Prevented by mantraps, access turnstiles, and awareness training.",
+              "tags": ["awareness", "physical", "tailgating"]
+            },
+            {
+              "id": "5.6.005",
+              "question": "What is a clean desk policy?",
+              "answer": "Requiring employees to clear sensitive documents and lock screens when away from their desk — preventing visual eavesdropping and unauthorized access.",
+              "tags": ["awareness", "clean-desk", "physical"]
+            },
+            {
+              "id": "5.6.006",
+              "question": "What metrics indicate an effective security awareness program?",
+              "answer": "Reduced phishing click rates, faster incident reporting, lower policy violations, improved quiz scores, and increased security-related help desk calls.",
+              "tags": ["awareness", "metrics"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

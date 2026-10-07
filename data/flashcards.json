@@ -10,52 +10,54 @@
           "title": "Compare and contrast various types of security controls.",
           "cards": [
             {
-              "id": "1.1.001",
-              "question": "What are the four categories of security controls?",
-              "answer": "Technical (logical), Managerial (administrative), Operational, and Physical.",
-              "tags": ["controls", "categories"]
+              "id": "1.1-b39bf196",
+              "question": "policy, risk assessment, governance, documented plan, security strategy",
+              "answer": "Managerial"
             },
             {
-              "id": "1.1.002",
-              "question": "What is a preventive control? Give an example.",
-              "answer": "A control that stops an incident before it happens. Examples: firewalls, access control lists, locked doors.",
-              "tags": ["controls", "preventive"]
+              "id": "1.1-454ef40d",
+              "question": "carried out by people: guards, awareness training, procedures staff follow",
+              "answer": "Operational"
             },
             {
-              "id": "1.1.003",
-              "question": "What is a detective control? Give an example.",
-              "answer": "A control that identifies and alerts on incidents after or during occurrence. Examples: IDS, audit logs, motion sensors.",
-              "tags": ["controls", "detective"]
+              "id": "1.1-bbca88f0",
+              "question": "firewall, antivirus, OS setting, encryption, enforced by a system",
+              "answer": "Technical"
             },
             {
-              "id": "1.1.004",
-              "question": "What is a corrective control? Give an example.",
-              "answer": "A control that minimizes damage and restores systems after an incident. Examples: backups, patch management, incident response.",
-              "tags": ["controls", "corrective"]
+              "id": "1.1-e922058b",
+              "question": "fence, lock, badge reader, bollard, guard shack, cameras",
+              "answer": "Physical"
             },
             {
-              "id": "1.1.005",
-              "question": "What is a deterrent control? Give an example.",
-              "answer": "A control that discourages an attacker without directly preventing access. Examples: warning banners, security cameras, guard dogs.",
-              "tags": ["controls", "deterrent"]
+              "id": "1.1-2dce1206",
+              "question": "block, stop, prevent from happening",
+              "answer": "Preventive"
             },
             {
-              "id": "1.1.006",
-              "question": "What is a compensating control?",
-              "answer": "A substitute control used when the primary control cannot be implemented. It provides an alternate means of achieving the same security objective.",
-              "tags": ["controls", "compensating"]
+              "id": "1.1-96265fda",
+              "question": "discourage, warning sign, \"may not stop it but makes them think twice\"",
+              "answer": "Deterrent"
             },
             {
-              "id": "1.1.007",
-              "question": "What is a directive control? Give an example.",
-              "answer": "A control that instructs people on how to behave. Examples: policies, procedures, security awareness training.",
-              "tags": ["controls", "directive"]
+              "id": "1.1-8b728c0c",
+              "question": "identify, record, alert, log, motion sensor, after or during the event",
+              "answer": "Detective"
             },
             {
-              "id": "1.1.008",
-              "question": "A company cannot patch a legacy system. They add network segmentation to isolate it. What type of control is this?",
-              "answer": "Compensating control — it substitutes for the unavailable patch (primary control).",
-              "tags": ["controls", "compensating", "scenario"]
+              "id": "1.1-5471f8fe",
+              "question": "restore, fix, recover after the incident, restore from backup",
+              "answer": "Corrective"
+            },
+            {
+              "id": "1.1-06221f06",
+              "question": "alternative, can't implement the primary control, temporary measure, workaround",
+              "answer": "Compensating"
+            },
+            {
+              "id": "1.1-0ca3e6ae",
+              "question": "instruct, direct, \"authorized personnel only,\" policy telling people what to do",
+              "answer": "Directive"
             }
           ]
         },
@@ -64,52 +66,199 @@
           "title": "Summarize fundamental security concepts.",
           "cards": [
             {
-              "id": "1.2.001",
-              "question": "What does the CIA triad stand for?",
-              "answer": "Confidentiality (only authorized access), Integrity (data is unaltered), Availability (systems are accessible when needed).",
-              "tags": ["cia-triad", "fundamentals"]
+              "id": "1.2-499f4d4a",
+              "question": "only authorized people can read it, encryption, secrecy",
+              "answer": "Confidentiality"
             },
             {
-              "id": "1.2.002",
-              "question": "What is non-repudiation?",
-              "answer": "The assurance that someone cannot deny the validity of their actions or messages. Typically enforced with digital signatures.",
-              "tags": ["non-repudiation", "fundamentals"]
+              "id": "1.2-faa2d9ab",
+              "question": "not modified, hashing, tampering",
+              "answer": "Integrity"
             },
             {
-              "id": "1.2.003",
-              "question": "What are the three components of AAA in security?",
-              "answer": "Authentication (who are you?), Authorization (what can you do?), Accounting/Auditing (what did you do?).",
-              "tags": ["aaa", "fundamentals"]
+              "id": "1.2-2b1c7169",
+              "question": "uptime, redundancy, accessible when needed",
+              "answer": "Availability"
             },
             {
-              "id": "1.2.004",
-              "question": "What is the principle of least privilege?",
-              "answer": "Users and systems should be granted only the minimum access rights necessary to perform their job functions.",
-              "tags": ["least-privilege", "fundamentals"]
+              "id": "1.2-db5bd1b9",
+              "question": "can't deny sending/signing, proof of origin, digital signature",
+              "answer": "Non-repudiation"
             },
             {
-              "id": "1.2.005",
-              "question": "What is Zero Trust?",
-              "answer": "A security model that assumes no user or system is trusted by default, even inside the network. Every access request must be verified.",
-              "tags": ["zero-trust", "fundamentals"]
+              "id": "1.2-0a6cb95d",
+              "question": "prove who you are, login, credentials",
+              "answer": "Authentication"
             },
             {
-              "id": "1.2.006",
-              "question": "What is a honeypot?",
-              "answer": "A deception technology — a fake system designed to lure attackers, detect intrusion attempts, and gather threat intelligence.",
-              "tags": ["deception", "honeypot"]
+              "id": "1.2-f95d166a",
+              "question": "what you're allowed to access, permissions",
+              "answer": "Authorization"
             },
             {
-              "id": "1.2.007",
-              "question": "What is the difference between authentication and authorization?",
-              "answer": "Authentication verifies identity (who you are). Authorization determines what an authenticated user is permitted to do.",
-              "tags": ["aaa", "authentication", "authorization"]
+              "id": "1.2-6a0050ee",
+              "question": "record of what was done, resources used, logging activity",
+              "answer": "Accounting"
             },
             {
-              "id": "1.2.008",
-              "question": "What is a gap analysis in security?",
-              "answer": "A comparison of current security posture against a desired baseline or framework to identify deficiencies that need to be addressed.",
-              "tags": ["gap-analysis", "fundamentals"]
+              "id": "1.2-a8e1d7e1",
+              "question": "device certificate, machine identity, authenticating a server/device",
+              "answer": "Authenticating systems"
+            },
+            {
+              "id": "1.2-b7df35aa",
+              "question": "compare current state to desired state/framework/baseline, \"where are we vs. where we need to be\"",
+              "answer": "Gap analysis"
+            },
+            {
+              "id": "1.2-c729b9d5",
+              "question": "never trust, always verify; no implicit trust based on network location",
+              "answer": "Zero Trust"
+            },
+            {
+              "id": "1.2-4093b8bf",
+              "question": "makes the grant/deny decision",
+              "answer": "Policy Engine (control plane)"
+            },
+            {
+              "id": "1.2-d194f259",
+              "question": "communicates the decision, issues tokens/credentials to the PEP",
+              "answer": "Policy Administrator (control plane)"
+            },
+            {
+              "id": "1.2-9f6f6140",
+              "question": "gatekeeper that enforces the decision in the traffic path",
+              "answer": "Policy Enforcement Point (data plane)"
+            },
+            {
+              "id": "1.2-a1e3dbc3",
+              "question": "identity checked with context (location, device, behavior)",
+              "answer": "Adaptive identity"
+            },
+            {
+              "id": "1.2-9cbf286c",
+              "question": "limit entry points, reduce what can be reached",
+              "answer": "Threat scope reduction"
+            },
+            {
+              "id": "1.2-ea0f3d38",
+              "question": "stop vehicles, posts in front of entrance",
+              "answer": "Bollards"
+            },
+            {
+              "id": "1.2-00145bd5",
+              "question": "tailgating/piggybacking, two doors, one opens at a time",
+              "answer": "Access control vestibule (mantrap)"
+            },
+            {
+              "id": "1.2-e9d04acd",
+              "question": "body heat",
+              "answer": "Infrared sensor"
+            },
+            {
+              "id": "1.2-49cb922e",
+              "question": "weight on floor/mat, force on window",
+              "answer": "Pressure sensor"
+            },
+            {
+              "id": "1.2-3a54736a",
+              "question": "larger area, detects movement, microwave pulses",
+              "answer": "Microwave sensor"
+            },
+            {
+              "id": "1.2-aece2365",
+              "question": "sound waves, echo",
+              "answer": "Ultrasonic sensor"
+            },
+            {
+              "id": "1.2-8bfec1e2",
+              "question": "fake system to attract attackers",
+              "answer": "Honeypot"
+            },
+            {
+              "id": "1.2-22314bd8",
+              "question": "multiple fake systems / fake network",
+              "answer": "Honeynet"
+            },
+            {
+              "id": "1.2-681f7c8f",
+              "question": "fake file (e.g., \"passwords.txt\") that alerts when opened",
+              "answer": "Honeyfile"
+            },
+            {
+              "id": "1.2-82e16d97",
+              "question": "fake credential, API key, or data record that's traceable if used",
+              "answer": "Honeytoken"
+            },
+            {
+              "id": "1.2-a4ad4ed8",
+              "question": "prove a person's identity: passwords, biometrics, MFA",
+              "answer": "Authenticating people"
+            },
+            {
+              "id": "1.2-b27ce5ab",
+              "question": "how access is decided after login (DAC/MAC/RBAC/ABAC)",
+              "answer": "Authorization models"
+            },
+            {
+              "id": "1.2-de456c1d",
+              "question": "Zero Trust decision side: adaptive identity, policy engine/administrator",
+              "answer": "Control Plane"
+            },
+            {
+              "id": "1.2-220062eb",
+              "question": "Zero Trust traffic side, where access is enforced",
+              "answer": "Data Plane"
+            },
+            {
+              "id": "1.2-4f0e8d11",
+              "question": "access decided by centrally defined policy, not network location",
+              "answer": "Policy-driven access control"
+            },
+            {
+              "id": "1.2-1e8ee917",
+              "question": "area where traffic is trusted without further checks (Zero Trust shrinks these)",
+              "answer": "Implicit trust zones"
+            },
+            {
+              "id": "1.2-443e5765",
+              "question": "the user/device requesting access in Zero Trust",
+              "answer": "Subject/System"
+            },
+            {
+              "id": "1.2-60e14160",
+              "question": "perimeter barrier, define a boundary, keep people out",
+              "answer": "Fencing"
+            },
+            {
+              "id": "1.2-e749756b",
+              "question": "CCTV, cameras recording an area",
+              "answer": "Video surveillance"
+            },
+            {
+              "id": "1.2-81a4b5bd",
+              "question": "human who can make judgment calls, verify identity in person",
+              "answer": "Security guard"
+            },
+            {
+              "id": "1.2-9cb35ef8",
+              "question": "ID card, proximity/smart card to open doors",
+              "answer": "Access badge"
+            },
+            {
+              "id": "1.2-1e91101c",
+              "question": "illuminate the area, deter intruders, help cameras see",
+              "answer": "Lighting"
+            },
+            {
+              "id": "1.2-f1a5803d",
+              "question": "automatically detect presence/motion (infrared/pressure/microwave/ultrasonic)",
+              "answer": "Sensors"
+            },
+            {
+              "id": "1.2-8cb20218",
+              "question": "fake resources to deceive or slow attackers and gather intel",
+              "answer": "Deception and disruption technology"
             }
           ]
         },
@@ -118,40 +267,99 @@
           "title": "Explain the importance of change management processes and the impact to security.",
           "cards": [
             {
-              "id": "1.3.001",
-              "question": "What is a Change Advisory Board (CAB)?",
-              "answer": "A group of stakeholders who review, approve, or reject proposed changes to IT systems to minimize risk and ensure business continuity.",
-              "tags": ["change-management", "cab"]
+              "id": "1.3-4b5b4ba0",
+              "question": "change advisory board (CAB), sign-off before the change",
+              "answer": "Approval process"
             },
             {
-              "id": "1.3.002",
-              "question": "What is the difference between a standard change and an emergency change?",
-              "answer": "A standard change is pre-approved and low-risk (e.g., routine patch). An emergency change bypasses normal approval to address a critical issue quickly.",
-              "tags": ["change-management", "change-types"]
+              "id": "1.3-c7b25d5f",
+              "question": "person who manages the change, responsible for the process",
+              "answer": "Ownership"
             },
             {
-              "id": "1.3.003",
-              "question": "Why is a backout/rollback plan required for changes?",
-              "answer": "To restore the system to its previous state if a change causes unexpected problems or outages, minimizing downtime and impact.",
-              "tags": ["change-management", "rollback"]
+              "id": "1.3-af6588df",
+              "question": "people/departments affected by the change",
+              "answer": "Stakeholders"
             },
             {
-              "id": "1.3.004",
-              "question": "What is configuration management in the context of change management?",
-              "answer": "Tracking and maintaining records of hardware/software configurations to ensure systems are in a known, approved state and changes are documented.",
-              "tags": ["change-management", "configuration"]
+              "id": "1.3-7c9b0b31",
+              "question": "risk of making the change (and of not making it), what could break",
+              "answer": "Impact analysis"
             },
             {
-              "id": "1.3.005",
-              "question": "How does an allow list (whitelist) differ from a deny list (blacklist)?",
-              "answer": "An allow list permits only explicitly approved items; everything else is denied. A deny list blocks specific known-bad items; everything else is allowed.",
-              "tags": ["change-management", "allow-list", "deny-list"]
+              "id": "1.3-d00a374d",
+              "question": "tested in a sandbox/lab first, results documented",
+              "answer": "Test results"
             },
             {
-              "id": "1.3.006",
-              "question": "What security risk does inadequate change management introduce?",
-              "answer": "Untracked changes can introduce vulnerabilities, misconfigurations, or open attack vectors that go undetected and unmitigated.",
-              "tags": ["change-management", "risk"]
+              "id": "1.3-77b29ba8",
+              "question": "rollback, revert if it fails, undo plan",
+              "answer": "Backout plan"
+            },
+            {
+              "id": "1.3-3252559d",
+              "question": "off-hours, scheduled time with least business impact",
+              "answer": "Maintenance window"
+            },
+            {
+              "id": "1.3-386c1eb7",
+              "question": "documented routine steps everyone follows",
+              "answer": "Standard operating procedure (SOP)"
+            },
+            {
+              "id": "1.3-f2067e1a",
+              "question": "application/software needs updating on allowed or blocked lists",
+              "answer": "Allow lists/deny lists"
+            },
+            {
+              "id": "1.3-3be02c1e",
+              "question": "limit the scope, don't touch anything outside the approved change",
+              "answer": "Restricted activities"
+            },
+            {
+              "id": "1.3-d15f8cfe",
+              "question": "change requires taking the service down",
+              "answer": "Downtime / Service restart / Application restart"
+            },
+            {
+              "id": "1.3-85141a98",
+              "question": "old app nobody understands, fragile, undocumented",
+              "answer": "Legacy applications"
+            },
+            {
+              "id": "1.3-8cbe19a8",
+              "question": "changing one component requires changing others",
+              "answer": "Dependencies"
+            },
+            {
+              "id": "1.3-a1557b6e",
+              "question": "update network diagrams/policies after the change",
+              "answer": "Documentation"
+            },
+            {
+              "id": "1.3-39d6152c",
+              "question": "track revisions, revert to a previous config",
+              "answer": "Version control"
+            },
+            {
+              "id": "1.3-6381ff83",
+              "question": "business-side change steps (approval, owner, stakeholders, impact, tests, backout, window, SOP)",
+              "answer": "Business processes impacting security operation"
+            },
+            {
+              "id": "1.3-066355aa",
+              "question": "technical side effects (allow/deny lists, restarts, downtime, legacy, dependencies)",
+              "answer": "Technical implications"
+            },
+            {
+              "id": "1.3-2c9c3f8b",
+              "question": "redraw network diagrams after the change",
+              "answer": "Updating diagrams"
+            },
+            {
+              "id": "1.3-7b6dcb57",
+              "question": "rewrite policies/procedures to match the change",
+              "answer": "Updating policies/procedures"
             }
           ]
         },
@@ -160,58 +368,199 @@
           "title": "Explain the importance of using appropriate cryptographic solutions.",
           "cards": [
             {
-              "id": "1.4.001",
-              "question": "What is the difference between symmetric and asymmetric encryption?",
-              "answer": "Symmetric uses the same key for encryption and decryption (fast, e.g., AES). Asymmetric uses a public/private key pair (slower, e.g., RSA).",
-              "tags": ["cryptography", "symmetric", "asymmetric"]
+              "id": "1.4-24fb03e3",
+              "question": "third party holds a copy of the keys, recovery if key is lost",
+              "answer": "Key escrow"
             },
             {
-              "id": "1.4.002",
-              "question": "What is hashing, and how does it differ from encryption?",
-              "answer": "Hashing produces a fixed-length digest from data; it is one-way and cannot be reversed. Encryption is two-way — data can be decrypted with the correct key.",
-              "tags": ["cryptography", "hashing"]
+              "id": "1.4-7a8052c7",
+              "question": "chip on the motherboard, boot integrity, BitLocker keys, per-device",
+              "answer": "TPM"
             },
             {
-              "id": "1.4.003",
-              "question": "What is a digital signature used for?",
-              "answer": "To verify the integrity and authenticity of a message. The sender encrypts a hash with their private key; the recipient decrypts it with the sender's public key.",
-              "tags": ["cryptography", "digital-signature", "non-repudiation"]
+              "id": "1.4-401c26d8",
+              "question": "high-volume, enterprise, dedicated crypto hardware, stores many keys, clustered",
+              "answer": "HSM"
             },
             {
-              "id": "1.4.004",
-              "question": "What is a Public Key Infrastructure (PKI)?",
-              "answer": "A framework of policies, hardware, software, and procedures to create, manage, distribute, and revoke digital certificates that bind keys to identities.",
-              "tags": ["cryptography", "pki"]
+              "id": "1.4-85385d4e",
+              "question": "centralized management of keys across services/cloud",
+              "answer": "Key management system"
             },
             {
-              "id": "1.4.005",
-              "question": "What is the purpose of a Certificate Authority (CA)?",
-              "answer": "A trusted third party that issues and signs digital certificates, vouching for the binding of a public key to an entity's identity.",
-              "tags": ["cryptography", "pki", "ca"]
+              "id": "1.4-71d97eb9",
+              "question": "isolated processor area, protects data in use, Apple Secure Enclave",
+              "answer": "Secure enclave"
             },
             {
-              "id": "1.4.006",
-              "question": "What is perfect forward secrecy (PFS)?",
-              "answer": "A property ensuring that session keys are not compromised even if the server's private key is compromised later. Achieved with ephemeral key exchange (e.g., ECDHE).",
-              "tags": ["cryptography", "pfs", "tls"]
+              "id": "1.4-af099d19",
+              "question": "encrypt whole drive / one partition / one file / volume / database / single row",
+              "answer": "Full-disk / Partition / File / Volume / Database / Record encryption"
             },
             {
-              "id": "1.4.007",
-              "question": "What is salting in cryptography?",
-              "answer": "Adding a random value to a password before hashing to prevent rainbow table attacks and ensure identical passwords produce different hashes.",
-              "tags": ["cryptography", "hashing", "salting"]
+              "id": "1.4-1c193b29",
+              "question": "protect data moving across the network (TLS, VPN)",
+              "answer": "Transport/communication encryption"
             },
             {
-              "id": "1.4.008",
-              "question": "What is the difference between encryption at rest and encryption in transit?",
-              "answer": "Encryption at rest protects stored data (e.g., disk encryption). Encryption in transit protects data moving across a network (e.g., TLS/HTTPS).",
-              "tags": ["cryptography", "data-states"]
+              "id": "1.4-8d66a2be",
+              "question": "same key encrypts and decrypts, fast, bulk data",
+              "answer": "Symmetric"
+            },
+            {
+              "id": "1.4-f363e30d",
+              "question": "public/private key pair, slower, key exchange, signatures",
+              "answer": "Asymmetric"
+            },
+            {
+              "id": "1.4-41785c6b",
+              "question": "send to outside parties, only the recipient can read it, PGP/GPG/S/MIME email encryption",
+              "answer": "Asymmetric, encrypt with the recipient's public key"
+            },
+            {
+              "id": "1.4-0d999795",
+              "question": "prove who sent it, non-repudiation, not modified",
+              "answer": "Digital signature, sign with the sender's private key"
+            },
+            {
+              "id": "1.4-1564e22d",
+              "question": "encrypt once for many recipients: bulk data with a symmetric session key, session key wrapped with each recipient's public key",
+              "answer": "Hybrid encryption (how PGP/S/MIME work under the hood; the exam answer is still Asymmetric)"
+            },
+            {
+              "id": "1.4-32ea956f",
+              "question": "securely agree on a shared key over an untrusted network, Diffie-Hellman",
+              "answer": "Key exchange"
+            },
+            {
+              "id": "1.4-d615986f",
+              "question": "longer key = stronger, bits",
+              "answer": "Key length"
+            },
+            {
+              "id": "1.4-cb968318",
+              "question": "hide data inside an image/audio file",
+              "answer": "Steganography"
+            },
+            {
+              "id": "1.4-56fb5da1",
+              "question": "replace sensitive value with a token, credit card numbers, lookup/mapping",
+              "answer": "Tokenization"
+            },
+            {
+              "id": "1.4-64e80615",
+              "question": "show only part of the data, -1234",
+              "answer": "Data masking"
+            },
+            {
+              "id": "1.4-6adc7763",
+              "question": "one-way, fixed-length output, integrity check",
+              "answer": "Hashing"
+            },
+            {
+              "id": "1.4-a5ef886e",
+              "question": "random value added before hashing, defeats rainbow tables",
+              "answer": "Salting"
+            },
+            {
+              "id": "1.4-7a436ede",
+              "question": "hash signed with sender's private key, integrity + non-repudiation",
+              "answer": "Digital signatures"
+            },
+            {
+              "id": "1.4-a8b1bbac",
+              "question": "hash many times to make weak passwords harder to crack, PBKDF2, bcrypt",
+              "answer": "Key stretching"
+            },
+            {
+              "id": "1.4-05541a47",
+              "question": "distributed, tamper-evident chain of records",
+              "answer": "Blockchain / Open public ledger"
+            },
+            {
+              "id": "1.4-8cf55c60",
+              "question": "entity that issues and signs certificates",
+              "answer": "Certificate authority (CA)"
+            },
+            {
+              "id": "1.4-53e43ecc",
+              "question": "list of revoked certificates, downloaded periodically",
+              "answer": "CRL"
+            },
+            {
+              "id": "1.4-a700d82d",
+              "question": "real-time certificate status check (stapling = server attaches the response)",
+              "answer": "OCSP"
+            },
+            {
+              "id": "1.4-ed94f74d",
+              "question": "not signed by a trusted CA, internal use, browser warning",
+              "answer": "Self-signed"
+            },
+            {
+              "id": "1.4-3f4de20b",
+              "question": "signed by a public, trusted CA",
+              "answer": "Third-party certificate"
+            },
+            {
+              "id": "1.4-2c2bbe15",
+              "question": "inherently trusted starting point (root CA, TPM, HSM)",
+              "answer": "Root of trust"
+            },
+            {
+              "id": "1.4-993c1988",
+              "question": "send public key + identity info to a CA to request a cert",
+              "answer": "CSR generation"
+            },
+            {
+              "id": "1.4-1b9b2829",
+              "question": "*.example.com, covers all subdomains",
+              "answer": "Wildcard"
+            },
+            {
+              "id": "1.4-804b8956",
+              "question": "framework of CAs, certificates and key pairs that establishes trust",
+              "answer": "Public key infrastructure (PKI)"
+            },
+            {
+              "id": "1.4-6b9904a6",
+              "question": "shared openly; used to encrypt to someone or verify their signature",
+              "answer": "Public key"
+            },
+            {
+              "id": "1.4-acd7d506",
+              "question": "kept secret; used to decrypt or sign",
+              "answer": "Private key"
+            },
+            {
+              "id": "1.4-bfab2fd2",
+              "question": "AES, RSA, ECC, the specific cipher chosen",
+              "answer": "Algorithms"
+            },
+            {
+              "id": "1.4-73e9450c",
+              "question": "how much of the storage is encrypted (disk, partition, file...)",
+              "answer": "Level (encryption)"
+            },
+            {
+              "id": "1.4-d8c84542",
+              "question": "hardware/software that stores and protects keys (TPM, HSM, KMS, secure enclave)",
+              "answer": "Tools"
+            },
+            {
+              "id": "1.4-bab1467a",
+              "question": "digital document binding a public key to an identity",
+              "answer": "Certificates"
+            },
+            {
+              "id": "1.4-1cc3cd50",
+              "question": "hide the meaning of data (steganography, tokenization, masking)",
+              "answer": "Obfuscation"
             }
           ]
         }
       ]
-    }
-  ,
+    },
     {
       "id": "2.0",
       "name": "Threats, Vulnerabilities, and Mitigations",
@@ -222,46 +571,94 @@
           "title": "Compare and contrast common threat actors and motivations.",
           "cards": [
             {
-              "id": "2.1.001",
-              "question": "What is a nation-state threat actor?",
-              "answer": "A government-sponsored attacker with significant resources and advanced capabilities. Motivated by espionage, sabotage, or political objectives.",
-              "tags": ["threat-actors", "nation-state"]
+              "id": "2.1-6472ec82",
+              "question": "government-backed, APT, highest resources, espionage, war",
+              "answer": "Nation-state"
             },
             {
-              "id": "2.1.002",
-              "question": "What is a hacktivist?",
-              "answer": "An attacker motivated by ideology, politics, or social causes. Goals include disruption, embarrassment, or raising awareness (e.g., defacing websites).",
-              "tags": ["threat-actors", "hacktivist"]
+              "id": "2.1-2adbfe1a",
+              "question": "script kiddie, uses others' tools, low skill",
+              "answer": "Unskilled attacker"
             },
             {
-              "id": "2.1.003",
-              "question": "What distinguishes an insider threat from external threat actors?",
-              "answer": "Insider threats have authorized access to systems. They may be malicious (disgruntled employee) or unintentional (accidental data disclosure).",
-              "tags": ["threat-actors", "insider-threat"]
+              "id": "2.1-e4ac686d",
+              "question": "political/social cause, website defacement, making a statement",
+              "answer": "Hacktivist"
             },
             {
-              "id": "2.1.004",
-              "question": "What is a script kiddie?",
-              "answer": "An unskilled attacker who uses pre-made tools and exploits without deep technical knowledge. Motivated by curiosity or notoriety.",
-              "tags": ["threat-actors", "script-kiddie"]
+              "id": "2.1-9de192b7",
+              "question": "employee, contractor, already has access",
+              "answer": "Insider threat"
             },
             {
-              "id": "2.1.005",
-              "question": "What does 'threat actor sophistication' refer to?",
-              "answer": "The technical skill level and resources of an attacker — ranging from unskilled (script kiddies) to highly advanced (APT/nation-state groups).",
-              "tags": ["threat-actors", "sophistication", "apt"]
+              "id": "2.1-5338b301",
+              "question": "profit, ransomware gangs, well-funded criminal group",
+              "answer": "Organized crime"
             },
             {
-              "id": "2.1.006",
-              "question": "What is an Advanced Persistent Threat (APT)?",
-              "answer": "A prolonged, targeted attack in which an intruder gains access and remains undetected for an extended period to steal data or cause damage.",
-              "tags": ["threat-actors", "apt"]
+              "id": "2.1-63af9433",
+              "question": "employees using unapproved cloud apps/devices without IT's knowledge",
+              "answer": "Shadow IT"
             },
             {
-              "id": "2.1.007",
-              "question": "What motivates most financially-driven cybercriminals?",
-              "answer": "Profit — through ransomware, data theft, fraud, credential sale, or extortion.",
-              "tags": ["threat-actors", "motivation", "cybercriminal"]
+              "id": "2.1-5ab55026",
+              "question": "inside vs. outside the organization",
+              "answer": "Internal/external (attribute)"
+            },
+            {
+              "id": "2.1-0cfd69d2",
+              "question": "money, budget, backing",
+              "answer": "Resources/funding (attribute)"
+            },
+            {
+              "id": "2.1-de5d48f4",
+              "question": "skill level",
+              "answer": "Level of sophistication/capability (attribute)"
+            },
+            {
+              "id": "2.1-95d2a594",
+              "question": "steal data out of the org",
+              "answer": "Data exfiltration (motivation)"
+            },
+            {
+              "id": "2.1-529112e8",
+              "question": "spying, state or corporate secrets",
+              "answer": "Espionage"
+            },
+            {
+              "id": "2.1-fb51d7d5",
+              "question": "take systems offline",
+              "answer": "Service disruption / Disruption/chaos"
+            },
+            {
+              "id": "2.1-6e5255e0",
+              "question": "threatening to release info unless paid",
+              "answer": "Blackmail"
+            },
+            {
+              "id": "2.1-3c71e2f6",
+              "question": "disgruntled, fired employee",
+              "answer": "Revenge"
+            },
+            {
+              "id": "2.1-0d1c4e2a",
+              "question": "authorized, white-hat, improve security",
+              "answer": "Ethical"
+            },
+            {
+              "id": "2.1-31ff42e5",
+              "question": "money, profit",
+              "answer": "Financial gain"
+            },
+            {
+              "id": "2.1-e18d4413",
+              "question": "ideology, cause, political beliefs",
+              "answer": "Philosophical/political beliefs"
+            },
+            {
+              "id": "2.1-e3755cba",
+              "question": "cyberwarfare, attacks during military conflict",
+              "answer": "War"
             }
           ]
         },
@@ -270,52 +667,144 @@
           "title": "Explain common threat vectors and attack surfaces.",
           "cards": [
             {
-              "id": "2.2.001",
-              "question": "What is a threat vector?",
-              "answer": "The path or method an attacker uses to gain access to a target. Examples: phishing email, vulnerable software, removable media.",
-              "tags": ["threat-vectors", "attack-surface"]
+              "id": "2.2-7922ede9",
+              "question": "email / SMS / instant messaging as the delivery channel",
+              "answer": "Message-based"
             },
             {
-              "id": "2.2.002",
-              "question": "What is a supply chain attack?",
-              "answer": "An attack targeting a less-secure element in the supply chain (vendor, software update, hardware component) to compromise the ultimate target.",
-              "tags": ["threat-vectors", "supply-chain"]
+              "id": "2.2-55d63a9b",
+              "question": "malicious code hidden in an image (e.g., SVG)",
+              "answer": "Image-based"
             },
             {
-              "id": "2.2.003",
-              "question": "What is phishing, and how does spear phishing differ?",
-              "answer": "Phishing is a broad, untargeted email scam. Spear phishing is targeted at a specific individual or organization using personalized information.",
-              "tags": ["threat-vectors", "phishing", "social-engineering"]
+              "id": "2.2-e102002f",
+              "question": "malicious PDF, Office macro, attachment file",
+              "answer": "File-based"
             },
             {
-              "id": "2.2.004",
-              "question": "What is vishing?",
-              "answer": "Voice phishing — social engineering conducted over the phone to trick victims into revealing sensitive information or performing actions.",
-              "tags": ["threat-vectors", "vishing", "social-engineering"]
+              "id": "2.2-b07ccdcb",
+              "question": "phone call",
+              "answer": "Voice call (vishing)"
             },
             {
-              "id": "2.2.005",
-              "question": "What is smishing?",
-              "answer": "SMS phishing — social engineering via text messages containing malicious links or requests for sensitive information.",
-              "tags": ["threat-vectors", "smishing", "social-engineering"]
+              "id": "2.2-5febccf5",
+              "question": "USB drive left in the parking lot",
+              "answer": "Removable device"
             },
             {
-              "id": "2.2.006",
-              "question": "What is an unsecured network as a threat vector?",
-              "answer": "Open or poorly secured wireless networks allow attackers to intercept traffic (on-path attacks) or gain unauthorized network access.",
-              "tags": ["threat-vectors", "wireless", "network"]
+              "id": "2.2-0596188c",
+              "question": "software with flaws; client-based (installed agent) vs. agentless",
+              "answer": "Vulnerable software"
             },
             {
-              "id": "2.2.007",
-              "question": "What is a watering hole attack?",
-              "answer": "An attacker compromises a website frequently visited by the target group, then waits for victims to visit and get infected.",
-              "tags": ["threat-vectors", "watering-hole"]
+              "id": "2.2-b0db5ce6",
+              "question": "end-of-life, vendor no longer patches",
+              "answer": "Unsupported systems and applications"
             },
             {
-              "id": "2.2.008",
-              "question": "What is pretexting?",
-              "answer": "Creating a fabricated scenario (pretext) to manipulate a victim into disclosing information or performing an action. A form of social engineering.",
-              "tags": ["threat-vectors", "pretexting", "social-engineering"]
+              "id": "2.2-89f4afac",
+              "question": "open Wi-Fi, unprotected wired jack, Bluetooth",
+              "answer": "Unsecure networks"
+            },
+            {
+              "id": "2.2-1315a5b9",
+              "question": "unnecessary listening services",
+              "answer": "Open service ports"
+            },
+            {
+              "id": "2.2-62073509",
+              "question": "admin/admin, factory password never changed",
+              "answer": "Default credentials"
+            },
+            {
+              "id": "2.2-868ba640",
+              "question": "MSP, vendor, or supplier compromised to reach you",
+              "answer": "Supply chain"
+            },
+            {
+              "id": "2.2-f8759dbb",
+              "question": "deceptive email",
+              "answer": "Phishing"
+            },
+            {
+              "id": "2.2-580970c3",
+              "question": "deceptive voice call",
+              "answer": "Vishing"
+            },
+            {
+              "id": "2.2-cbe5a3eb",
+              "question": "deceptive text message",
+              "answer": "Smishing"
+            },
+            {
+              "id": "2.2-27c9d4c5",
+              "question": "false info spread on purpose (disinfo) or by mistake (misinfo)",
+              "answer": "Misinformation/disinformation"
+            },
+            {
+              "id": "2.2-6ac04145",
+              "question": "pretending to be someone else",
+              "answer": "Impersonation"
+            },
+            {
+              "id": "2.2-8a532715",
+              "question": "fake CEO/vendor email asking for wire transfer or invoice change",
+              "answer": "Business email compromise (BEC)"
+            },
+            {
+              "id": "2.2-be49518e",
+              "question": "made-up backstory to gain trust",
+              "answer": "Pretexting"
+            },
+            {
+              "id": "2.2-6dea773b",
+              "question": "infect a website the target group regularly visits",
+              "answer": "Watering hole"
+            },
+            {
+              "id": "2.2-b96f78bb",
+              "question": "fake site/email copying a company's branding",
+              "answer": "Brand impersonation"
+            },
+            {
+              "id": "2.2-1f067d8b",
+              "question": "misspelled domain (e.g., gooogle.com)",
+              "answer": "Typosquatting"
+            },
+            {
+              "id": "2.2-05e68b3b",
+              "question": "phishing link sent by email / text / chat app",
+              "answer": "Email / SMS / Instant messaging (IM)"
+            },
+            {
+              "id": "2.2-04e24f8b",
+              "question": "attacker gets in through your managed service provider's access",
+              "answer": "Managed service providers (MSPs)"
+            },
+            {
+              "id": "2.2-37895e74",
+              "question": "software/service vendor compromised",
+              "answer": "Vendors"
+            },
+            {
+              "id": "2.2-03b8bfe5",
+              "question": "hardware or parts supplier compromised, counterfeit/tampered hardware",
+              "answer": "Suppliers"
+            },
+            {
+              "id": "2.2-1af184c8",
+              "question": "vulnerability needs installed software on the client vs. none needed",
+              "answer": "Client-based vs. agentless"
+            },
+            {
+              "id": "2.2-aa72e299",
+              "question": "open Wi-Fi / unprotected network jack / Bluetooth pairing",
+              "answer": "Wireless / Wired / Bluetooth"
+            },
+            {
+              "id": "2.2-2c954a6f",
+              "question": "tricking people rather than technology",
+              "answer": "Human vectors/social engineering"
             }
           ]
         },
@@ -324,46 +813,124 @@
           "title": "Explain various types of vulnerabilities.",
           "cards": [
             {
-              "id": "2.3.001",
-              "question": "What is a zero-day vulnerability?",
-              "answer": "A vulnerability that is unknown to the vendor and has no available patch. It can be exploited before defenders are aware of it.",
-              "tags": ["vulnerabilities", "zero-day"]
+              "id": "2.3-c51cc9e1",
+              "question": "inject code into another process's memory",
+              "answer": "Memory injection"
             },
             {
-              "id": "2.3.002",
-              "question": "What is an SQL injection vulnerability?",
-              "answer": "A flaw where attacker-supplied input is interpreted as SQL commands, allowing unauthorized database access, data theft, or manipulation.",
-              "tags": ["vulnerabilities", "sqli", "application"]
+              "id": "2.3-d52a79a1",
+              "question": "more data than the buffer holds, overwrites memory",
+              "answer": "Buffer overflow"
             },
             {
-              "id": "2.3.003",
-              "question": "What is a buffer overflow vulnerability?",
-              "answer": "When a program writes more data to a buffer than it can hold, overwriting adjacent memory — potentially allowing arbitrary code execution.",
-              "tags": ["vulnerabilities", "buffer-overflow", "application"]
+              "id": "2.3-a697bf53",
+              "question": "timing gap between checking and using a resource (TOCTOU)",
+              "answer": "Race condition (TOC/TOU)"
             },
             {
-              "id": "2.3.004",
-              "question": "What is a race condition vulnerability?",
-              "answer": "A flaw where the outcome depends on the timing or sequence of events. Attackers exploit the window between a check and a use (TOCTOU).",
-              "tags": ["vulnerabilities", "race-condition"]
+              "id": "2.3-3f9776a5",
+              "question": "trusted vendor's update was compromised",
+              "answer": "Malicious update"
             },
             {
-              "id": "2.3.005",
-              "question": "What is a misconfiguration vulnerability?",
-              "answer": "Insecure default settings, open permissions, unnecessary services, or improper configurations that create exploitable weaknesses.",
-              "tags": ["vulnerabilities", "misconfiguration"]
+              "id": "2.3-ff773321",
+              "question": "' OR 1=1 --, database query manipulated",
+              "answer": "SQL injection (SQLi)"
             },
             {
-              "id": "2.3.006",
-              "question": "What is a weak or default credential vulnerability?",
-              "answer": "Using factory-default or easily guessable usernames/passwords on systems, which attackers can exploit to gain unauthorized access.",
-              "tags": ["vulnerabilities", "credentials"]
+              "id": "2.3-4500f4e7",
+              "question": "script runs in other users' browsers, malicious JavaScript",
+              "answer": "Cross-site scripting (XSS)"
             },
             {
-              "id": "2.3.007",
-              "question": "What is an insecure direct object reference (IDOR)?",
-              "answer": "A web vulnerability where an attacker manipulates a reference (e.g., URL parameter) to access objects they are not authorized to view.",
-              "tags": ["vulnerabilities", "idor", "application"]
+              "id": "2.3-fdd7e620",
+              "question": "flaw in device firmware",
+              "answer": "Firmware"
+            },
+            {
+              "id": "2.3-e0285575",
+              "question": "manufacturer no longer supports / no more updates",
+              "answer": "End-of-life"
+            },
+            {
+              "id": "2.3-00c46e5a",
+              "question": "old system still in use, outdated but may still run",
+              "answer": "Legacy"
+            },
+            {
+              "id": "2.3-0234bc5f",
+              "question": "break out of a VM to the host or other VMs",
+              "answer": "VM escape"
+            },
+            {
+              "id": "2.3-522e2fb1",
+              "question": "memory/storage not cleared between VMs",
+              "answer": "Resource reuse"
+            },
+            {
+              "id": "2.3-c8198a33",
+              "question": "weak algorithm, bad implementation, expired cert",
+              "answer": "Cryptographic"
+            },
+            {
+              "id": "2.3-e05a0d38",
+              "question": "default settings, open cloud storage bucket, wrong permissions",
+              "answer": "Misconfiguration"
+            },
+            {
+              "id": "2.3-535a8137",
+              "question": "install apps from outside the official app store",
+              "answer": "Side loading"
+            },
+            {
+              "id": "2.3-fc8065bf",
+              "question": "remove iOS restrictions (rooting = Android)",
+              "answer": "Jailbreaking"
+            },
+            {
+              "id": "2.3-fd4eb127",
+              "question": "unknown to vendor, no patch exists yet",
+              "answer": "Zero-day"
+            },
+            {
+              "id": "2.3-cd4adcd0",
+              "question": "bugs in a program's code",
+              "answer": "Application"
+            },
+            {
+              "id": "2.3-666fbf11",
+              "question": "flaw in Windows/Linux itself, OS patches",
+              "answer": "Operating system (OS)-based"
+            },
+            {
+              "id": "2.3-c3c804c2",
+              "question": "flaws in websites/web apps (SQLi, XSS)",
+              "answer": "Web-based"
+            },
+            {
+              "id": "2.3-6c5e6c63",
+              "question": "flaws in physical devices (firmware, EOL, legacy)",
+              "answer": "Hardware"
+            },
+            {
+              "id": "2.3-0816ba93",
+              "question": "flaws in hypervisors/VMs",
+              "answer": "Virtualization"
+            },
+            {
+              "id": "2.3-eed09fa0",
+              "question": "misconfigured cloud storage, insecure cloud APIs, cloud-only issues",
+              "answer": "Cloud-specific"
+            },
+            {
+              "id": "2.3-058a6bdb",
+              "question": "compromise through a service, hardware or software provider",
+              "answer": "Supply chain (Service / Hardware / Software provider)"
+            },
+            {
+              "id": "2.3-d50c40a0",
+              "question": "phone-specific weaknesses (side loading, jailbreaking)",
+              "answer": "Mobile device"
             }
           ]
         },
@@ -372,52 +939,199 @@
           "title": "Given a scenario, analyze indicators of malicious activity.",
           "cards": [
             {
-              "id": "2.4.001",
-              "question": "What is ransomware, and what is its primary indicator?",
-              "answer": "Malware that encrypts victim files and demands payment for the key. Primary indicators: files renamed with unknown extensions, ransom note files.",
-              "tags": ["malware", "ransomware", "indicators"]
+              "id": "2.4-98bf3bd8",
+              "question": "files encrypted, demand for payment",
+              "answer": "Ransomware"
             },
             {
-              "id": "2.4.002",
-              "question": "What is a trojan horse in malware terms?",
-              "answer": "Malware disguised as legitimate software. It appears useful but executes malicious code in the background when run.",
-              "tags": ["malware", "trojan"]
+              "id": "2.4-7dc78891",
+              "question": "disguised as legitimate software",
+              "answer": "Trojan"
             },
             {
-              "id": "2.4.003",
-              "question": "What is a rootkit?",
-              "answer": "Malware that hides its presence and other malicious activity by modifying the OS at a low level. Very difficult to detect and remove.",
-              "tags": ["malware", "rootkit"]
+              "id": "2.4-99771d11",
+              "question": "self-replicating, spreads across the network with no user action",
+              "answer": "Worm"
             },
             {
-              "id": "2.4.004",
-              "question": "What is a botnet?",
-              "answer": "A network of compromised machines (bots) controlled by an attacker (botmaster) via a command-and-control (C2) server, used for DDoS, spam, etc.",
-              "tags": ["malware", "botnet", "c2"]
+              "id": "2.4-1c076f96",
+              "question": "needs a user to run it, attaches to files",
+              "answer": "Virus"
             },
             {
-              "id": "2.4.005",
-              "question": "What indicators suggest a denial-of-service (DoS) attack?",
-              "answer": "Sudden spike in traffic, service unavailability, high CPU/memory on servers, network flooding from one or many sources (DDoS).",
-              "tags": ["dos", "ddos", "indicators"]
+              "id": "2.4-0fcd3629",
+              "question": "secretly monitors activity, collects info",
+              "answer": "Spyware"
             },
             {
-              "id": "2.4.006",
-              "question": "What is an on-path (man-in-the-middle) attack indicator?",
-              "answer": "Unexpected SSL certificate warnings, ARP cache poisoning, unusual latency, or traffic being routed through unexpected hosts.",
-              "tags": ["on-path", "mitm", "indicators"]
+              "id": "2.4-82823246",
+              "question": "unwanted preinstalled apps",
+              "answer": "Bloatware"
             },
             {
-              "id": "2.4.007",
-              "question": "What is a fileless malware attack?",
-              "answer": "Malware that runs entirely in memory without writing to disk, using legitimate tools (e.g., PowerShell) to evade traditional file-based detection.",
-              "tags": ["malware", "fileless"]
+              "id": "2.4-607fef42",
+              "question": "records keystrokes",
+              "answer": "Keylogger"
             },
             {
-              "id": "2.4.008",
-              "question": "What is a command-and-control (C2) callback indicator?",
-              "answer": "Unusual outbound connections to unknown IPs, beaconing at regular intervals, encrypted traffic to unexpected destinations.",
-              "tags": ["malware", "c2", "indicators"]
+              "id": "2.4-d80d47cf",
+              "question": "triggers on a date/event (e.g., when an employee is removed from payroll)",
+              "answer": "Logic bomb"
+            },
+            {
+              "id": "2.4-f3143b0e",
+              "question": "hides deep in the OS/kernel, hard to detect",
+              "answer": "Rootkit"
+            },
+            {
+              "id": "2.4-0e559091",
+              "question": "forcing a door/lock",
+              "answer": "Brute force (physical)"
+            },
+            {
+              "id": "2.4-9a23b8e9",
+              "question": "copying an access badge",
+              "answer": "RFID cloning"
+            },
+            {
+              "id": "2.4-eb7ab27c",
+              "question": "attacking HVAC, power, fire suppression",
+              "answer": "Environmental"
+            },
+            {
+              "id": "2.4-0cb694b4",
+              "question": "small request → huge response (DNS, NTP)",
+              "answer": "Amplified DDoS"
+            },
+            {
+              "id": "2.4-9b40df13",
+              "question": "spoofed source IP so responses hit the victim",
+              "answer": "Reflected DDoS"
+            },
+            {
+              "id": "2.4-51b5781a",
+              "question": "DNS poisoning, domain hijacking, redirected to wrong site",
+              "answer": "DNS attacks"
+            },
+            {
+              "id": "2.4-e657561e",
+              "question": "evil twin, rogue AP, deauthentication",
+              "answer": "Wireless attacks"
+            },
+            {
+              "id": "2.4-2e4d5b6c",
+              "question": "intercepts traffic between two parties",
+              "answer": "On-path"
+            },
+            {
+              "id": "2.4-f68a1c44",
+              "question": "captured credentials or hash reused to log in",
+              "answer": "Credential replay"
+            },
+            {
+              "id": "2.4-c8d912b1",
+              "question": "reuse a captured session/token",
+              "answer": "Replay"
+            },
+            {
+              "id": "2.4-a3952c58",
+              "question": "user gains admin rights",
+              "answer": "Privilege escalation"
+            },
+            {
+              "id": "2.4-1cef0053",
+              "question": "request made on behalf of a user/server (CSRF/SSRF)",
+              "answer": "Forgery"
+            },
+            {
+              "id": "2.4-9a7ffa8d",
+              "question": "../../etc/passwd",
+              "answer": "Directory traversal"
+            },
+            {
+              "id": "2.4-e76b1a48",
+              "question": "force a weaker protocol/cipher (SSL stripping)",
+              "answer": "Downgrade"
+            },
+            {
+              "id": "2.4-a7e4bde1",
+              "question": "two different inputs produce the same hash",
+              "answer": "Collision / Birthday"
+            },
+            {
+              "id": "2.4-577ce35f",
+              "question": "a few common passwords tried across many accounts (avoids lockout)",
+              "answer": "Spraying"
+            },
+            {
+              "id": "2.4-5a11730c",
+              "question": "many passwords tried against one account",
+              "answer": "Brute force (password)"
+            },
+            {
+              "id": "2.4-56abf620",
+              "question": "many failed logins, user can't log in",
+              "answer": "Account lockout"
+            },
+            {
+              "id": "2.4-89ea151b",
+              "question": "same account logged in from multiple places at once",
+              "answer": "Concurrent session usage"
+            },
+            {
+              "id": "2.4-9e2c810f",
+              "question": "user/system tried to reach something security blocked",
+              "answer": "Blocked content"
+            },
+            {
+              "id": "2.4-743114ac",
+              "question": "logins from two distant locations too close in time",
+              "answer": "Impossible travel"
+            },
+            {
+              "id": "2.4-a68d1363",
+              "question": "CPU/bandwidth/disk spike",
+              "answer": "Resource consumption"
+            },
+            {
+              "id": "2.4-d92ba276",
+              "question": "files or services suddenly unavailable",
+              "answer": "Resource inaccessibility"
+            },
+            {
+              "id": "2.4-d6217c29",
+              "question": "log entries at unusual times",
+              "answer": "Out-of-cycle logging"
+            },
+            {
+              "id": "2.4-0f371193",
+              "question": "attack details posted publicly",
+              "answer": "Published/documented"
+            },
+            {
+              "id": "2.4-5734565d",
+              "question": "gaps in logs, attacker covering tracks",
+              "answer": "Missing logs"
+            },
+            {
+              "id": "2.4-bf7ac68f",
+              "question": "SQL, LDAP, command or script added to input",
+              "answer": "Injection (application attack)"
+            },
+            {
+              "id": "2.4-7419429c",
+              "question": "oversized input crashes the app or runs attacker code",
+              "answer": "Buffer overflow (application attack)"
+            },
+            {
+              "id": "2.4-69312db9",
+              "question": "malicious scripts delivered over the network (PowerShell, JavaScript, macros)",
+              "answer": "Malicious code"
+            },
+            {
+              "id": "2.4-c40d242d",
+              "question": "many systems flood one target",
+              "answer": "DDoS"
             }
           ]
         },
@@ -426,46 +1140,89 @@
           "title": "Explain the purpose of mitigation techniques used to secure the enterprise.",
           "cards": [
             {
-              "id": "2.5.001",
-              "question": "What is network segmentation and why is it used?",
-              "answer": "Dividing a network into isolated zones to contain breaches, limit lateral movement, and reduce the blast radius of an attack.",
-              "tags": ["mitigation", "segmentation"]
+              "id": "2.5-d2a89762",
+              "question": "separate networks to limit spread, VLANs",
+              "answer": "Segmentation"
             },
             {
-              "id": "2.5.002",
-              "question": "What is endpoint detection and response (EDR)?",
-              "answer": "Security software on endpoints that continuously monitors, records activity, detects threats, and enables rapid response and investigation.",
-              "tags": ["mitigation", "edr", "endpoint"]
+              "id": "2.5-9bd3bada",
+              "question": "rules listing who can access what",
+              "answer": "Access control list (ACL) / Permissions"
             },
             {
-              "id": "2.5.003",
-              "question": "What is patch management and why is it a key mitigation?",
-              "answer": "The process of regularly applying updates to fix known vulnerabilities. Unpatched systems are one of the most common attack vectors.",
-              "tags": ["mitigation", "patching"]
+              "id": "2.5-6b4f426f",
+              "question": "only approved applications can run",
+              "answer": "Application allow list"
             },
             {
-              "id": "2.5.004",
-              "question": "What is the purpose of an intrusion prevention system (IPS)?",
-              "answer": "An IPS monitors network traffic and actively blocks detected threats in real time (unlike an IDS, which only detects and alerts).",
-              "tags": ["mitigation", "ips", "ids"]
+              "id": "2.5-29a37179",
+              "question": "move an infected device to its own network, quarantine",
+              "answer": "Isolation"
             },
             {
-              "id": "2.5.005",
-              "question": "What is the principle of network access control (NAC)?",
-              "answer": "Enforcing security policy on devices before allowing network access — checking for patches, AV, and compliance before granting entry.",
-              "tags": ["mitigation", "nac"]
+              "id": "2.5-2d949a40",
+              "question": "apply vendor updates",
+              "answer": "Patching"
             },
             {
-              "id": "2.5.006",
-              "question": "What is application allow-listing as a mitigation?",
-              "answer": "Only permitting explicitly approved applications to run on a system, preventing unauthorized or malicious executables from executing.",
-              "tags": ["mitigation", "allow-listing"]
+              "id": "2.5-53956b9d",
+              "question": "watch for suspicious activity",
+              "answer": "Monitoring"
             },
             {
-              "id": "2.5.007",
-              "question": "What is the purpose of user and entity behavior analytics (UEBA)?",
-              "answer": "Uses machine learning to establish behavioral baselines and detect anomalies that may indicate insider threats or compromised accounts.",
-              "tags": ["mitigation", "ueba"]
+              "id": "2.5-bce780e8",
+              "question": "only the minimum access needed for the job",
+              "answer": "Least privilege"
+            },
+            {
+              "id": "2.5-755839db",
+              "question": "check/force devices to match the required configuration",
+              "answer": "Configuration enforcement"
+            },
+            {
+              "id": "2.5-91f57679",
+              "question": "retire, remove from service",
+              "answer": "Decommissioning"
+            },
+            {
+              "id": "2.5-e580c5e6",
+              "question": "disable unused ports, change default passwords, remove unneeded software, host firewall, HIPS",
+              "answer": "Hardening techniques"
+            },
+            {
+              "id": "2.5-633992bf",
+              "question": "encrypt data/devices",
+              "answer": "Encryption"
+            },
+            {
+              "id": "2.5-6848b641",
+              "question": "install antivirus/EDR on hosts",
+              "answer": "Installation of endpoint protection"
+            },
+            {
+              "id": "2.5-8601b344",
+              "question": "firewall running on the host itself",
+              "answer": "Host-based firewall"
+            },
+            {
+              "id": "2.5-d8312329",
+              "question": "intrusion prevention on the host",
+              "answer": "Host-based intrusion prevention system (HIPS)"
+            },
+            {
+              "id": "2.5-1a1f8d70",
+              "question": "turn off unused ports/services (e.g., Telnet)",
+              "answer": "Disabling ports/protocols"
+            },
+            {
+              "id": "2.5-0201d176",
+              "question": "change admin/admin",
+              "answer": "Default password changes"
+            },
+            {
+              "id": "2.5-09c63997",
+              "question": "uninstall unused apps",
+              "answer": "Removal of unnecessary software"
             }
           ]
         }
@@ -481,46 +1238,164 @@
           "title": "Compare and contrast security implications of different architecture models.",
           "cards": [
             {
-              "id": "3.1.001",
-              "question": "What are the security implications of a cloud-shared responsibility model?",
-              "answer": "The cloud provider secures the underlying infrastructure; the customer is responsible for securing data, identities, and configurations within the cloud.",
-              "tags": ["architecture", "cloud", "shared-responsibility"]
+              "id": "3.1-07ccd12b",
+              "question": "who secures what (provider vs. customer)",
+              "answer": "Responsibility matrix (shared responsibility)"
             },
             {
-              "id": "3.1.002",
-              "question": "What is infrastructure as code (IaC) and its security risk?",
-              "answer": "IaC provisions infrastructure via code/scripts. Security risk: misconfigurations in templates can be deployed at scale instantly.",
-              "tags": ["architecture", "iac", "cloud"]
+              "id": "3.1-e8bb077c",
+              "question": "mixing private and public cloud, inconsistent security across both",
+              "answer": "Hybrid considerations"
             },
             {
-              "id": "3.1.003",
-              "question": "What is a microservices architecture and its primary security challenge?",
-              "answer": "An application built as many small, independent services. Challenge: large attack surface — each service-to-service communication must be secured.",
-              "tags": ["architecture", "microservices"]
+              "id": "3.1-4b552973",
+              "question": "deploy infrastructure from templates/code, consistent and repeatable",
+              "answer": "Infrastructure as code (IaC)"
             },
             {
-              "id": "3.1.004",
-              "question": "What is a serverless architecture?",
-              "answer": "Code runs in ephemeral, provider-managed containers (e.g., AWS Lambda). The provider manages OS/runtime; the developer only secures the function code and permissions.",
-              "tags": ["architecture", "serverless", "cloud"]
+              "id": "3.1-8ba13fc0",
+              "question": "no servers to manage, functions run on demand (FaaS)",
+              "answer": "Serverless"
             },
             {
-              "id": "3.1.005",
-              "question": "What is an edge computing architecture and its security concern?",
-              "answer": "Processing data close to the source rather than a central data center. Security concern: distributed nodes are harder to manage and physically secure.",
-              "tags": ["architecture", "edge-computing"]
+              "id": "3.1-8bd72500",
+              "question": "app broken into small independent services, API gateway",
+              "answer": "Microservices"
             },
             {
-              "id": "3.1.006",
-              "question": "What is a software-defined network (SDN)?",
-              "answer": "A network architecture where the control plane is separated from the data plane, managed via software. Enables dynamic policy enforcement but centralizes a critical attack target.",
-              "tags": ["architecture", "sdn", "network"]
+              "id": "3.1-35a15d2c",
+              "question": "physically disconnected network",
+              "answer": "Air-gapped (Physical isolation)"
             },
             {
-              "id": "3.1.007",
-              "question": "What is a Zero Trust architecture?",
-              "answer": "A model where no implicit trust is granted based on network location. Every access request is authenticated, authorized, and continuously validated.",
-              "tags": ["architecture", "zero-trust"]
+              "id": "3.1-1526a532",
+              "question": "VLANs, separate networks over shared hardware",
+              "answer": "Logical segmentation"
+            },
+            {
+              "id": "3.1-1139d2a5",
+              "question": "control plane separated from data plane, programmable network",
+              "answer": "Software-defined networking (SDN)"
+            },
+            {
+              "id": "3.1-f8b715d0",
+              "question": "one central point of control vs. spread across locations",
+              "answer": "Centralized vs. decentralized"
+            },
+            {
+              "id": "3.1-d77837fc",
+              "question": "shares host OS kernel, lightweight, Docker",
+              "answer": "Containerization"
+            },
+            {
+              "id": "3.1-b6bd4bf8",
+              "question": "hypervisor, each guest has its own OS",
+              "answer": "Virtualization"
+            },
+            {
+              "id": "3.1-9c9e2e62",
+              "question": "smart devices, sensors, weak default security",
+              "answer": "IoT"
+            },
+            {
+              "id": "3.1-17a12cb2",
+              "question": "industrial plant, utilities, PLCs",
+              "answer": "ICS/SCADA"
+            },
+            {
+              "id": "3.1-1eb7fd41",
+              "question": "must respond within guaranteed time, deterministic",
+              "answer": "RTOS"
+            },
+            {
+              "id": "3.1-5a65ad3e",
+              "question": "purpose-built device, limited updates",
+              "answer": "Embedded systems"
+            },
+            {
+              "id": "3.1-a6719326",
+              "question": "always up, redundant",
+              "answer": "High availability"
+            },
+            {
+              "id": "3.1-4c4209a8",
+              "question": "moving risk to the cloud provider",
+              "answer": "Risk transference (consideration)"
+            },
+            {
+              "id": "3.1-d5296cb9",
+              "question": "device can't be patched (embedded/ICS)",
+              "answer": "Inability to patch (consideration)"
+            },
+            {
+              "id": "3.1-3c34a67d",
+              "question": "provider hosts the infrastructure (public/private/hybrid)",
+              "answer": "Cloud"
+            },
+            {
+              "id": "3.1-191f3fd6",
+              "question": "outside providers you depend on",
+              "answer": "Third-party vendors"
+            },
+            {
+              "id": "3.1-04cc1b1d",
+              "question": "routers, switches, physical network design",
+              "answer": "Network infrastructure"
+            },
+            {
+              "id": "3.1-502d031e",
+              "question": "org owns and runs its own data center",
+              "answer": "On-premises"
+            },
+            {
+              "id": "3.1-84c28e17",
+              "question": "uptime",
+              "answer": "Availability (consideration)"
+            },
+            {
+              "id": "3.1-0e7e5d33",
+              "question": "withstand and bounce back from disruption",
+              "answer": "Resilience"
+            },
+            {
+              "id": "3.1-96d69a0f",
+              "question": "price",
+              "answer": "Cost"
+            },
+            {
+              "id": "3.1-2350b0ec",
+              "question": "how quickly the system reacts",
+              "answer": "Responsiveness"
+            },
+            {
+              "id": "3.1-b077796d",
+              "question": "grow/shrink with demand",
+              "answer": "Scalability"
+            },
+            {
+              "id": "3.1-d7e78b52",
+              "question": "how quickly it can be rolled out",
+              "answer": "Ease of deployment"
+            },
+            {
+              "id": "3.1-2cbc7dd3",
+              "question": "how quickly it can be restored",
+              "answer": "Ease of recovery"
+            },
+            {
+              "id": "3.1-c15b2f9a",
+              "question": "are patches available and how fast",
+              "answer": "Patch availability"
+            },
+            {
+              "id": "3.1-b9396d4c",
+              "question": "electricity requirements",
+              "answer": "Power"
+            },
+            {
+              "id": "3.1-79579aae",
+              "question": "processing capacity",
+              "answer": "Compute"
             }
           ]
         },
@@ -529,46 +1404,159 @@
           "title": "Given a scenario, apply security principles to secure enterprise infrastructure.",
           "cards": [
             {
-              "id": "3.2.001",
-              "question": "What is defense in depth?",
-              "answer": "A layered security strategy using multiple, overlapping controls so that if one layer fails, others still provide protection.",
-              "tags": ["architecture", "defense-in-depth"]
+              "id": "3.2-5d71deba",
+              "question": "where to put a device on the network",
+              "answer": "Device placement"
             },
             {
-              "id": "3.2.002",
-              "question": "What is a screened subnet (DMZ)?",
-              "answer": "A network zone between the internet and the internal network that hosts public-facing services (web servers), isolating them from internal systems.",
-              "tags": ["architecture", "dmz", "network"]
+              "id": "3.2-6dc45e31",
+              "question": "trusted/untrusted/screened areas",
+              "answer": "Security zones"
             },
             {
-              "id": "3.2.003",
-              "question": "What is the purpose of a jump server (bastion host)?",
-              "answer": "A hardened, monitored server used as a secure gateway for administrators to access systems in a protected network zone.",
-              "tags": ["architecture", "jump-server", "bastion"]
+              "id": "3.2-f3e33665",
+              "question": "all the points an attacker could target",
+              "answer": "Attack surface"
             },
             {
-              "id": "3.2.004",
-              "question": "What is network address translation (NAT) and its security benefit?",
-              "answer": "NAT maps private internal IPs to a public IP. Security benefit: internal IP addresses are hidden from the internet, reducing direct exposure.",
-              "tags": ["architecture", "nat", "network"]
+              "id": "3.2-067ad033",
+              "question": "device fails → traffic keeps flowing (availability wins)",
+              "answer": "Fail-open"
             },
             {
-              "id": "3.2.005",
-              "question": "What is port security on a managed switch?",
-              "answer": "Restricting which MAC addresses can connect to a switch port, preventing unauthorized devices from connecting to the network.",
-              "tags": ["architecture", "port-security", "network"]
+              "id": "3.2-f6eb6427",
+              "question": "device fails → traffic stops (security wins)",
+              "answer": "Fail-closed"
             },
             {
-              "id": "3.2.006",
-              "question": "What is the difference between an IDS and an IPS?",
-              "answer": "IDS (Intrusion Detection System) detects and alerts on threats passively. IPS (Intrusion Prevention System) actively blocks threats inline.",
-              "tags": ["architecture", "ids", "ips"]
+              "id": "3.2-f06ac21a",
+              "question": "can block traffic vs. only observe",
+              "answer": "Active vs. passive"
             },
             {
-              "id": "3.2.007",
-              "question": "What is a next-generation firewall (NGFW)?",
-              "answer": "A firewall with deep packet inspection, application awareness, user identity tracking, and integrated IPS capabilities beyond traditional port/protocol filtering.",
-              "tags": ["architecture", "ngfw", "firewall"]
+              "id": "3.2-58aa584e",
+              "question": "in the traffic path vs. receives a copy",
+              "answer": "Inline vs. tap/monitor"
+            },
+            {
+              "id": "3.2-3951e3c8",
+              "question": "hardened host used to administer devices in a secure zone",
+              "answer": "Jump server"
+            },
+            {
+              "id": "3.2-4f88129f",
+              "question": "intermediary between users and internet, caching, URL filtering",
+              "answer": "Proxy server"
+            },
+            {
+              "id": "3.2-940e69db",
+              "question": "detects and alerts only",
+              "answer": "IDS"
+            },
+            {
+              "id": "3.2-abf1f0e4",
+              "question": "detects and blocks inline",
+              "answer": "IPS"
+            },
+            {
+              "id": "3.2-167987b8",
+              "question": "spread traffic across servers",
+              "answer": "Load balancer"
+            },
+            {
+              "id": "3.2-f14d3317",
+              "question": "authenticate before a switch port allows traffic",
+              "answer": "802.1X (port security) + EAP"
+            },
+            {
+              "id": "3.2-c1b73a6b",
+              "question": "protects web apps from SQLi/XSS, HTTP traffic",
+              "answer": "WAF"
+            },
+            {
+              "id": "3.2-99c418c0",
+              "question": "all-in-one appliance, small business",
+              "answer": "UTM"
+            },
+            {
+              "id": "3.2-1d86271e",
+              "question": "application-aware firewall",
+              "answer": "NGFW / Layer 7"
+            },
+            {
+              "id": "3.2-04ace97e",
+              "question": "filters by IP and port only",
+              "answer": "Layer 4"
+            },
+            {
+              "id": "3.2-28bb5e50",
+              "question": "SSL VPN, browser-based, port 443",
+              "answer": "TLS tunneling"
+            },
+            {
+              "id": "3.2-dc51be01",
+              "question": "site-to-site VPN, AH/ESP, tunnel vs. transport mode",
+              "answer": "IPSec"
+            },
+            {
+              "id": "3.2-5a042b44",
+              "question": "manage multiple WAN links to cloud apps efficiently",
+              "answer": "SD-WAN"
+            },
+            {
+              "id": "3.2-ae5c52d6",
+              "question": "cloud-delivered networking + security for remote users",
+              "answer": "SASE"
+            },
+            {
+              "id": "3.2-d26dbc07",
+              "question": "how sites/devices connect (links, WAN, internet)",
+              "answer": "Connectivity"
+            },
+            {
+              "id": "3.2-6165a938",
+              "question": "characteristics of a device: active/passive, inline/tap",
+              "answer": "Device attribute"
+            },
+            {
+              "id": "3.2-a5297222",
+              "question": "jump server, proxy, IDS/IPS, load balancer, sensors",
+              "answer": "Network appliances"
+            },
+            {
+              "id": "3.2-f5111864",
+              "question": "collect data for monitoring, feed the SIEM",
+              "answer": "Sensors"
+            },
+            {
+              "id": "3.2-cb4ee95c",
+              "question": "control what can connect to a switch port",
+              "answer": "Port security"
+            },
+            {
+              "id": "3.2-dd76616d",
+              "question": "authentication framework used with 802.1X",
+              "answer": "Extensible Authentication Protocol (EAP)"
+            },
+            {
+              "id": "3.2-08f1a99f",
+              "question": "encrypted tunnel over a public network",
+              "answer": "Virtual private network (VPN)"
+            },
+            {
+              "id": "3.2-6bf530d1",
+              "question": "users connecting into the network from outside",
+              "answer": "Remote access"
+            },
+            {
+              "id": "3.2-9f7851b1",
+              "question": "wrap one protocol inside another",
+              "answer": "Tunneling"
+            },
+            {
+              "id": "3.2-06912ea1",
+              "question": "pick controls that fit the scenario's risk and needs",
+              "answer": "Selection of effective controls"
             }
           ]
         },
@@ -577,46 +1565,129 @@
           "title": "Compare and contrast concepts and strategies to protect data.",
           "cards": [
             {
-              "id": "3.3.001",
-              "question": "What are the three states of data and how is each protected?",
-              "answer": "Data at rest (stored) — encryption. Data in transit (moving) — TLS/VPN. Data in use (processing) — access controls, trusted execution environments.",
-              "tags": ["data-protection", "data-states"]
+              "id": "3.3-7ad7c92b",
+              "question": "governed by law/regulation (HIPAA, PCI DSS, GDPR)",
+              "answer": "Regulated (data type)"
             },
             {
-              "id": "3.3.002",
-              "question": "What is data loss prevention (DLP)?",
-              "answer": "Technology that monitors and controls data transfers to prevent unauthorized disclosure of sensitive information (e.g., blocking SSNs in emails).",
-              "tags": ["data-protection", "dlp"]
+              "id": "3.3-fd416452",
+              "question": "secret formula/process giving competitive advantage",
+              "answer": "Trade secret"
             },
             {
-              "id": "3.3.003",
-              "question": "What is data classification?",
-              "answer": "Categorizing data by sensitivity (e.g., public, internal, confidential, top secret) to apply appropriate handling and protection controls.",
-              "tags": ["data-protection", "classification"]
+              "id": "3.3-6c0223a4",
+              "question": "patents, copyrights, designs",
+              "answer": "Intellectual property"
             },
             {
-              "id": "3.3.004",
-              "question": "What is tokenization?",
-              "answer": "Replacing sensitive data (e.g., credit card numbers) with a non-sensitive placeholder (token). The original data is stored securely elsewhere.",
-              "tags": ["data-protection", "tokenization"]
+              "id": "3.3-b9aaa7d5",
+              "question": "contracts, court records",
+              "answer": "Legal information"
             },
             {
-              "id": "3.3.005",
-              "question": "What is data masking?",
-              "answer": "Replacing sensitive data with realistic but fictitious data (e.g., for testing environments) so the original values are not exposed.",
-              "tags": ["data-protection", "masking"]
+              "id": "3.3-3575ac0f",
+              "question": "bank/payment/account records",
+              "answer": "Financial information"
             },
             {
-              "id": "3.3.006",
-              "question": "What is a data retention policy?",
-              "answer": "Defines how long data must be kept and when it must be securely destroyed, balancing legal/compliance requirements against storage risk.",
-              "tags": ["data-protection", "retention"]
+              "id": "3.3-3915fb2b",
+              "question": "readable by people vs. only by machines (barcode, encoded)",
+              "answer": "Human- and non-human-readable"
             },
             {
-              "id": "3.3.007",
-              "question": "What is the purpose of rights management (IRM/DRM)?",
-              "answer": "Controls how digital content can be used — restricting copying, printing, forwarding, or access based on user identity or expiration dates.",
-              "tags": ["data-protection", "irm", "drm"]
+              "id": "3.3-70bb7c29",
+              "question": "stored on disk",
+              "answer": "Data at rest"
+            },
+            {
+              "id": "3.3-54ddfc93",
+              "question": "moving across a network",
+              "answer": "Data in transit"
+            },
+            {
+              "id": "3.3-b3145fc8",
+              "question": "in memory/CPU, being processed",
+              "answer": "Data in use"
+            },
+            {
+              "id": "3.3-970e8864",
+              "question": "data subject to the laws of the country where it's stored",
+              "answer": "Data sovereignty"
+            },
+            {
+              "id": "3.3-d9a79e34",
+              "question": "physical location of data or user",
+              "answer": "Geolocation"
+            },
+            {
+              "id": "3.3-c07717cc",
+              "question": "block access from certain countries/regions",
+              "answer": "Geographic restrictions"
+            },
+            {
+              "id": "3.3-34e9b265",
+              "question": "limit who can access (rather than transforming the data)",
+              "answer": "Permission restrictions"
+            },
+            {
+              "id": "3.3-94541b13",
+              "question": "anyone may see it",
+              "answer": "Public (classification)"
+            },
+            {
+              "id": "3.3-af868014",
+              "question": "limited distribution, moderate harm if disclosed",
+              "answer": "Sensitive"
+            },
+            {
+              "id": "3.3-95a09476",
+              "question": "serious harm if disclosed, need authorization",
+              "answer": "Confidential"
+            },
+            {
+              "id": "3.3-1bbe1449",
+              "question": "highest sensitivity, strictest access",
+              "answer": "Restricted"
+            },
+            {
+              "id": "3.3-eb1b5f63",
+              "question": "personal information about individuals",
+              "answer": "Private"
+            },
+            {
+              "id": "3.3-d691724b",
+              "question": "essential to operations, must stay available",
+              "answer": "Critical"
+            },
+            {
+              "id": "3.3-dfee99cc",
+              "question": "make data unreadable without a key",
+              "answer": "Encryption (method)"
+            },
+            {
+              "id": "3.3-b05bfe2f",
+              "question": "one-way digest, e.g., stored passwords",
+              "answer": "Hashing"
+            },
+            {
+              "id": "3.3-663dd5d9",
+              "question": "show only part of the value (1234)",
+              "answer": "Masking"
+            },
+            {
+              "id": "3.3-fe5c6614",
+              "question": "replace the value with a token",
+              "answer": "Tokenization"
+            },
+            {
+              "id": "3.3-1ae45494",
+              "question": "umbrella term for hiding/making data unclear",
+              "answer": "Obfuscation"
+            },
+            {
+              "id": "3.3-e3b5e164",
+              "question": "put sensitive data on its own network/system",
+              "answer": "Segmentation"
             }
           ]
         },
@@ -625,46 +1696,119 @@
           "title": "Explain the importance of resilience and recovery in security architecture.",
           "cards": [
             {
-              "id": "3.4.001",
-              "question": "What is the difference between RTO and RPO?",
-              "answer": "RTO (Recovery Time Objective): maximum acceptable downtime. RPO (Recovery Point Objective): maximum acceptable data loss measured in time.",
-              "tags": ["resilience", "rto", "rpo", "bcdr"]
+              "id": "3.4-b02a4489",
+              "question": "distribute load across active servers",
+              "answer": "Load balancing"
             },
             {
-              "id": "3.4.002",
-              "question": "What is a hot site, warm site, and cold site?",
-              "answer": "Hot: fully operational backup site (immediate failover). Warm: partially configured (hours to activate). Cold: empty facility (days to weeks to activate).",
-              "tags": ["resilience", "recovery-sites", "bcdr"]
+              "id": "3.4-90f8c3ea",
+              "question": "servers share storage, one takes over if another fails",
+              "answer": "Clustering"
             },
             {
-              "id": "3.4.003",
-              "question": "What is the 3-2-1 backup rule?",
-              "answer": "Keep 3 copies of data, on 2 different media types, with 1 copy stored offsite.",
-              "tags": ["resilience", "backup", "321-rule"]
+              "id": "3.4-48a857d8",
+              "question": "fully equipped, ready immediately, most expensive",
+              "answer": "Hot site"
             },
             {
-              "id": "3.4.004",
-              "question": "What is high availability (HA)?",
-              "answer": "System design ensuring continuous operation with minimal downtime, typically using redundancy, failover clustering, and load balancing.",
-              "tags": ["resilience", "high-availability"]
+              "id": "3.4-6f4b834d",
+              "question": "some equipment, needs setup time",
+              "answer": "Warm site"
             },
             {
-              "id": "3.4.005",
-              "question": "What is the difference between full, incremental, and differential backups?",
-              "answer": "Full: all data. Incremental: only changes since last backup (any type). Differential: all changes since last full backup. Incremental is fastest to back up; differential is faster to restore.",
-              "tags": ["resilience", "backup"]
+              "id": "3.4-28e9d71b",
+              "question": "empty space, cheapest, longest recovery",
+              "answer": "Cold site"
             },
             {
-              "id": "3.4.006",
-              "question": "What is geographic dispersion in resilience planning?",
-              "answer": "Distributing systems, data centers, or backups across different physical locations to survive regional disasters or outages.",
-              "tags": ["resilience", "geographic-dispersion"]
+              "id": "3.4-873720a9",
+              "question": "sites spread far apart (avoid a single disaster)",
+              "answer": "Geographic dispersion"
             },
             {
-              "id": "3.4.007",
-              "question": "What is a tabletop exercise?",
-              "answer": "A discussion-based simulation where stakeholders walk through a disaster or incident scenario to evaluate response plans without deploying actual resources.",
-              "tags": ["resilience", "tabletop", "bcdr"]
+              "id": "3.4-f3ebaa7d",
+              "question": "different OSes/vendors so one flaw doesn't hit everything",
+              "answer": "Platform diversity"
+            },
+            {
+              "id": "3.4-8af9635f",
+              "question": "multiple cloud providers",
+              "answer": "Multi-cloud systems"
+            },
+            {
+              "id": "3.4-2899d8f2",
+              "question": "keep essential functions running during a disruption",
+              "answer": "Continuity of operations (COOP)"
+            },
+            {
+              "id": "3.4-8b8c8415",
+              "question": "plan staff, technology, infrastructure for future demand",
+              "answer": "Capacity planning"
+            },
+            {
+              "id": "3.4-32dd7a4c",
+              "question": "discussion-based walkthrough around a table",
+              "answer": "Tabletop exercise"
+            },
+            {
+              "id": "3.4-3f3daab4",
+              "question": "actually switch to backup systems",
+              "answer": "Fail over (testing)"
+            },
+            {
+              "id": "3.4-3f54f806",
+              "question": "drill, practice scenario (e.g., simulated phishing)",
+              "answer": "Simulation"
+            },
+            {
+              "id": "3.4-52ee4892",
+              "question": "run old and new systems at the same time",
+              "answer": "Parallel processing"
+            },
+            {
+              "id": "3.4-08f197cb",
+              "question": "point-in-time copy (often of a VM)",
+              "answer": "Snapshot"
+            },
+            {
+              "id": "3.4-c2e600fe",
+              "question": "near-real-time copy to another location",
+              "answer": "Replication"
+            },
+            {
+              "id": "3.4-4814a46d",
+              "question": "log of changes used to recover",
+              "answer": "Journaling"
+            },
+            {
+              "id": "3.4-741dfd6a",
+              "question": "short-term battery power, bridge to generator, clean shutdown",
+              "answer": "UPS"
+            },
+            {
+              "id": "3.4-f9f69e4d",
+              "question": "long-term power during an outage",
+              "answer": "Generators"
+            },
+            {
+              "id": "3.4-c6bfe7ff",
+              "question": "backups at the same site vs. another location",
+              "answer": "Onsite/offsite"
+            },
+            {
+              "id": "3.4-926c250c",
+              "question": "how often backups run",
+              "answer": "Frequency"
+            },
+            {
+              "id": "3.4-32382df1",
+              "question": "protect the backup data itself",
+              "answer": "Encryption (backups)"
+            },
+            {
+              "id": "3.4-21a2ab0b",
+              "question": "restore from backup, test that restores work",
+              "answer": "Recovery"
             }
           ]
         }
@@ -680,40 +1824,124 @@
           "title": "Given a scenario, apply common security techniques to computing resources.",
           "cards": [
             {
-              "id": "4.1.001",
-              "question": "What is hardening a system?",
-              "answer": "Reducing the attack surface by disabling unnecessary services, closing unused ports, removing default accounts, and applying the principle of least privilege.",
-              "tags": ["hardening", "operations"]
+              "id": "4.1-c6317e93",
+              "question": "approved standard config: define it → roll it out → keep it current",
+              "answer": "Secure baselines (Establish / Deploy / Maintain)"
             },
             {
-              "id": "4.1.002",
-              "question": "What is a secure baseline configuration?",
-              "answer": "A documented, approved set of security settings for a system type (e.g., CIS Benchmarks) used to ensure consistent hardening across deployments.",
-              "tags": ["hardening", "baseline", "operations"]
+              "id": "4.1-05e270a2",
+              "question": "plan AP placement before installing",
+              "answer": "Site survey"
             },
             {
-              "id": "4.1.003",
-              "question": "What is sandboxing?",
-              "answer": "Isolating an application or process in a restricted environment so it cannot affect the host system — used for testing suspicious code or untrusted applications.",
-              "tags": ["operations", "sandboxing"]
+              "id": "4.1-50c6e6ce",
+              "question": "visual map of Wi-Fi signal strength",
+              "answer": "Heat map"
             },
             {
-              "id": "4.1.004",
-              "question": "What is the purpose of group policy in a Windows environment?",
-              "answer": "Centrally enforces security settings (password policies, software restrictions, firewall rules) across all domain-joined systems from Active Directory.",
-              "tags": ["operations", "group-policy", "windows"]
+              "id": "4.1-fc4eb613",
+              "question": "centrally manage/wipe/enforce policy on phones",
+              "answer": "MDM"
             },
             {
-              "id": "4.1.005",
-              "question": "What is mobile device management (MDM)?",
-              "answer": "A solution that enforces security policies on mobile devices — enabling remote wipe, enforcing encryption, controlling app installs, and managing configurations.",
-              "tags": ["operations", "mdm", "mobile"]
+              "id": "4.1-75353f0f",
+              "question": "employee owns the device",
+              "answer": "BYOD"
             },
             {
-              "id": "4.1.006",
-              "question": "What is containerization and its security benefit?",
-              "answer": "Packaging an application with its dependencies into an isolated container. Security benefit: applications are isolated from each other and the host OS.",
-              "tags": ["operations", "containers", "docker"]
+              "id": "4.1-f28eb671",
+              "question": "company owns it, personal use allowed",
+              "answer": "COPE"
+            },
+            {
+              "id": "4.1-beefc0b5",
+              "question": "employee picks from an approved list, company owns it",
+              "answer": "CYOD"
+            },
+            {
+              "id": "4.1-d4c0f500",
+              "question": "latest Wi-Fi security, SAE",
+              "answer": "WPA3"
+            },
+            {
+              "id": "4.1-ccf38a02",
+              "question": "centralized AAA for network/wireless logins",
+              "answer": "RADIUS"
+            },
+            {
+              "id": "4.1-bf311824",
+              "question": "check/clean user input, stop injection",
+              "answer": "Input validation"
+            },
+            {
+              "id": "4.1-c45f7519",
+              "question": "cookie flagged to only travel over HTTPS",
+              "answer": "Secure cookies"
+            },
+            {
+              "id": "4.1-9d01ed69",
+              "question": "review source code without running it",
+              "answer": "Static code analysis"
+            },
+            {
+              "id": "4.1-27006664",
+              "question": "verify who wrote the code and that it hasn't been modified",
+              "answer": "Code signing"
+            },
+            {
+              "id": "4.1-24c8db0a",
+              "question": "run untrusted code in an isolated environment",
+              "answer": "Sandboxing"
+            },
+            {
+              "id": "4.1-82eb8280",
+              "question": "phones/tablets: MDM, updates, screen lock",
+              "answer": "Mobile devices (hardening target)"
+            },
+            {
+              "id": "4.1-c7fce97d",
+              "question": "desktops/laptops: patches, remove local admin, host firewall, EDR",
+              "answer": "Workstations"
+            },
+            {
+              "id": "4.1-b9f5b23c",
+              "question": "disable unused ports, change defaults, SSH not Telnet",
+              "answer": "Switches / Routers"
+            },
+            {
+              "id": "4.1-f619e63e",
+              "question": "IAM least privilege, MFA on the console, secure configs",
+              "answer": "Cloud infrastructure"
+            },
+            {
+              "id": "4.1-b7cadf7c",
+              "question": "remove unneeded services, patch",
+              "answer": "Servers"
+            },
+            {
+              "id": "4.1-ef40433c",
+              "question": "often can't patch: segment, change default credentials",
+              "answer": "ICS/SCADA / Embedded systems / RTOS / IoT devices"
+            },
+            {
+              "id": "4.1-29f9c7e0",
+              "question": "cellular, Wi-Fi, Bluetooth on a mobile device",
+              "answer": "Connection methods"
+            },
+            {
+              "id": "4.1-50de8973",
+              "question": "WPA3, AES/CCMP, GCMP",
+              "answer": "Cryptographic protocols"
+            },
+            {
+              "id": "4.1-3aa3c9fc",
+              "question": "EAP, 802.1X",
+              "answer": "Authentication protocols"
+            },
+            {
+              "id": "4.1-17aeadd3",
+              "question": "watch systems for issues",
+              "answer": "Monitoring"
             }
           ]
         },
@@ -722,34 +1950,54 @@
           "title": "Explain the security implications of proper hardware, software, and data asset management.",
           "cards": [
             {
-              "id": "4.2.001",
-              "question": "Why is asset inventory critical to security?",
-              "answer": "You cannot protect what you don't know you have. Unknown assets (shadow IT) can be exploited without detection.",
-              "tags": ["asset-management", "inventory"]
+              "id": "4.2-2a09c43e",
+              "question": "buying from approved vendors, purchasing process",
+              "answer": "Acquisition/procurement"
             },
             {
-              "id": "4.2.002",
-              "question": "What is end-of-life (EOL) software risk?",
-              "answer": "EOL software no longer receives security patches, leaving known vulnerabilities permanently unmitigated.",
-              "tags": ["asset-management", "eol", "patching"]
+              "id": "4.2-62eec311",
+              "question": "named person accountable for the asset",
+              "answer": "Ownership"
             },
             {
-              "id": "4.2.003",
-              "question": "What is data sanitization and when is it required?",
-              "answer": "Securely removing data from media before disposal or reuse. Required to prevent data recovery from decommissioned drives.",
-              "tags": ["asset-management", "sanitization", "disposal"]
+              "id": "4.2-86f0c1d1",
+              "question": "label by sensitivity/criticality → consistent controls",
+              "answer": "Classification"
             },
             {
-              "id": "4.2.004",
-              "question": "What is the difference between data destruction methods: wiping, degaussing, and shredding?",
-              "answer": "Wiping: overwrites data (software). Degaussing: destroys magnetic fields (magnetic media only). Shredding/pulverizing: physical destruction.",
-              "tags": ["asset-management", "destruction", "disposal"]
+              "id": "4.2-b8d0970a",
+              "question": "list of what you own",
+              "answer": "Inventory"
             },
             {
-              "id": "4.2.005",
-              "question": "What is a software bill of materials (SBOM)?",
-              "answer": "A formal inventory of all components, libraries, and dependencies in a software product — used to identify vulnerable components quickly.",
-              "tags": ["asset-management", "sbom", "software"]
+              "id": "4.2-55e37e3c",
+              "question": "discover/scan to find all devices or software",
+              "answer": "Enumeration"
+            },
+            {
+              "id": "4.2-55a87f1b",
+              "question": "remove data so media can be reused; wiping, degaussing, crypto-erase",
+              "answer": "Sanitization"
+            },
+            {
+              "id": "4.2-4fb0fcd7",
+              "question": "shred, crush, pulverize, incinerate",
+              "answer": "Destruction"
+            },
+            {
+              "id": "4.2-8e86088d",
+              "question": "proof/document that disposal was done",
+              "answer": "Certification"
+            },
+            {
+              "id": "4.2-9cdb88cc",
+              "question": "how long data must be kept",
+              "answer": "Data retention"
+            },
+            {
+              "id": "4.2-e5bfe134",
+              "question": "SSD/flash + degaussing",
+              "answer": "❌ Doesn't work (magnetic media only)"
             }
           ]
         },
@@ -758,40 +2006,169 @@
           "title": "Explain various activities associated with vulnerability management.",
           "cards": [
             {
-              "id": "4.3.001",
-              "question": "What is the difference between a vulnerability scan and a penetration test?",
-              "answer": "A vulnerability scan identifies potential weaknesses automatically. A penetration test actively exploits vulnerabilities to determine real-world impact.",
-              "tags": ["vulnerability-management", "scanning", "pentest"]
+              "id": "4.3-19f73a4a",
+              "question": "automated scan for known flaws",
+              "answer": "Vulnerability scan"
             },
             {
-              "id": "4.3.002",
-              "question": "What is CVSS and what does it measure?",
-              "answer": "Common Vulnerability Scoring System — a standardized 0–10 score rating the severity of a vulnerability based on exploitability and impact.",
-              "tags": ["vulnerability-management", "cvss"]
+              "id": "4.3-39278b0c",
+              "question": "analyze code without running it",
+              "answer": "Static analysis"
             },
             {
-              "id": "4.3.003",
-              "question": "What is a CVE?",
-              "answer": "Common Vulnerabilities and Exposures — a publicly assigned identifier (e.g., CVE-2021-44228) for a known security vulnerability.",
-              "tags": ["vulnerability-management", "cve"]
+              "id": "4.3-e4d8c6e9",
+              "question": "test the running app, fuzzing",
+              "answer": "Dynamic analysis"
             },
             {
-              "id": "4.3.004",
-              "question": "What does vulnerability remediation prioritization involve?",
-              "answer": "Ranking vulnerabilities by severity (CVSS), exploitability, asset criticality, and exposure to determine which to patch first.",
-              "tags": ["vulnerability-management", "remediation", "prioritization"]
+              "id": "4.3-848609c3",
+              "question": "track third-party libraries/dependencies for flaws",
+              "answer": "Package monitoring"
             },
             {
-              "id": "4.3.005",
-              "question": "What is a false positive in vulnerability scanning?",
-              "answer": "A reported vulnerability that does not actually exist. It wastes remediation effort and can cause alert fatigue.",
-              "tags": ["vulnerability-management", "false-positive"]
+              "id": "4.3-0d30386d",
+              "question": "public sources",
+              "answer": "OSINT threat feed"
             },
             {
-              "id": "4.3.006",
-              "question": "What is threat intelligence and how does it support vulnerability management?",
-              "answer": "Curated information about active threats and adversary TTPs. Helps prioritize patching based on which vulnerabilities are actively being exploited in the wild.",
-              "tags": ["vulnerability-management", "threat-intelligence"]
+              "id": "4.3-f1349ee9",
+              "question": "paid feed",
+              "answer": "Proprietary/third-party"
+            },
+            {
+              "id": "4.3-f5964490",
+              "question": "ISAC, sector sharing group",
+              "answer": "Information-sharing organization"
+            },
+            {
+              "id": "4.3-c04a94cc",
+              "question": "stolen data/credentials for sale",
+              "answer": "Dark web"
+            },
+            {
+              "id": "4.3-9b7f58e1",
+              "question": "simulated attack to exploit flaws",
+              "answer": "Penetration testing"
+            },
+            {
+              "id": "4.3-128e3f3b",
+              "question": "pay outside researchers for finding bugs",
+              "answer": "Bug bounty program"
+            },
+            {
+              "id": "4.3-3c77449c",
+              "question": "reported a vulnerability that isn't there",
+              "answer": "False positive"
+            },
+            {
+              "id": "4.3-6169c8ea",
+              "question": "missed a real vulnerability",
+              "answer": "False negative"
+            },
+            {
+              "id": "4.3-041781cd",
+              "question": "severity score 0–10",
+              "answer": "CVSS"
+            },
+            {
+              "id": "4.3-bc826eac",
+              "question": "unique identifier for a known vulnerability",
+              "answer": "CVE"
+            },
+            {
+              "id": "4.3-ea56da2a",
+              "question": "percent of asset value lost if exploited",
+              "answer": "Exposure factor"
+            },
+            {
+              "id": "4.3-15bf1a33",
+              "question": "how much risk the org will accept for this flaw",
+              "answer": "Risk tolerance"
+            },
+            {
+              "id": "4.3-b78458f8",
+              "question": "cyber insurance to cover losses",
+              "answer": "Insurance (response)"
+            },
+            {
+              "id": "4.3-0e66ab55",
+              "question": "can't patch, so use a different control",
+              "answer": "Compensating controls"
+            },
+            {
+              "id": "4.3-b6e7a5dd",
+              "question": "formally approved to leave unpatched",
+              "answer": "Exceptions and exemptions"
+            },
+            {
+              "id": "4.3-a612b31f",
+              "question": "scan again after fixing",
+              "answer": "Rescanning (validation)"
+            },
+            {
+              "id": "4.3-6121130a",
+              "question": "verify a finding is real",
+              "answer": "Confirmation"
+            },
+            {
+              "id": "4.3-ab9731e5",
+              "question": "rank which vulnerabilities to fix first",
+              "answer": "Prioritize"
+            },
+            {
+              "id": "4.3-93e3bfd6",
+              "question": "categorize vulnerabilities by type/severity",
+              "answer": "Vulnerability classification"
+            },
+            {
+              "id": "4.3-e9a0a334",
+              "question": "org-specific factors change severity (e.g., system is internal-only)",
+              "answer": "Environmental variables"
+            },
+            {
+              "id": "4.3-bf28c89a",
+              "question": "effect on the business or industry",
+              "answer": "Industry/organizational impact"
+            },
+            {
+              "id": "4.3-70a38038",
+              "question": "process for outside researchers to report vulnerabilities",
+              "answer": "Responsible disclosure program"
+            },
+            {
+              "id": "4.3-7f1cdf4e",
+              "question": "review systems/processes for weaknesses",
+              "answer": "System/process audit"
+            },
+            {
+              "id": "4.3-e0f2946e",
+              "question": "external intel about current threats",
+              "answer": "Threat feed"
+            },
+            {
+              "id": "4.3-f6618faf",
+              "question": "code-level testing (static, dynamic, package monitoring)",
+              "answer": "Application security"
+            },
+            {
+              "id": "4.3-a31f7afb",
+              "question": "fix by applying vendor updates",
+              "answer": "Patching"
+            },
+            {
+              "id": "4.3-80417f77",
+              "question": "isolate the vulnerable system on its own network",
+              "answer": "Segmentation"
+            },
+            {
+              "id": "4.3-e65b65b6",
+              "question": "confirm the fix through audit or verification",
+              "answer": "Audit / Verification"
+            },
+            {
+              "id": "4.3-0f0b89eb",
+              "question": "document and communicate findings",
+              "answer": "Reporting"
             }
           ]
         },
@@ -800,34 +2177,94 @@
           "title": "Explain security alerting and monitoring concepts and tools.",
           "cards": [
             {
-              "id": "4.4.001",
-              "question": "What is a SIEM?",
-              "answer": "Security Information and Event Management — aggregates and correlates logs from multiple sources to detect threats, generate alerts, and support investigations.",
-              "tags": ["monitoring", "siem"]
+              "id": "4.4-c89e1f35",
+              "question": "aggregate and correlate logs from many sources, alert",
+              "answer": "SIEM"
             },
             {
-              "id": "4.4.002",
-              "question": "What is the difference between SIEM and SOAR?",
-              "answer": "SIEM collects/correlates logs and alerts. SOAR (Security Orchestration, Automation, and Response) automates response playbooks triggered by SIEM alerts.",
-              "tags": ["monitoring", "siem", "soar"]
+              "id": "4.4-f448c54f",
+              "question": "standardized format to automate compliance/config checks",
+              "answer": "SCAP"
             },
             {
-              "id": "4.4.003",
-              "question": "What is NetFlow and how is it used in security monitoring?",
-              "answer": "A protocol that records metadata about network flows (IPs, ports, bytes) without capturing packet contents — used to detect anomalies and suspicious traffic patterns.",
-              "tags": ["monitoring", "netflow", "network"]
+              "id": "4.4-614db9fd",
+              "question": "CIS-style hardening standards to compare against",
+              "answer": "Benchmarks"
             },
             {
-              "id": "4.4.004",
-              "question": "What is a security baseline and how is it used in alerting?",
-              "answer": "A documented normal state of system/network behavior. Deviations from baseline trigger alerts for potential incidents.",
-              "tags": ["monitoring", "baseline"]
+              "id": "4.4-4edfaa29",
+              "question": "software installed on the device vs. no install",
+              "answer": "Agents/agentless"
             },
             {
-              "id": "4.4.005",
-              "question": "What is log aggregation?",
-              "answer": "Collecting logs from multiple sources into a central repository for unified search, correlation, retention, and analysis.",
-              "tags": ["monitoring", "logging"]
+              "id": "4.4-4c35aba2",
+              "question": "stop sensitive data from leaving",
+              "answer": "DLP"
+            },
+            {
+              "id": "4.4-30b138f9",
+              "question": "device pushes an alert to a management station",
+              "answer": "SNMP traps"
+            },
+            {
+              "id": "4.4-f93dfb5d",
+              "question": "who talked to whom, how much, when, but no content",
+              "answer": "NetFlow"
+            },
+            {
+              "id": "4.4-4fe75ab0",
+              "question": "collect logs into one place",
+              "answer": "Log aggregation"
+            },
+            {
+              "id": "4.4-44bea121",
+              "question": "store logs long-term",
+              "answer": "Archiving"
+            },
+            {
+              "id": "4.4-a62d177a",
+              "question": "too many false positives, adjust thresholds",
+              "answer": "Alert tuning"
+            },
+            {
+              "id": "4.4-132c262f",
+              "question": "isolate the affected file or host",
+              "answer": "Quarantine"
+            },
+            {
+              "id": "4.4-e6255337",
+              "question": "monitor servers/endpoints, apps, network devices",
+              "answer": "Systems / Applications / Infrastructure"
+            },
+            {
+              "id": "4.4-e3e0a3b4",
+              "question": "notify on events",
+              "answer": "Alerting"
+            },
+            {
+              "id": "4.4-9eb469b1",
+              "question": "check systems for vulnerabilities/config issues",
+              "answer": "Scanning"
+            },
+            {
+              "id": "4.4-cb9f8edc",
+              "question": "produce summaries of monitoring results",
+              "answer": "Reporting"
+            },
+            {
+              "id": "4.4-b9f22af2",
+              "question": "malware detection on endpoints",
+              "answer": "Antivirus"
+            },
+            {
+              "id": "4.4-4bab330e",
+              "question": "find known vulnerabilities",
+              "answer": "Vulnerability scanners"
+            },
+            {
+              "id": "4.4-a4637bcc",
+              "question": "act on an alert and confirm the fix worked",
+              "answer": "Alert response and remediation/validation"
             }
           ]
         },
@@ -836,34 +2273,139 @@
           "title": "Given a scenario, modify enterprise capabilities to enhance security.",
           "cards": [
             {
-              "id": "4.5.001",
-              "question": "What is DNS filtering and how does it protect users?",
-              "answer": "Blocking resolution of malicious or prohibited domains at the DNS level, preventing users from connecting to known bad sites.",
-              "tags": ["operations", "dns", "filtering"]
+              "id": "4.5-797372a2",
+              "question": "DMZ, public-facing servers isolated from the internal network",
+              "answer": "Screened subnet"
             },
             {
-              "id": "4.5.002",
-              "question": "What is a web application firewall (WAF)?",
-              "answer": "A firewall that inspects HTTP/S traffic and blocks common web attacks such as SQL injection, XSS, and CSRF against web applications.",
-              "tags": ["operations", "waf", "application"]
+              "id": "4.5-5b458b11",
+              "question": "IDS/IPS matches known patterns",
+              "answer": "Signatures"
             },
             {
-              "id": "4.5.003",
-              "question": "What is email security and what does SPF/DKIM/DMARC do?",
-              "answer": "SPF verifies authorized sending servers. DKIM adds a cryptographic signature. DMARC tells receivers how to handle failures — together they prevent email spoofing.",
-              "tags": ["operations", "email", "spf", "dkim", "dmarc"]
+              "id": "4.5-587e3b85",
+              "question": "IDS/IPS spots unusual patterns over time",
+              "answer": "Trends"
             },
             {
-              "id": "4.5.004",
-              "question": "What is TLS inspection (SSL/TLS decryption) and why is it controversial?",
-              "answer": "Decrypting encrypted traffic at a proxy to inspect for threats, then re-encrypting. Controversial because it breaks end-to-end encryption and requires trust in the proxy.",
-              "tags": ["operations", "tls", "inspection"]
+              "id": "4.5-87f4cd1b",
+              "question": "filter web on the device (works off-site)",
+              "answer": "Agent-based web filter"
             },
             {
-              "id": "4.5.005",
-              "question": "What is a secure DNS resolver (e.g., DNS over HTTPS)?",
-              "answer": "Encrypts DNS queries to prevent eavesdropping and manipulation. DoH sends DNS queries over HTTPS; DoT uses TLS.",
-              "tags": ["operations", "dns", "doh", "dot"]
+              "id": "4.5-29e062e8",
+              "question": "all web traffic through one filter point",
+              "answer": "Centralized proxy"
+            },
+            {
+              "id": "4.5-9e66e570",
+              "question": "block by category (gambling, social media)",
+              "answer": "Content categorization"
+            },
+            {
+              "id": "4.5-6a457b6f",
+              "question": "block based on site's known trustworthiness",
+              "answer": "Reputation"
+            },
+            {
+              "id": "4.5-454b8caa",
+              "question": "centrally push Windows settings via AD",
+              "answer": "Group Policy"
+            },
+            {
+              "id": "4.5-bc1180bc",
+              "question": "Linux mandatory access control",
+              "answer": "SELinux"
+            },
+            {
+              "id": "4.5-550c7007",
+              "question": "choose secure protocol (SSH over Telnet, SFTP over FTP)",
+              "answer": "Protocol selection / Port selection"
+            },
+            {
+              "id": "4.5-85455b22",
+              "question": "block malicious domains at name resolution",
+              "answer": "DNS filtering"
+            },
+            {
+              "id": "4.5-ccc93c37",
+              "question": "alert when critical system files change",
+              "answer": "File integrity monitoring (FIM)"
+            },
+            {
+              "id": "4.5-fded43ba",
+              "question": "check device health/posture before allowing network access",
+              "answer": "NAC"
+            },
+            {
+              "id": "4.5-eefdf6e2",
+              "question": "endpoint-focused detection and automated response",
+              "answer": "EDR"
+            },
+            {
+              "id": "4.5-2a9867d8",
+              "question": "correlates across endpoints, network, cloud",
+              "answer": "XDR"
+            },
+            {
+              "id": "4.5-4fd5fd6f",
+              "question": "baseline of normal user behavior, flag deviations",
+              "answer": "User behavior analytics"
+            },
+            {
+              "id": "4.5-468ebd3e",
+              "question": "digital signature, public key in DNS",
+              "answer": "DKIM"
+            },
+            {
+              "id": "4.5-4c548893",
+              "question": "list of authorized sending servers/IPs",
+              "answer": "SPF"
+            },
+            {
+              "id": "4.5-2c7d9ee7",
+              "question": "policy (none/quarantine/reject) + reports",
+              "answer": "DMARC"
+            },
+            {
+              "id": "4.5-cdd91f11",
+              "question": "filters inbound/outbound mail",
+              "answer": "Email gateway"
+            },
+            {
+              "id": "4.5-e0eebae4",
+              "question": "allow/deny traffic based on criteria",
+              "answer": "Rules (firewall)"
+            },
+            {
+              "id": "4.5-b849c153",
+              "question": "list of permitted/denied addresses",
+              "answer": "Access lists"
+            },
+            {
+              "id": "4.5-a59a4cc0",
+              "question": "allow/block specific ports and protocols",
+              "answer": "Ports/protocols"
+            },
+            {
+              "id": "4.5-799cbb3c",
+              "question": "check URLs against known-bad lists",
+              "answer": "URL scanning"
+            },
+            {
+              "id": "4.5-ecfdd7f2",
+              "question": "explicitly block certain sites/categories",
+              "answer": "Block rules"
+            },
+            {
+              "id": "4.5-1d53c113",
+              "question": "how data is sent securely (TLS, VPN)",
+              "answer": "Transport method"
+            },
+            {
+              "id": "4.5-908c963f",
+              "question": "detect/stop sensitive data leaving",
+              "answer": "DLP"
             }
           ]
         },
@@ -872,40 +2414,179 @@
           "title": "Given a scenario, implement and maintain identity and access management.",
           "cards": [
             {
-              "id": "4.6.001",
-              "question": "What is multi-factor authentication (MFA)?",
-              "answer": "Requiring two or more factors from different categories: something you know (password), something you have (token), something you are (biometric).",
-              "tags": ["iam", "mfa", "authentication"]
+              "id": "4.6-fb76ba2f",
+              "question": "create/remove accounts (onboarding/offboarding)",
+              "answer": "Provisioning/de-provisioning"
             },
             {
-              "id": "4.6.002",
-              "question": "What is single sign-on (SSO)?",
-              "answer": "Allows a user to authenticate once and access multiple systems without re-entering credentials. Reduces password fatigue but creates a single point of failure.",
-              "tags": ["iam", "sso", "federation"]
+              "id": "4.6-f6d0c5fa",
+              "question": "verify a person's real identity before giving an account",
+              "answer": "Identity proofing"
             },
             {
-              "id": "4.6.003",
-              "question": "What is privileged access management (PAM)?",
-              "answer": "Controls and monitors the use of privileged (admin) accounts — vaulting credentials, enforcing just-in-time access, and auditing privileged sessions.",
-              "tags": ["iam", "pam", "privileged-access"]
+              "id": "4.6-a4744d62",
+              "question": "trust between organizations, log in with another org's identity",
+              "answer": "Federation"
             },
             {
-              "id": "4.6.004",
-              "question": "What is the difference between role-based access control (RBAC) and attribute-based access control (ABAC)?",
-              "answer": "RBAC grants access based on job role. ABAC grants access based on multiple attributes (user, resource, environment) for finer-grained control.",
-              "tags": ["iam", "rbac", "abac", "access-control"]
+              "id": "4.6-ff5184ff",
+              "question": "one login, many apps",
+              "answer": "SSO"
             },
             {
-              "id": "4.6.005",
-              "question": "What is a directory service and what role does it play in IAM?",
-              "answer": "A centralized repository of user identities and access rights (e.g., Active Directory, LDAP) used to authenticate users and enforce access policies.",
-              "tags": ["iam", "directory", "active-directory"]
+              "id": "4.6-0e2ba587",
+              "question": "directory service, query users/groups",
+              "answer": "LDAP"
             },
             {
-              "id": "4.6.006",
-              "question": "What is federation in identity management?",
-              "answer": "Establishing trust between different organizations' identity systems so users from one domain can access resources in another (e.g., using SAML or OAuth).",
-              "tags": ["iam", "federation", "saml", "oauth"]
+              "id": "4.6-406e0c99",
+              "question": "\"allow this app to access your account,\" authorization delegation",
+              "answer": "OAuth"
+            },
+            {
+              "id": "4.6-9e05eff6",
+              "question": "XML assertions between identity provider and service provider",
+              "answer": "SAML"
+            },
+            {
+              "id": "4.6-63f12ecd",
+              "question": "systems working together across vendors",
+              "answer": "Interoperability"
+            },
+            {
+              "id": "4.6-f205b34c",
+              "question": "prove an authenticator/device is genuine",
+              "answer": "Attestation"
+            },
+            {
+              "id": "4.6-85da34ba",
+              "question": "labels/clearances, OS-enforced, military",
+              "answer": "Mandatory (MAC)"
+            },
+            {
+              "id": "4.6-dc8fdb34",
+              "question": "owner decides who gets access",
+              "answer": "Discretionary (DAC)"
+            },
+            {
+              "id": "4.6-f06641c8",
+              "question": "access by job role/group",
+              "answer": "Role-based (RBAC)"
+            },
+            {
+              "id": "4.6-9197aad3",
+              "question": "admin-defined conditions apply to everyone",
+              "answer": "Rule-based"
+            },
+            {
+              "id": "4.6-abf08b06",
+              "question": "combines many attributes (user, device, location, time)",
+              "answer": "Attribute-based (ABAC)"
+            },
+            {
+              "id": "4.6-c3d06357",
+              "question": "only allowed during work hours",
+              "answer": "Time-of-day restrictions"
+            },
+            {
+              "id": "4.6-9df18bb6",
+              "question": "password, PIN",
+              "answer": "Something you know"
+            },
+            {
+              "id": "4.6-14fbf333",
+              "question": "token, smart card, phone",
+              "answer": "Something you have"
+            },
+            {
+              "id": "4.6-0227efdd",
+              "question": "fingerprint, face",
+              "answer": "Something you are"
+            },
+            {
+              "id": "4.6-6795085d",
+              "question": "GPS/IP location",
+              "answer": "Somewhere you are"
+            },
+            {
+              "id": "4.6-c71d1a63",
+              "question": "FIDO key, YubiKey",
+              "answer": "Security keys"
+            },
+            {
+              "id": "4.6-6948ef4c",
+              "question": "elevated rights granted only when needed, then removed",
+              "answer": "Just-in-time permissions"
+            },
+            {
+              "id": "4.6-32055139",
+              "question": "admin passwords stored and checked out from a vault",
+              "answer": "Password vaulting"
+            },
+            {
+              "id": "4.6-7dd33a68",
+              "question": "short-lived, one-use credentials",
+              "answer": "Ephemeral credentials"
+            },
+            {
+              "id": "4.6-f280d399",
+              "question": "login without a password (biometrics, keys)",
+              "answer": "Passwordless"
+            },
+            {
+              "id": "4.6-9308a959",
+              "question": "what rights a user gets and the risk of too many (privilege creep)",
+              "answer": "Permission assignments and implications"
+            },
+            {
+              "id": "4.6-12d7a1b0",
+              "question": "minimum rights needed",
+              "answer": "Least privilege"
+            },
+            {
+              "id": "4.6-13750ed8",
+              "question": "longer = stronger",
+              "answer": "Length (password)"
+            },
+            {
+              "id": "4.6-fe81bee7",
+              "question": "mix of character types",
+              "answer": "Complexity"
+            },
+            {
+              "id": "4.6-2ea7e5ba",
+              "question": "can't use previous passwords, password history",
+              "answer": "Reuse"
+            },
+            {
+              "id": "4.6-37258dd5",
+              "question": "must change after N days",
+              "answer": "Expiration"
+            },
+            {
+              "id": "4.6-d9988026",
+              "question": "minimum time before it can be changed again (stops cycling back)",
+              "answer": "Age"
+            },
+            {
+              "id": "4.6-02954bc1",
+              "question": "app that stores/generates unique passwords",
+              "answer": "Password managers"
+            },
+            {
+              "id": "4.6-8d80b63b",
+              "question": "fingerprint/face scanner as the MFA method",
+              "answer": "Biometrics"
+            },
+            {
+              "id": "4.6-a23d114a",
+              "question": "hardware fob vs. authenticator app one-time codes",
+              "answer": "Hard/soft authentication tokens"
+            },
+            {
+              "id": "4.6-96990633",
+              "question": "JIT, vaulting, ephemeral creds for admin accounts",
+              "answer": "Privileged access management tools"
             }
           ]
         },
@@ -914,34 +2595,109 @@
           "title": "Explain the importance of automation and orchestration related to secure operations.",
           "cards": [
             {
-              "id": "4.7.001",
-              "question": "What is security orchestration, automation, and response (SOAR)?",
-              "answer": "Platforms that automate repetitive security tasks (e.g., blocking an IP, creating a ticket) using playbooks triggered by alerts, reducing response time.",
-              "tags": ["automation", "soar"]
+              "id": "4.7-cff5a987",
+              "question": "auto-create accounts for new hires",
+              "answer": "User provisioning"
             },
             {
-              "id": "4.7.002",
-              "question": "What is a security playbook?",
-              "answer": "A documented, step-by-step procedure for responding to a specific security event or incident type — can be automated via SOAR.",
-              "tags": ["automation", "playbook", "incident-response"]
+              "id": "4.7-4471d634",
+              "question": "auto-create servers/cloud resources",
+              "answer": "Resource provisioning"
             },
             {
-              "id": "4.7.003",
-              "question": "What is continuous integration/continuous deployment (CI/CD) and its security relevance?",
-              "answer": "Automated pipelines for building, testing, and deploying code. Security relevance: security tests (SAST, DAST) can be embedded to catch issues before production.",
-              "tags": ["automation", "cicd", "devsecops"]
+              "id": "4.7-b1b52934",
+              "question": "automated limits that stop risky actions",
+              "answer": "Guard rails"
             },
             {
-              "id": "4.7.004",
-              "question": "What is the benefit of automating user account provisioning/deprovisioning?",
-              "answer": "Ensures accounts are created with correct permissions and immediately disabled when an employee leaves — reducing risk of orphaned accounts.",
-              "tags": ["automation", "iam", "provisioning"]
+              "id": "4.7-d8d7974c",
+              "question": "auto-open a ticket on an alert",
+              "answer": "Ticket creation"
             },
             {
-              "id": "4.7.005",
-              "question": "What is a risk of over-automation in security operations?",
-              "answer": "Automated responses can block legitimate traffic, cause outages, or be manipulated by attackers who understand the automation logic.",
-              "tags": ["automation", "risk"]
+              "id": "4.7-23d46adb",
+              "question": "auto-route to a higher tier",
+              "answer": "Escalation"
+            },
+            {
+              "id": "4.7-205d1266",
+              "question": "automated build/test pipeline",
+              "answer": "Continuous integration and testing"
+            },
+            {
+              "id": "4.7-51ce1c76",
+              "question": "systems connected through APIs",
+              "answer": "Integrations and APIs"
+            },
+            {
+              "id": "4.7-e1d2b54d",
+              "question": "one person does the work of many",
+              "answer": "Workforce multiplier"
+            },
+            {
+              "id": "4.7-7770868f",
+              "question": "automation respond faster to incidents",
+              "answer": "Reaction time"
+            },
+            {
+              "id": "4.7-39633a2d",
+              "question": "staff aren't burned out by repetitive work",
+              "answer": "Employee retention"
+            },
+            {
+              "id": "4.7-6e026646",
+              "question": "automation itself becomes a single dependency",
+              "answer": "Single point of failure"
+            },
+            {
+              "id": "4.7-cefeeb6c",
+              "question": "quick fixes pile up into future maintenance burden",
+              "answer": "Technical debt"
+            },
+            {
+              "id": "4.7-c8d5527a",
+              "question": "automatically add/remove resources to/from firewall-like groups",
+              "answer": "Security groups"
+            },
+            {
+              "id": "4.7-248f49cb",
+              "question": "turn services or access on/off automatically (e.g., disable account at termination)",
+              "answer": "Enabling/disabling services and access"
+            },
+            {
+              "id": "4.7-6ea5c6a8",
+              "question": "saves time",
+              "answer": "Efficiency/time saving"
+            },
+            {
+              "id": "4.7-d80fe921",
+              "question": "automatically keep systems at baseline",
+              "answer": "Enforcing baselines"
+            },
+            {
+              "id": "4.7-97b0ef44",
+              "question": "every deployment uses the same config",
+              "answer": "Standard infrastructure configurations"
+            },
+            {
+              "id": "4.7-b2317b08",
+              "question": "grow automatically without weakening security",
+              "answer": "Scaling in a secure manner"
+            },
+            {
+              "id": "4.7-e07f7ccf",
+              "question": "scripts need maintenance; who supports them later",
+              "answer": "Ongoing supportability"
+            },
+            {
+              "id": "4.7-dc7776e9",
+              "question": "automation is harder to understand/troubleshoot",
+              "answer": "Complexity"
+            },
+            {
+              "id": "4.7-f77371c4",
+              "question": "costs money/time to build",
+              "answer": "Cost"
             }
           ]
         },
@@ -950,40 +2706,99 @@
           "title": "Explain appropriate incident response activities.",
           "cards": [
             {
-              "id": "4.8.001",
-              "question": "What are the six phases of the NIST incident response lifecycle?",
-              "answer": "Preparation → Detection & Analysis → Containment → Eradication → Recovery → Post-Incident Activity (lessons learned).",
-              "tags": ["incident-response", "nist"]
+              "id": "4.8-a177bd8d",
+              "question": "order of steps",
+              "answer": "Preparation → Detection → Analysis → Containment → Eradication → Recovery → Lessons learned"
             },
             {
-              "id": "4.8.002",
-              "question": "What is the purpose of containment in incident response?",
-              "answer": "To limit the spread and impact of an incident — isolating affected systems, blocking attacker access, and preventing further damage while preserving evidence.",
-              "tags": ["incident-response", "containment"]
+              "id": "4.8-428bfa94",
+              "question": "stop the spread, isolate",
+              "answer": "Containment"
             },
             {
-              "id": "4.8.003",
-              "question": "What is the chain of custody in incident response?",
-              "answer": "A documented record of who handled evidence, when, and how — ensuring evidence is admissible in legal proceedings and has not been tampered with.",
-              "tags": ["incident-response", "forensics", "chain-of-custody"]
+              "id": "4.8-c73041b2",
+              "question": "remove the malware/cause",
+              "answer": "Eradication"
             },
             {
-              "id": "4.8.004",
-              "question": "What is a lessons learned review?",
-              "answer": "A post-incident meeting to analyze what happened, what worked, what failed, and what improvements should be made to prevent recurrence.",
-              "tags": ["incident-response", "lessons-learned"]
+              "id": "4.8-6b3397e5",
+              "question": "restore systems to normal",
+              "answer": "Recovery"
             },
             {
-              "id": "4.8.005",
-              "question": "What is the first priority when responding to an active incident?",
-              "answer": "Containment — stopping the bleeding. Preserving evidence is secondary to preventing ongoing damage, though both should be balanced.",
-              "tags": ["incident-response", "containment", "priorities"]
+              "id": "4.8-80d8a882",
+              "question": "post-incident review meeting",
+              "answer": "Lessons learned"
             },
             {
-              "id": "4.8.006",
-              "question": "What is a computer security incident response team (CSIRT)?",
-              "answer": "A designated group responsible for coordinating and executing incident response activities within an organization.",
-              "tags": ["incident-response", "csirt"]
+              "id": "4.8-1e06da8d",
+              "question": "find the underlying cause so it doesn't happen again",
+              "answer": "Root cause analysis"
+            },
+            {
+              "id": "4.8-199fdee8",
+              "question": "proactively search for threats already inside",
+              "answer": "Threat hunting"
+            },
+            {
+              "id": "4.8-8a2144ea",
+              "question": "order to preserve data for litigation",
+              "answer": "Legal hold"
+            },
+            {
+              "id": "4.8-0432584f",
+              "question": "documented record of who handled evidence",
+              "answer": "Chain of custody"
+            },
+            {
+              "id": "4.8-b06eca3c",
+              "question": "collect evidence, most volatile first",
+              "answer": "Acquisition"
+            },
+            {
+              "id": "4.8-6937b1ce",
+              "question": "keep evidence unchanged, copies/hashes",
+              "answer": "Preservation"
+            },
+            {
+              "id": "4.8-9d649e2d",
+              "question": "gather electronic data for legal proceedings",
+              "answer": "E-discovery"
+            },
+            {
+              "id": "4.8-d04fde5c",
+              "question": "plans, tools, team in place before an incident",
+              "answer": "Preparation"
+            },
+            {
+              "id": "4.8-1c154958",
+              "question": "notice the incident (alerts, reports)",
+              "answer": "Detection"
+            },
+            {
+              "id": "4.8-21eabbc6",
+              "question": "determine scope/severity, confirm it's real",
+              "answer": "Analysis"
+            },
+            {
+              "id": "4.8-b42ff749",
+              "question": "teach the IR team",
+              "answer": "Training"
+            },
+            {
+              "id": "4.8-aa4cc616",
+              "question": "tabletop/simulation of the IR plan",
+              "answer": "Testing"
+            },
+            {
+              "id": "4.8-2b89ad43",
+              "question": "collect and analyze evidence",
+              "answer": "Digital forensics"
+            },
+            {
+              "id": "4.8-ca78e914",
+              "question": "document forensic findings",
+              "answer": "Reporting"
             }
           ]
         },
@@ -992,34 +2807,59 @@
           "title": "Given a scenario, use data sources to support an investigation.",
           "cards": [
             {
-              "id": "4.9.001",
-              "question": "What is a packet capture (PCAP) and when is it used in investigations?",
-              "answer": "A full recording of network traffic at the packet level. Used to reconstruct attacker activity, identify exfiltrated data, or confirm an attack vector.",
-              "tags": ["investigation", "pcap", "forensics"]
+              "id": "4.9-54ee383e",
+              "question": "allowed/blocked connections",
+              "answer": "Firewall logs"
             },
             {
-              "id": "4.9.002",
-              "question": "What types of logs are most useful in a security investigation?",
-              "answer": "Firewall logs, authentication logs, endpoint/EDR logs, DNS logs, web proxy logs, and application logs — each reveals a different layer of activity.",
-              "tags": ["investigation", "logging", "forensics"]
+              "id": "4.9-3ead6c4f",
+              "question": "app errors, app-level events",
+              "answer": "Application logs"
             },
             {
-              "id": "4.9.003",
-              "question": "What is the significance of timestamps in forensic investigations?",
-              "answer": "Timestamps establish a timeline of events. Log sources must be time-synchronized (NTP) to correlate events accurately across systems.",
-              "tags": ["investigation", "forensics", "timestamps", "ntp"]
+              "id": "4.9-f02245b5",
+              "question": "host/endpoint events, EDR",
+              "answer": "Endpoint logs"
             },
             {
-              "id": "4.9.004",
-              "question": "What is endpoint forensics?",
-              "answer": "Examining system artifacts — running processes, registry keys, file timestamps, browser history, prefetch files — to reconstruct what occurred on a host.",
-              "tags": ["investigation", "forensics", "endpoint"]
+              "id": "4.9-d1fdc3cf",
+              "question": "Windows Event Log logon events, Linux auth logs",
+              "answer": "OS-specific security logs"
             },
             {
-              "id": "4.9.005",
-              "question": "What is threat hunting?",
-              "answer": "Proactively searching through logs and telemetry for signs of threats that have evaded automated detection — hypothesis-driven rather than alert-driven.",
-              "tags": ["investigation", "threat-hunting"]
+              "id": "4.9-039598f4",
+              "question": "alerts on matched signatures",
+              "answer": "IPS/IDS logs"
+            },
+            {
+              "id": "4.9-d53bd9a3",
+              "question": "router/switch logs",
+              "answer": "Network logs"
+            },
+            {
+              "id": "4.9-ed026a98",
+              "question": "email headers, file properties, \"data about data\"",
+              "answer": "Metadata"
+            },
+            {
+              "id": "4.9-8c6677c7",
+              "question": "summary view in real time",
+              "answer": "Dashboards"
+            },
+            {
+              "id": "4.9-c57112ed",
+              "question": "scheduled summaries generated by tools",
+              "answer": "Automated reports"
+            },
+            {
+              "id": "4.9-0bae754d",
+              "question": "full packet contents, Wireshark",
+              "answer": "Packet captures"
+            },
+            {
+              "id": "4.9-b54d753c",
+              "question": "scan results used as evidence",
+              "answer": "Vulnerability scans"
             }
           ]
         }
@@ -1035,46 +2875,134 @@
           "title": "Summarize elements of effective security governance.",
           "cards": [
             {
-              "id": "5.1.001",
-              "question": "What is a security policy?",
-              "answer": "A high-level document that defines an organization's security objectives, requirements, and management direction. It is mandatory and enforced.",
-              "tags": ["governance", "policy"]
+              "id": "5.1-211f500c",
+              "question": "recommendations, optional, best practice advice",
+              "answer": "Guidelines"
             },
             {
-              "id": "5.1.002",
-              "question": "What is the difference between a policy, a standard, and a procedure?",
-              "answer": "Policy: high-level 'what and why' (mandatory). Standard: specific measurable requirements. Procedure: step-by-step 'how to' implement the standard.",
-              "tags": ["governance", "policy", "standard", "procedure"]
+              "id": "5.1-35e90047",
+              "question": "high-level statement of what and why, mandatory",
+              "answer": "Policies"
             },
             {
-              "id": "5.1.003",
-              "question": "What is a security framework, and give two examples.",
-              "answer": "A structured set of guidelines for managing cybersecurity risk. Examples: NIST CSF (Cybersecurity Framework), ISO 27001.",
-              "tags": ["governance", "framework", "nist", "iso27001"]
+              "id": "5.1-724d1490",
+              "question": "specific mandatory requirement (e.g., minimum password length)",
+              "answer": "Standards"
             },
             {
-              "id": "5.1.004",
-              "question": "What is the role of a Chief Information Security Officer (CISO)?",
-              "answer": "Senior executive responsible for establishing and maintaining the organization's security vision, strategy, and program.",
-              "tags": ["governance", "ciso"]
+              "id": "5.1-d4160fba",
+              "question": "step-by-step how-to",
+              "answer": "Procedures"
             },
             {
-              "id": "5.1.005",
-              "question": "What is separation of duties?",
-              "answer": "Dividing critical tasks among multiple people so no single person can complete a sensitive process alone — reducing fraud and error risk.",
-              "tags": ["governance", "separation-of-duties"]
+              "id": "5.1-ffddf2f9",
+              "question": "step-by-step response for a specific incident type",
+              "answer": "Playbooks"
             },
             {
-              "id": "5.1.006",
-              "question": "What is job rotation and its security benefit?",
-              "answer": "Moving employees through different roles periodically. Security benefit: detects fraud, reduces over-reliance on single individuals, limits insider threat buildup.",
-              "tags": ["governance", "job-rotation"]
+              "id": "5.1-2b1750e7",
+              "question": "rules for using company equipment",
+              "answer": "Acceptable use policy (AUP)"
             },
             {
-              "id": "5.1.007",
-              "question": "What is mandatory vacation (forced leave) as a security control?",
-              "answer": "Requiring employees to take leave so another person covers their duties — exposing any fraudulent activity that depends on the absent employee's ongoing presence.",
-              "tags": ["governance", "mandatory-vacation"]
+              "id": "5.1-d9068a66",
+              "question": "keep the business running during disruption",
+              "answer": "Business continuity"
+            },
+            {
+              "id": "5.1-8979f3e6",
+              "question": "restore IT after a disaster",
+              "answer": "Disaster recovery"
+            },
+            {
+              "id": "5.1-56b9f453",
+              "question": "secure development process",
+              "answer": "SDLC policy"
+            },
+            {
+              "id": "5.1-096bfa94",
+              "question": "laws, industry rules, local → national → global",
+              "answer": "External considerations"
+            },
+            {
+              "id": "5.1-9c735879",
+              "question": "board of directors / committees / government oversight",
+              "answer": "Types of governance structures"
+            },
+            {
+              "id": "5.1-e2aa97c3",
+              "question": "accountable for data, sets classification",
+              "answer": "Owner"
+            },
+            {
+              "id": "5.1-a53a3971",
+              "question": "decides why and how personal data is processed",
+              "answer": "Controller"
+            },
+            {
+              "id": "5.1-54721601",
+              "question": "processes data on behalf of the controller",
+              "answer": "Processor"
+            },
+            {
+              "id": "5.1-5476b009",
+              "question": "day-to-day handling: backups, controls",
+              "answer": "Custodian/steward"
+            },
+            {
+              "id": "5.1-4923d347",
+              "question": "general security rules for the org",
+              "answer": "Information security policies"
+            },
+            {
+              "id": "5.1-63b48e84",
+              "question": "how to respond to incidents",
+              "answer": "Incident response (policy)"
+            },
+            {
+              "id": "5.1-3901da35",
+              "question": "how changes get approved (both a policy and a procedure)",
+              "answer": "Change management"
+            },
+            {
+              "id": "5.1-79e1ecfc",
+              "question": "account setup/removal when people join/leave",
+              "answer": "Onboarding/offboarding"
+            },
+            {
+              "id": "5.1-a5c756c2",
+              "question": "specific mandatory requirements for passwords / access / physical / encryption",
+              "answer": "Password / Access control / Physical security / Encryption standards"
+            },
+            {
+              "id": "5.1-b2dac987",
+              "question": "periodically review and update policies",
+              "answer": "Monitoring and revision"
+            },
+            {
+              "id": "5.1-0668777a",
+              "question": "top leadership setting direction",
+              "answer": "Boards"
+            },
+            {
+              "id": "5.1-62e96683",
+              "question": "subgroup focused on one area (e.g., audit, risk)",
+              "answer": "Committees"
+            },
+            {
+              "id": "5.1-78a7d067",
+              "question": "agencies with oversight authority",
+              "answer": "Government entities"
+            },
+            {
+              "id": "5.1-2ae79ff0",
+              "question": "decisions made at HQ vs. by individual units",
+              "answer": "Centralized/decentralized"
+            },
+            {
+              "id": "5.1-37f40314",
+              "question": "law / industry rules / city-state, country, international",
+              "answer": "Regulatory / Legal / Industry / Local-regional / National / Global"
             }
           ]
         },
@@ -1083,40 +3011,139 @@
           "title": "Explain elements of the risk management process.",
           "cards": [
             {
-              "id": "5.2.001",
-              "question": "What is the formula for risk?",
-              "answer": "Risk = Likelihood (probability of occurrence) × Impact (magnitude of harm).",
-              "tags": ["risk-management", "risk-formula"]
+              "id": "5.2-0cf105e8",
+              "question": "finding risks",
+              "answer": "Risk identification"
             },
             {
-              "id": "5.2.002",
-              "question": "What are the four risk response strategies?",
-              "answer": "Accept (tolerate the risk), Transfer (e.g., insurance), Avoid (eliminate the activity), Mitigate (reduce likelihood or impact).",
-              "tags": ["risk-management", "risk-response"]
+              "id": "5.2-46650b27",
+              "question": "as needed / regular schedule / once / always running",
+              "answer": "Ad hoc / Recurring / One-time / Continuous assessment"
             },
             {
-              "id": "5.2.003",
-              "question": "What is the difference between quantitative and qualitative risk assessment?",
-              "answer": "Quantitative uses numeric values (e.g., ALE = SLE × ARO). Qualitative uses subjective ratings (High/Medium/Low) based on expert judgment.",
-              "tags": ["risk-management", "quantitative", "qualitative"]
+              "id": "5.2-64e1edbb",
+              "question": "high/medium/low, heat map",
+              "answer": "Qualitative"
             },
             {
-              "id": "5.2.004",
-              "question": "What is residual risk?",
-              "answer": "The remaining risk after security controls have been applied. No control eliminates all risk — residual risk must be accepted or further treated.",
-              "tags": ["risk-management", "residual-risk"]
+              "id": "5.2-34c55484",
+              "question": "dollar values, numbers",
+              "answer": "Quantitative"
             },
             {
-              "id": "5.2.005",
-              "question": "What is a risk register?",
-              "answer": "A document that lists identified risks, their likelihood, impact, owner, and treatment status — used to track and communicate risk across the organization.",
-              "tags": ["risk-management", "risk-register"]
+              "id": "5.2-b417c424",
+              "question": "loss from one event (asset value × EF)",
+              "answer": "SLE"
             },
             {
-              "id": "5.2.006",
-              "question": "What is ALE, SLE, and ARO?",
-              "answer": "SLE (Single Loss Expectancy): cost of one incident. ARO (Annual Rate of Occurrence): how often per year. ALE = SLE × ARO (expected annual loss).",
-              "tags": ["risk-management", "ale", "sle", "aro"]
+              "id": "5.2-5a531963",
+              "question": "times per year",
+              "answer": "ARO"
+            },
+            {
+              "id": "5.2-3c9e41a2",
+              "question": "yearly expected loss (SLE × ARO)",
+              "answer": "ALE"
+            },
+            {
+              "id": "5.2-af9f47fa",
+              "question": "document tracking risks, owners, status",
+              "answer": "Risk register"
+            },
+            {
+              "id": "5.2-9d468bf3",
+              "question": "metric warning that risk is rising",
+              "answer": "Key risk indicator (KRI)"
+            },
+            {
+              "id": "5.2-8d17dfa2",
+              "question": "person responsible for a specific risk",
+              "answer": "Risk owner"
+            },
+            {
+              "id": "5.2-7f203c9f",
+              "question": "level that triggers action",
+              "answer": "Risk threshold"
+            },
+            {
+              "id": "5.2-910b8962",
+              "question": "acceptable deviation from the plan",
+              "answer": "Risk tolerance"
+            },
+            {
+              "id": "5.2-e2bc541b",
+              "question": "overall amount of risk willing to pursue; aggressive / cautious / balanced",
+              "answer": "Risk appetite (Expansionary / Conservative / Neutral)"
+            },
+            {
+              "id": "5.2-36f71c8b",
+              "question": "buy insurance, outsource",
+              "answer": "Transfer"
+            },
+            {
+              "id": "5.2-940b7037",
+              "question": "leave as is, formally sign off (exception/exemption)",
+              "answer": "Accept"
+            },
+            {
+              "id": "5.2-431503e2",
+              "question": "stop doing the risky activity",
+              "answer": "Avoid"
+            },
+            {
+              "id": "5.2-5a58e1af",
+              "question": "add controls to reduce it",
+              "answer": "Mitigate"
+            },
+            {
+              "id": "5.2-2ec9a0d6",
+              "question": "how long until back online",
+              "answer": "RTO"
+            },
+            {
+              "id": "5.2-0a3e0aa9",
+              "question": "how much data loss is acceptable / backup frequency",
+              "answer": "RPO"
+            },
+            {
+              "id": "5.2-cb7a3a0a",
+              "question": "average time to fix",
+              "answer": "MTTR"
+            },
+            {
+              "id": "5.2-e72b37c0",
+              "question": "average time between failures, reliability",
+              "answer": "MTBF"
+            },
+            {
+              "id": "5.2-c85ce5d0",
+              "question": "chance of an event, as a number",
+              "answer": "Probability"
+            },
+            {
+              "id": "5.2-14400015",
+              "question": "chance in qualitative terms (rare, likely)",
+              "answer": "Likelihood"
+            },
+            {
+              "id": "5.2-cff9eab1",
+              "question": "percent of asset value lost per event",
+              "answer": "Exposure factor"
+            },
+            {
+              "id": "5.2-bfc9cf41",
+              "question": "how bad the effect would be",
+              "answer": "Impact"
+            },
+            {
+              "id": "5.2-5b9975ce",
+              "question": "communicate risks to leadership",
+              "answer": "Risk reporting"
+            },
+            {
+              "id": "5.2-4e4a46b9",
+              "question": "effect of a disruption on business functions (RTO/RPO/MTTR/MTBF)",
+              "answer": "Business impact analysis (BIA)"
             }
           ]
         },
@@ -1125,40 +3152,99 @@
           "title": "Explain the processes associated with third-party risk assessment and management.",
           "cards": [
             {
-              "id": "5.3.001",
-              "question": "What is a vendor risk assessment?",
-              "answer": "Evaluating a third party's security posture before engaging them — reviewing policies, controls, certifications (SOC 2, ISO 27001), and questionnaires.",
-              "tags": ["third-party-risk", "vendor"]
+              "id": "5.3-5e7b4ad3",
+              "question": "contract allows us to audit the vendor",
+              "answer": "Right-to-audit clause"
             },
             {
-              "id": "5.3.002",
-              "question": "What is a right-to-audit clause?",
-              "answer": "A contract provision giving an organization the right to audit a vendor's security controls to verify compliance with agreed requirements.",
-              "tags": ["third-party-risk", "audit", "contract"]
+              "id": "5.3-7078d5ad",
+              "question": "vendor shows its own audit results",
+              "answer": "Evidence of internal audits"
             },
             {
-              "id": "5.3.003",
-              "question": "What is a business associate agreement (BAA)?",
-              "answer": "A HIPAA-required contract with vendors who handle protected health information (PHI), ensuring they meet required security and privacy obligations.",
-              "tags": ["third-party-risk", "baa", "hipaa", "compliance"]
+              "id": "5.3-95e8b511",
+              "question": "outside party evaluates the vendor",
+              "answer": "Independent assessments"
             },
             {
-              "id": "5.3.004",
-              "question": "What is a memorandum of understanding (MOU) in a security context?",
-              "answer": "A non-binding agreement between organizations establishing mutual expectations for sharing information or services, often a precursor to a formal contract.",
-              "tags": ["third-party-risk", "mou"]
+              "id": "5.3-b71cfa32",
+              "question": "evaluate the vendor's suppliers",
+              "answer": "Supply chain analysis"
             },
             {
-              "id": "5.3.005",
-              "question": "What is supply chain risk management (SCRM)?",
-              "answer": "Identifying, assessing, and mitigating security risks introduced by vendors, suppliers, and partners throughout the product/service supply chain.",
-              "tags": ["third-party-risk", "scrm", "supply-chain"]
+              "id": "5.3-99909336",
+              "question": "research a vendor before choosing",
+              "answer": "Due diligence"
             },
             {
-              "id": "5.3.006",
-              "question": "What is a SOC 2 report and why is it relevant to vendor risk?",
-              "answer": "An independent audit of a service organization's controls around security, availability, and confidentiality. Type II covers a period of time and is more valuable than Type I.",
-              "tags": ["third-party-risk", "soc2", "audit"]
+              "id": "5.3-2dc6f962",
+              "question": "relationships that could bias selection",
+              "answer": "Conflict of interest"
+            },
+            {
+              "id": "5.3-80279e31",
+              "question": "uptime, response time guarantees",
+              "answer": "SLA"
+            },
+            {
+              "id": "5.3-36a16f7f",
+              "question": "informal, non-binding statement of shared intent",
+              "answer": "MOU"
+            },
+            {
+              "id": "5.3-d434982d",
+              "question": "more formal, defines conditions of cooperation",
+              "answer": "MOA"
+            },
+            {
+              "id": "5.3-a4de8f9a",
+              "question": "general terms for all future work",
+              "answer": "MSA"
+            },
+            {
+              "id": "5.3-fd274f45",
+              "question": "specific project deliverables, timeline, scope",
+              "answer": "WO/SOW"
+            },
+            {
+              "id": "5.3-ca81724f",
+              "question": "keep information confidential",
+              "answer": "NDA"
+            },
+            {
+              "id": "5.3-e4229354",
+              "question": "partnership terms, shared responsibilities/profits",
+              "answer": "BPA"
+            },
+            {
+              "id": "5.3-158ac49e",
+              "question": "ongoing review of vendor performance",
+              "answer": "Vendor monitoring"
+            },
+            {
+              "id": "5.3-21af7142",
+              "question": "send vendor a security survey",
+              "answer": "Questionnaires"
+            },
+            {
+              "id": "5.3-77bfa058",
+              "question": "defines what pen testers may and may not do",
+              "answer": "Rules of engagement"
+            },
+            {
+              "id": "5.3-65cea11d",
+              "question": "evaluating a vendor's security",
+              "answer": "Vendor assessment"
+            },
+            {
+              "id": "5.3-cdf1f596",
+              "question": "test the vendor's security by pen test",
+              "answer": "Penetration testing (vendor assessment)"
+            },
+            {
+              "id": "5.3-85593bff",
+              "question": "choosing a vendor",
+              "answer": "Vendor selection"
             }
           ]
         },
@@ -1167,40 +3253,99 @@
           "title": "Summarize elements of effective security compliance.",
           "cards": [
             {
-              "id": "5.4.001",
-              "question": "What does PCI DSS govern?",
-              "answer": "Payment Card Industry Data Security Standard — protects cardholder data. Applies to any organization that stores, processes, or transmits credit card information.",
-              "tags": ["compliance", "pci-dss"]
+              "id": "5.4-29df0b03",
+              "question": "reported to internal management vs. regulators",
+              "answer": "Internal / External compliance reporting"
             },
             {
-              "id": "5.4.002",
-              "question": "What does HIPAA govern?",
-              "answer": "Health Insurance Portability and Accountability Act — protects the privacy and security of protected health information (PHI) in the US healthcare sector.",
-              "tags": ["compliance", "hipaa"]
+              "id": "5.4-8a6f1331",
+              "question": "fines, sanctions, reputation hit, license revoked, contract breach",
+              "answer": "Consequences of non-compliance"
             },
             {
-              "id": "5.4.003",
-              "question": "What is GDPR and who does it apply to?",
-              "answer": "General Data Protection Regulation — EU law governing the processing of personal data. Applies to any organization handling data of EU residents, regardless of where the org is based.",
-              "tags": ["compliance", "gdpr"]
+              "id": "5.4-61ba9376",
+              "question": "investigating and understanding the risks",
+              "answer": "Due diligence"
             },
             {
-              "id": "5.4.004",
-              "question": "What is the difference between a compliance requirement and a security best practice?",
-              "answer": "Compliance is a mandatory legal/regulatory minimum. Best practice may exceed compliance requirements — an organization can be compliant but still not secure.",
-              "tags": ["compliance", "best-practice"]
+              "id": "5.4-8f73dd85",
+              "question": "acting responsibly on what you know",
+              "answer": "Due care"
             },
             {
-              "id": "5.4.005",
-              "question": "What is data sovereignty?",
-              "answer": "The concept that data is subject to the laws of the country in which it is stored. Cloud deployments must account for where data physically resides.",
-              "tags": ["compliance", "data-sovereignty", "cloud"]
+              "id": "5.4-786f12e1",
+              "question": "employees sign that they read and understand a policy",
+              "answer": "Attestation and acknowledgement"
             },
             {
-              "id": "5.4.006",
-              "question": "What is a privacy impact assessment (PIA)?",
-              "answer": "A process to identify privacy risks before deploying a new system or process that handles personal data, ensuring compliance with privacy regulations.",
-              "tags": ["compliance", "pia", "privacy"]
+              "id": "5.4-1466168f",
+              "question": "automated compliance checks",
+              "answer": "Automation"
+            },
+            {
+              "id": "5.4-1601346c",
+              "question": "the person the data is about",
+              "answer": "Data subject"
+            },
+            {
+              "id": "5.4-2dd5b668",
+              "question": "decides purpose vs. carries out processing",
+              "answer": "Controller vs. processor"
+            },
+            {
+              "id": "5.4-f1bb6eb9",
+              "question": "know what data you hold and how long to keep it",
+              "answer": "Data inventory and retention"
+            },
+            {
+              "id": "5.4-bdb27f48",
+              "question": "request to erase personal data (GDPR)",
+              "answer": "Right to be forgotten"
+            },
+            {
+              "id": "5.4-e1081bf6",
+              "question": "ongoing checks that requirements are met",
+              "answer": "Compliance monitoring"
+            },
+            {
+              "id": "5.4-fe25be02",
+              "question": "monitoring done by staff vs. outside parties",
+              "answer": "Internal and external"
+            },
+            {
+              "id": "5.4-9dbc6fae",
+              "question": "monetary penalty",
+              "answer": "Fines"
+            },
+            {
+              "id": "5.4-2c00547c",
+              "question": "restrictions imposed by governments/regulators",
+              "answer": "Sanctions"
+            },
+            {
+              "id": "5.4-41142283",
+              "question": "customers lose trust",
+              "answer": "Reputational damage"
+            },
+            {
+              "id": "5.4-e9a61d1f",
+              "question": "can no longer operate legally",
+              "answer": "Loss of license"
+            },
+            {
+              "id": "5.4-4fa9a122",
+              "question": "breach of contract, lost business",
+              "answer": "Contractual impacts"
+            },
+            {
+              "id": "5.4-714a7d7d",
+              "question": "privacy laws by jurisdiction",
+              "answer": "Legal implications (Local/regional / National / Global)"
+            },
+            {
+              "id": "5.4-cc1b1eab",
+              "question": "who owns the data",
+              "answer": "Ownership"
             }
           ]
         },
@@ -1209,34 +3354,99 @@
           "title": "Explain types and purposes of audits and assessments.",
           "cards": [
             {
-              "id": "5.5.001",
-              "question": "What is the difference between an internal and external audit?",
-              "answer": "Internal audits are conducted by the organization's own staff. External audits are performed by independent third parties, providing unbiased validation.",
-              "tags": ["audits", "internal", "external"]
+              "id": "5.5-aa246f7d",
+              "question": "formal statement/opinion that controls are effective",
+              "answer": "Attestation"
             },
             {
-              "id": "5.5.002",
-              "question": "What is a penetration test and what are its phases?",
-              "answer": "A simulated attack to find exploitable vulnerabilities. Phases: Reconnaissance → Scanning/Enumeration → Exploitation → Post-exploitation → Reporting.",
-              "tags": ["audits", "pentest"]
+              "id": "5.5-087d18e8",
+              "question": "board-level group overseeing audits",
+              "answer": "Audit committee"
             },
             {
-              "id": "5.5.003",
-              "question": "What is the difference between a black box, white box, and gray box pentest?",
-              "answer": "Black box: no prior knowledge (simulates external attacker). White box: full knowledge (internal audit). Gray box: partial knowledge (simulates insider threat).",
-              "tags": ["audits", "pentest", "black-box", "white-box", "gray-box"]
+              "id": "5.5-5b0d718e",
+              "question": "org evaluates itself",
+              "answer": "Self-assessment"
             },
             {
-              "id": "5.5.004",
-              "question": "What is a security assessment vs. a security audit?",
-              "answer": "Assessment: evaluates effectiveness of controls against a standard, often informal. Audit: formal, evidence-based review of compliance with specific requirements.",
-              "tags": ["audits", "assessment"]
+              "id": "5.5-271ac383",
+              "question": "required by a regulator",
+              "answer": "Regulatory"
             },
             {
-              "id": "5.5.005",
-              "question": "What is attestation in the context of security compliance?",
-              "answer": "A formal declaration by a responsible party confirming that systems or processes meet required security standards — often a signed statement or formal report.",
-              "tags": ["audits", "attestation", "compliance"]
+              "id": "5.5-30a9a267",
+              "question": "outside auditor with no ties to the org",
+              "answer": "Independent third-party audit"
+            },
+            {
+              "id": "5.5-862f50ba",
+              "question": "test locks, doors, badges",
+              "answer": "Physical pen test"
+            },
+            {
+              "id": "5.5-8f770e19",
+              "question": "red team, attack",
+              "answer": "Offensive"
+            },
+            {
+              "id": "5.5-1916e667",
+              "question": "blue team, defend",
+              "answer": "Defensive"
+            },
+            {
+              "id": "5.5-1fb63e77",
+              "question": "red + blue together (purple team)",
+              "answer": "Integrated"
+            },
+            {
+              "id": "5.5-12b34d9b",
+              "question": "full knowledge given to testers (white box)",
+              "answer": "Known environment"
+            },
+            {
+              "id": "5.5-82d17818",
+              "question": "some info given (gray box)",
+              "answer": "Partially known environment"
+            },
+            {
+              "id": "5.5-33ba994c",
+              "question": "no info given (black box)",
+              "answer": "Unknown environment"
+            },
+            {
+              "id": "5.5-df26174a",
+              "question": "OSINT, no direct contact with target",
+              "answer": "Passive reconnaissance"
+            },
+            {
+              "id": "5.5-bed4d76e",
+              "question": "scanning, directly touching the target",
+              "answer": "Active reconnaissance"
+            },
+            {
+              "id": "5.5-7383bdc6",
+              "question": "audits run by the org itself",
+              "answer": "Internal"
+            },
+            {
+              "id": "5.5-563714cb",
+              "question": "meeting requirements, checked internally",
+              "answer": "Compliance"
+            },
+            {
+              "id": "5.5-6dea1c42",
+              "question": "audits run by outside parties",
+              "answer": "External"
+            },
+            {
+              "id": "5.5-c54aa719",
+              "question": "regulator's formal review",
+              "answer": "Examinations"
+            },
+            {
+              "id": "5.5-ce0196fc",
+              "question": "outside evaluation of controls",
+              "answer": "Assessment"
             }
           ]
         },
@@ -1245,40 +3455,99 @@
           "title": "Given a scenario, implement security awareness practices.",
           "cards": [
             {
-              "id": "5.6.001",
-              "question": "What is the purpose of security awareness training?",
-              "answer": "To educate employees about security threats, policies, and behaviors — making them the first line of defense rather than the weakest link.",
-              "tags": ["awareness", "training"]
+              "id": "5.6-33d6da26",
+              "question": "send simulated phishing emails to train staff",
+              "answer": "Phishing campaigns"
             },
             {
-              "id": "5.6.002",
-              "question": "What is a phishing simulation?",
-              "answer": "A controlled exercise where security teams send fake phishing emails to employees to measure susceptibility and reinforce training.",
-              "tags": ["awareness", "phishing", "simulation"]
+              "id": "5.6-4b2e539a",
+              "question": "teach staff the signs of a phish",
+              "answer": "Recognizing a phishing attempt"
             },
             {
-              "id": "5.6.003",
-              "question": "What is social engineering awareness and why is it critical?",
-              "answer": "Training employees to recognize manipulation tactics (pretexting, phishing, tailgating) — because technical controls cannot stop humans being deceived.",
-              "tags": ["awareness", "social-engineering"]
+              "id": "5.6-b15f1176",
+              "question": "what to do with suspicious messages users report",
+              "answer": "Responding to reported suspicious messages"
             },
             {
-              "id": "5.6.004",
-              "question": "What is tailgating (piggybacking) and how is it prevented?",
-              "answer": "An attacker follows an authorized person through a secured entry without badging in. Prevented by mantraps, access turnstiles, and awareness training.",
-              "tags": ["awareness", "physical", "tailgating"]
+              "id": "5.6-9eb5af26",
+              "question": "user deliberately doing something unsafe",
+              "answer": "Risky behavior"
             },
             {
-              "id": "5.6.005",
-              "question": "What is a clean desk policy?",
-              "answer": "Requiring employees to clear sensitive documents and lock screens when away from their desk — preventing visual eavesdropping and unauthorized access.",
-              "tags": ["awareness", "clean-desk", "physical"]
+              "id": "5.6-d63cba58",
+              "question": "out-of-the-ordinary behavior",
+              "answer": "Unexpected behavior"
             },
             {
-              "id": "5.6.006",
-              "question": "What metrics indicate an effective security awareness program?",
-              "answer": "Reduced phishing click rates, faster incident reporting, lower policy violations, improved quiz scores, and increased security-related help desk calls.",
-              "tags": ["awareness", "metrics"]
+              "id": "5.6-8de798f2",
+              "question": "honest mistakes",
+              "answer": "Unintentional behavior"
+            },
+            {
+              "id": "5.6-5e16616d",
+              "question": "written rules users must follow",
+              "answer": "Policy/handbooks"
+            },
+            {
+              "id": "5.6-0cfd9aa7",
+              "question": "be aware of surroundings, shoulder surfing",
+              "answer": "Situational awareness"
+            },
+            {
+              "id": "5.6-091aa154",
+              "question": "USB drives, unknown cables",
+              "answer": "Removable media and cables"
+            },
+            {
+              "id": "5.6-946e4cde",
+              "question": "protect info that could reveal operations (e.g., social media posts)",
+              "answer": "Operational security"
+            },
+            {
+              "id": "5.6-7ab450d3",
+              "question": "working from home/coffee shops",
+              "answer": "Hybrid/remote work environments"
+            },
+            {
+              "id": "5.6-218aa14d",
+              "question": "training at hire vs. ongoing/quarterly",
+              "answer": "Initial / Recurring"
+            },
+            {
+              "id": "5.6-5854dabc",
+              "question": "building the program vs. running it",
+              "answer": "Development / Execution"
+            },
+            {
+              "id": "5.6-7f5a5158",
+              "question": "spot employees who might be threats",
+              "answer": "Insider threat"
+            },
+            {
+              "id": "5.6-97a904df",
+              "question": "strong passwords, password managers",
+              "answer": "Password management"
+            },
+            {
+              "id": "5.6-bae107c3",
+              "question": "manipulation tactics",
+              "answer": "Social engineering"
+            },
+            {
+              "id": "5.6-291af09f",
+              "question": "recognize odd behavior",
+              "answer": "Anomalous behavior recognition"
+            },
+            {
+              "id": "5.6-c298efc6",
+              "question": "training topics",
+              "answer": "User guidance and training"
+            },
+            {
+              "id": "5.6-12e7e4a9",
+              "question": "track and report training results/incidents",
+              "answer": "Reporting and monitoring"
             }
           ]
         }

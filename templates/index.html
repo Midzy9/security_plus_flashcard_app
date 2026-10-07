@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security+ SY0-701 Flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Security+ SY0-701</h1>
+        <h1 data-text="Security+ SY0-701">Security+ SY0-701</h1>
         <nav>
             <button class="nav-btn active" data-view="dashboard">Dashboard</button>
             <button class="nav-btn" data-view="selector">Study</button>
@@ -26,7 +29,7 @@
                         <span class="progress-text">0%</span>
                     </div>
                 </div>
-                <p id="overall-stats">0 / 0 cards mastered</p>
+                <p id="overall-stats">0 / 0 cards known</p>
             </div>
 
             <div class="domain-list" id="domain-progress">
@@ -35,7 +38,6 @@
 
             <div class="dashboard-actions">
                 <button class="btn btn-primary" id="btn-study-all">Start Study Session</button>
-                <button class="btn btn-secondary" id="btn-review-due">Review Due Cards (<span id="due-count">0</span>)</button>
             </div>
         </section>
 
@@ -46,7 +48,7 @@
                 <!-- Checkboxes injected by JS -->
             </div>
             <div class="selector-summary">
-                <p>Cards selected: <span id="selected-count">0</span> | Due: <span id="selected-due">0</span> | New: <span id="selected-new">0</span></p>
+                <p>Cards selected: <span id="selected-count">0</span> | Known: <span id="selected-known">0</span> | Still learning: <span id="selected-unknown">0</span></p>
             </div>
             <button class="btn btn-primary" id="btn-start-session">Start Session</button>
         </section>
@@ -70,12 +72,11 @@
                 </div>
             </div>
 
-            <p class="tap-hint" id="tap-hint">Tap card to reveal answer</p>
+            <p class="tap-hint" id="tap-hint">Tap card to reveal the CompTIA term</p>
 
             <div class="rating-buttons hidden" id="rating-buttons">
-                <button class="btn btn-again" data-quality="0">Again</button>
-                <button class="btn btn-hard" data-quality="2">Hard</button>
-                <button class="btn btn-good" data-quality="4">Good</button>
+                <button class="btn btn-again" data-known="false">Still learning</button>
+                <button class="btn btn-good" data-known="true">Known</button>
             </div>
         </section>
 
@@ -101,7 +102,7 @@
                 <h3>Statistics</h3>
                 <ul>
                     <li>Total reviews: <span id="stat-reviews">0</span></li>
-                    <li>Cards mastered: <span id="stat-mastered">0</span></li>
+                    <li>Cards known: <span id="stat-known">0</span></li>
                     <li>Study streak: <span id="stat-streak">0</span> days</li>
                     <li>Last studied: <span id="stat-last">Never</span></li>
                 </ul>
@@ -109,7 +110,7 @@
         </section>
     </main>
 
-    <script src="/static/js/spaced_repetition.js"></script>
+    <script src="/static/js/card_selection.js"></script>
     <script src="/static/js/progress.js"></script>
     <script src="/static/js/flashcards.js"></script>
     <script src="/static/js/app.js"></script>

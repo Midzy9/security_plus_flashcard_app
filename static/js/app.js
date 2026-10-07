@@ -2,7 +2,7 @@ const App = (() => {
     let progressData = null;
     let sessionQueue = [];
     let sessionIndex = 0;
-    let sessionResults = { good: 0, hard: 0, again: 0 };
+    let sessionResults = { known: 0, learning: 0 };
 
     async function init() {
         await Flashcards.loadData();
@@ -48,33 +48,18 @@ const App = (() => {
         document.getElementById('btn-study-all').addEventListener('click', () => {
             startSession(Flashcards.getAllCards());
         });
-
-        document.getElementById('btn-review-due').addEventListener('click', () => {
-            const allCards = Flashcards.getAllCards();
-            const dueCards = allCards.filter(c => SpacedRepetition.isDue(progressData.cards[c.id]));
-            if (dueCards.length === 0) {
-                alert('No cards are due for review right now!');
-                return;
-            }
-            startSession(dueCards);
-        });
     }
 
     function updateDashboard() {
         const allCards = Flashcards.getAllCards();
-        const counts = SpacedRepetition.countByClassification(allCards, progressData);
         const total = allCards.length;
-        const mastered = counts.mastered;
-        const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
+        const known = CardSelection.countKnown(allCards, progressData);
+        const pct = total > 0 ? Math.round((known / total) * 100) : 0;
 
         const overallBar = document.getElementById('overall-bar');
         overallBar.style.width = pct + '%';
         overallBar.querySelector('.progress-text').textContent = pct + '%';
-        document.getElementById('overall-stats').textContent = `${mastered} / ${total} cards mastered`;
-
-        // Due count
-        const dueCount = SpacedRepetition.countDue(allCards, progressData);
-        document.getElementById('due-count').textContent = dueCount;
+        document.getElementById('overall-stats').textContent = `${known} / ${total} cards known`;
 
         // Domain progress
         const domainList = document.getElementById('domain-progress');
@@ -83,17 +68,15 @@ const App = (() => {
 
         for (const domain of domains) {
             const domainCards = Flashcards.getCardsByDomain(domain.id);
-            const domainMastered = domainCards.filter(c =>
-                SpacedRepetition.classifyCard(progressData.cards[c.id]) === 'mastered'
-            ).length;
-            const domainPct = domainCards.length > 0 ? Math.round((domainMastered / domainCards.length) * 100) : 0;
+            const domainKnown = CardSelection.countKnown(domainCards, progressData);
+            const domainPct = domainCards.length > 0 ? Math.round((domainKnown / domainCards.length) * 100) : 0;
 
             const item = document.createElement('div');
             item.className = 'domain-item';
             item.innerHTML = `
                 <div class="domain-item-header">
                     <span class="domain-item-name">${domain.id} ${domain.name}</span>
-                    <span class="domain-item-count">${domainMastered}/${domainCards.length}</span>
+                    <span class="domain-item-count">${domainKnown}/${domainCards.length}</span>
                 </div>
                 <div class="domain-bar-container">
                     <div class="domain-bar" style="width: ${domainPct}%"></div>
@@ -165,17 +148,11 @@ const App = (() => {
         const objectiveIds = Array.from(checked).map(cb => cb.dataset.objective);
         const cards = Flashcards.getCardsByObjectives(objectiveIds);
 
-        let dueCount = 0;
-        let newCount = 0;
-        for (const card of cards) {
-            const cls = SpacedRepetition.classifyCard(progressData.cards[card.id]);
-            if (cls === 'new') newCount++;
-            else if (cls === 'due' || SpacedRepetition.isDue(progressData.cards[card.id])) dueCount++;
-        }
+        const knownCount = CardSelection.countKnown(cards, progressData);
 
         document.getElementById('selected-count').textContent = cards.length;
-        document.getElementById('selected-due').textContent = dueCount;
-        document.getElementById('selected-new').textContent = newCount;
+        document.getElementById('selected-known').textContent = knownCount;
+        document.getElementById('selected-unknown').textContent = cards.length - knownCount;
     }
 
     // --- Session ---
@@ -184,8 +161,7 @@ const App = (() => {
 
         document.querySelectorAll('.rating-buttons .btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                const quality = parseInt(btn.dataset.quality);
-                rateCard(quality);
+                rateCard(btn.dataset.known === 'true');
             });
         });
 
@@ -194,13 +170,13 @@ const App = (() => {
     }
 
     function startSession(cards) {
-        sessionQueue = SpacedRepetition.buildSessionQueue(cards, progressData);
+        sessionQueue = CardSelection.buildSessionQueue(cards, progressData);
         if (sessionQueue.length === 0) {
             alert('No cards available for study in the selected objectives.');
             return;
         }
         sessionIndex = 0;
-        sessionResults = { good: 0, hard: 0, again: 0 };
+        sessionResults = { known: 0, learning: 0 };
 
         // Show session view
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -216,6 +192,14 @@ const App = (() => {
             return;
         }
 
+        // Snap the card to its front with no flip animation *before* loading the
+        // next card's text, so the new answer is never visible mid-rotation.
+        const flashcard = document.getElementById('flashcard');
+        flashcard.classList.add('instant');
+        flashcard.classList.remove('flipped');
+        void flashcard.offsetWidth; // apply the un-flip before re-enabling transitions
+        flashcard.classList.remove('instant');
+
         const card = sessionQueue[sessionIndex];
         document.getElementById('card-question').textContent = card.question;
         document.getElementById('card-answer').textContent = card.answer;
@@ -224,38 +208,28 @@ const App = (() => {
         document.getElementById('session-counter').textContent =
             `Card ${sessionIndex + 1} of ${sessionQueue.length}`;
 
-        // Reset card state
-        document.getElementById('flashcard').classList.remove('flipped');
         document.getElementById('rating-buttons').classList.add('hidden');
-        document.getElementById('tap-hint').textContent = 'Tap card to reveal answer';
+        document.getElementById('tap-hint').textContent = 'Tap card to reveal the CompTIA term';
     }
 
     function flipCard() {
         const card = document.getElementById('flashcard');
         card.classList.toggle('flipped');
         const isFlipped = card.classList.contains('flipped');
-        document.getElementById('rating-buttons').classList.toggle('hidden', !isFlipped);
-        document.getElementById('tap-hint').textContent = isFlipped ? 'How well did you know it?' : 'Tap card to reveal answer';
+        const buttons = document.getElementById('rating-buttons');
+        buttons.classList.toggle('hidden', !isFlipped);
+        if (isFlipped) buttons.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        document.getElementById('tap-hint').textContent = isFlipped ? 'Did you know it?' : 'Tap card to reveal the CompTIA term';
     }
 
-    function rateCard(quality) {
+    function rateCard(known) {
         const card = sessionQueue[sessionIndex];
 
-        // Get or create progress for this card
-        let cardProg = progressData.cards[card.id];
-        if (!cardProg) {
-            cardProg = SpacedRepetition.newCardProgress(card.id);
-        }
-
-        // Update with SM-2
-        SpacedRepetition.updateCard(cardProg, quality);
-        Progress.setCardProgress(progressData, card.id, cardProg);
+        CardSelection.markCard(progressData, card.id, known);
         Progress.recordReview(progressData);
 
-        // Track results
-        if (quality === 0) sessionResults.again++;
-        else if (quality === 2) sessionResults.hard++;
-        else sessionResults.good++;
+        if (known) sessionResults.known++;
+        else sessionResults.learning++;
 
         // Next card
         sessionIndex++;
@@ -264,23 +238,19 @@ const App = (() => {
 
     function endSession() {
         const results = document.getElementById('session-results');
-        const total = sessionResults.good + sessionResults.hard + sessionResults.again;
+        const total = sessionResults.known + sessionResults.learning;
         results.innerHTML = `
             <div class="result-row">
                 <span class="result-label">Cards reviewed</span>
                 <span class="result-value">${total}</span>
             </div>
             <div class="result-row">
-                <span class="result-label">Good</span>
-                <span class="result-value result-good">${sessionResults.good}</span>
+                <span class="result-label">Known</span>
+                <span class="result-value result-good">${sessionResults.known}</span>
             </div>
             <div class="result-row">
-                <span class="result-label">Hard</span>
-                <span class="result-value result-hard">${sessionResults.hard}</span>
-            </div>
-            <div class="result-row">
-                <span class="result-label">Again</span>
-                <span class="result-value result-again">${sessionResults.again}</span>
+                <span class="result-label">Still learning</span>
+                <span class="result-value result-again">${sessionResults.learning}</span>
             </div>
         `;
 
@@ -313,10 +283,8 @@ const App = (() => {
 
     function updateSettings() {
         const allCards = Flashcards.getAllCards();
-        const counts = SpacedRepetition.countByClassification(allCards, progressData);
-
         document.getElementById('stat-reviews').textContent = progressData.stats.total_reviews;
-        document.getElementById('stat-mastered').textContent = counts.mastered;
+        document.getElementById('stat-known').textContent = CardSelection.countKnown(allCards, progressData);
         document.getElementById('stat-streak').textContent = progressData.stats.study_streak_days;
         document.getElementById('stat-last').textContent = progressData.stats.last_studied || 'Never';
     }

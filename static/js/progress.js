@@ -1,5 +1,7 @@
 const Progress = (() => {
-    const STORAGE_KEY = 'secplus_progress';
+    // v2 = keyword deck with known/unknown marks. The v1 (SM-2) progress stays
+    // untouched under 'secplus_progress' in the browser.
+    const STORAGE_KEY = 'secplus_progress_v2';
 
     function load() {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -27,7 +29,7 @@ const Progress = (() => {
             data = await resp.json();
         } catch (e) {
             data = {
-                version: '1.0',
+                version: '2.0',
                 exam: 'SY0-701',
                 exported_at: null,
                 stats: { total_reviews: 0, study_streak_days: 0, last_studied: null },
@@ -48,7 +50,7 @@ const Progress = (() => {
     }
 
     function recordReview(data) {
-        const today = SpacedRepetition.todayStr();
+        const today = CardSelection.todayStr();
         data.stats.total_reviews++;
 
         if (data.stats.last_studied === today) {
@@ -94,11 +96,11 @@ const Progress = (() => {
             reader.onload = (event) => {
                 try {
                     const data = JSON.parse(event.target.result);
-                    if (data.version && data.cards) {
+                    if (String(data.version).startsWith('2') && data.cards) {
                         save(data);
                         if (callback) callback(data);
                     } else {
-                        alert('Invalid progress file format.');
+                        alert('Invalid progress file format (expected a version 2.x export).');
                     }
                 } catch (err) {
                     alert('Could not parse JSON file.');

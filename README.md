@@ -1,6 +1,6 @@
 # Security+ SY0-701 Flashcard Study App
 
-A spaced repetition flashcard app for studying the CompTIA Security+ SY0-701 exam. Features 180 cards across all 28 objectives, SM-2 spaced repetition, domain/objective filtering, and portable progress via JSON export/import.
+A keyword flashcard app for studying the CompTIA Security+ SY0-701 exam. Each card shows the cue words an exam question uses on the front and the official CompTIA term on the back. Cards are drawn at random, with known cards drawn less often. Includes domain/objective filtering and portable progress via JSON export/import.
 
 ## Requirements
 
@@ -32,11 +32,23 @@ To stop the server, press `Ctrl+C` in the terminal.
 
 ## Features
 
-- **180 flashcards** covering all 5 domains and 28 objectives of SY0-701
-- **Spaced repetition** (SM-2 algorithm) with Again / Hard / Good buttons
+- **670 keyword cards** covering every official term in all 28 objectives, built from the keyword cheat sheet
+- **Weighted random selection:** each session draws 20 random cards. A card marked **Known** is 1/5 as likely to be drawn as one still being learned (`KNOWN_WEIGHT` in `static/js/card_selection.js`)
+- **Two buttons:** Still learning / Known. Marking a known card "Still learning" makes it common again
 - **Domain & objective filtering** — study only what you need
-- **Progress tracking** — New, Learning, Due, and Mastered card states
 - **Export/Import progress** as JSON for portability and git-based backup
+
+## Rebuilding the Deck
+
+Cards are generated from `comptia_keyword_cheatsheet.md` (one card per table row):
+
+```bash
+python3 tools/build_cards.py /mnt/nas/Notes/certifications/security_plus/comptia_keyword_cheatsheet.md
+```
+
+Card IDs are derived from each row's content, so rebuilding after adding rows keeps your Known marks. Editing a row's text resets that card to Still learning.
+
+The original 180-card Q&A deck and its SM-2 progress template are kept unused in `data/backup/`.
 
 ## Saving Progress to Git
 
