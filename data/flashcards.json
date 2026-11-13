@@ -398,6 +398,11 @@
               "answer": "Full-disk / Partition / File / Volume / Database / Record encryption"
             },
             {
+              "id": "1.4-16867074",
+              "question": "protect SQL data from theft while the database is running (\"in use\")",
+              "answer": "Database-level encryption (FDE only protects powered-off/locked disks)"
+            },
+            {
               "id": "1.4-1c193b29",
               "question": "protect data moving across the network (TLS, VPN)",
               "answer": "Transport/communication encryption"
@@ -805,6 +810,31 @@
               "id": "2.2-2c954a6f",
               "question": "tricking people rather than technology",
               "answer": "Human vectors/social engineering"
+            },
+            {
+              "id": "2.2-8d8017d4",
+              "question": "phishing aimed at a senior executive (CEO, CFO), any payload",
+              "answer": "Whaling (most specific term beats \"phishing\")"
+            },
+            {
+              "id": "2.2-d1250f81",
+              "question": "phishing aimed at a specific person/group using researched details",
+              "answer": "Spear phishing"
+            },
+            {
+              "id": "2.2-e95a481f",
+              "question": "tactic: claims power over the victim (HR, IT, executive, police), new hire eager to impress",
+              "answer": "Authority"
+            },
+            {
+              "id": "2.2-98d6f736",
+              "question": "tactic: \"ASAP,\" deadline, act now or lose access",
+              "answer": "Urgency"
+            },
+            {
+              "id": "2.2-c284fd20",
+              "question": "tactic: references people, events or relationships the victim knows (shared conference, named colleague)",
+              "answer": "Familiarity"
             }
           ]
         },
@@ -1263,6 +1293,16 @@
               "answer": "Microservices"
             },
             {
+              "id": "3.1-5647021b",
+              "question": "vendor patches the OS and runtime; customer secures only code and its dependencies",
+              "answer": "Serverless (least customer patching)"
+            },
+            {
+              "id": "3.1-ba87d2d7",
+              "question": "patching responsibility depends on where it's hosted (VMs, self-managed or managed containers)",
+              "answer": "Microservices (a design pattern, not a hosting model)"
+            },
+            {
               "id": "3.1-35a15d2c",
               "question": "physically disconnected network",
               "answer": "Air-gapped (Physical isolation)"
@@ -1449,6 +1489,11 @@
               "answer": "Proxy server"
             },
             {
+              "id": "3.2-eedbd3b9",
+              "question": "primary benefit of adding a proxy (security + client performance)",
+              "answer": "Application-layer filtering (plus caching for performance)"
+            },
+            {
               "id": "3.2-940e69db",
               "question": "detects and alerts only",
               "answer": "IDS"
@@ -1497,6 +1542,26 @@
               "id": "3.2-dc51be01",
               "question": "site-to-site VPN, AH/ESP, tunnel vs. transport mode",
               "answer": "IPSec"
+            },
+            {
+              "id": "3.2-3e58a68b",
+              "question": "VPN encrypting at the packet level (Layer 3), mutual authentication, low overhead",
+              "answer": "IPSec with IKE"
+            },
+            {
+              "id": "3.2-284c4341",
+              "question": "negotiates IPSec keys/security associations and authenticates both peers",
+              "answer": "IKE (Internet Key Exchange)"
+            },
+            {
+              "id": "3.2-d672ea07",
+              "question": "both sides prove their identity to each other",
+              "answer": "Mutual authentication"
+            },
+            {
+              "id": "3.2-cb8aedf0",
+              "question": "legacy tunneling protocol with broken MS-CHAPv2 authentication",
+              "answer": "PPTP (obsolete; a distractor)"
             },
             {
               "id": "3.2-5a042b44",
@@ -1688,6 +1753,21 @@
               "id": "3.3-e3b5e164",
               "question": "put sensitive data on its own network/system",
               "answer": "Segmentation"
+            },
+            {
+              "id": "3.3-8b68616b",
+              "question": "which laws govern data: where it's stored, PLUS laws reaching it via who it's about or who holds it",
+              "answer": "Data sovereignty (multiple jurisdictions can apply)"
+            },
+            {
+              "id": "3.3-f8a8d970",
+              "question": "where data physically sits, e.g., choosing an EU cloud region",
+              "answer": "Data residency"
+            },
+            {
+              "id": "3.3-79809294",
+              "question": "a law requiring data to stay inside the country's borders",
+              "answer": "Data localization"
             }
           ]
         },
@@ -1809,6 +1889,31 @@
               "id": "3.4-21a2ab0b",
               "question": "restore from backup, test that restores work",
               "answer": "Recovery"
+            },
+            {
+              "id": "3.4-ca3f1097",
+              "question": "battery power, instant takeover, bridges the gap, minutes only",
+              "answer": "UPS"
+            },
+            {
+              "id": "3.4-0c7f30ca",
+              "question": "prolonged power so the UPS isn't exhausted; takes seconds to start",
+              "answer": "Generator (complements the UPS)"
+            },
+            {
+              "id": "3.4-96e66436",
+              "question": "distributes power to rack equipment, a heavy-duty rack power strip",
+              "answer": "Power distribution unit (PDU)"
+            },
+            {
+              "id": "3.4-3d2ac140",
+              "question": "remotely turn PDU outlets on/off, power-cycle a hung server",
+              "answer": "Switched PDU"
+            },
+            {
+              "id": "3.4-b333ef38",
+              "question": "servers with dual power supplies fed from separate PDUs/circuits",
+              "answer": "Redundant (A/B) power feeds"
             }
           ]
         }
@@ -2265,6 +2370,26 @@
               "id": "4.4-a4637bcc",
               "question": "act on an alert and confirm the fix worked",
               "answer": "Alert response and remediation/validation"
+            },
+            {
+              "id": "4.4-6dcd769f",
+              "question": "appliance can't run SIEM agents; device pushes logs to a listener",
+              "answer": "Syslog (agentless, collector/listener)"
+            },
+            {
+              "id": "4.4-13c4f266",
+              "question": "encrypted, reliable log transport",
+              "answer": "Syslog over TLS (TCP 6514)"
+            },
+            {
+              "id": "4.4-1ce840e7",
+              "question": "plain syslog default port",
+              "answer": "UDP 514"
+            },
+            {
+              "id": "4.4-55777d62",
+              "question": "syslog levels: 0 Emergency → 7 Debug; level N sends 0..N",
+              "answer": "Syslog severity levels"
             }
           ]
         },
@@ -2276,6 +2401,26 @@
               "id": "4.5-797372a2",
               "question": "DMZ, public-facing servers isolated from the internal network",
               "answer": "Screened subnet"
+            },
+            {
+              "id": "4.5-005f0a39",
+              "question": "public-facing (DMZ) servers initiating connections into the LAN",
+              "answer": "Not allowed (a compromised DMZ host would become a pivot)"
+            },
+            {
+              "id": "4.5-3a059c92",
+              "question": "enterprise LAN clients: initiate outbound, don't accept new inbound",
+              "answer": "Correct zone behavior (stateful firewall allows the replies)"
+            },
+            {
+              "id": "4.5-c3f3e58d",
+              "question": "guest zone",
+              "answer": "Internet only, never the enterprise LAN"
+            },
+            {
+              "id": "4.5-eb688dba",
+              "question": "printer/IoT (low-privilege) zone",
+              "answer": "Accepts jobs from the LAN, doesn't initiate"
             },
             {
               "id": "4.5-5b458b11",
@@ -2479,8 +2624,13 @@
               "answer": "Rule-based"
             },
             {
-              "id": "4.6-abf08b06",
-              "question": "combines many attributes (user, device, location, time)",
+              "id": "4.6-5d544917",
+              "question": "\"attributes and predefined rules,\" user characteristics + data sensitivity, fine-grained",
+              "answer": "ABAC (not rule-based, despite the word \"rules\")"
+            },
+            {
+              "id": "4.6-01ea47ef",
+              "question": "combines many attributes (user, device, location, time - also attributes of the resources being accessed)",
               "answer": "Attribute-based (ABAC)"
             },
             {
@@ -2531,6 +2681,11 @@
             {
               "id": "4.6-f280d399",
               "question": "login without a password (biometrics, keys)",
+              "answer": "Passwordless"
+            },
+            {
+              "id": "4.6-e7f4a62b",
+              "question": "eliminates passwords + verifies the user, credential bound to the device (passkey, Windows Hello, FIDO2)",
               "answer": "Passwordless"
             },
             {
@@ -2587,6 +2742,26 @@
               "id": "4.6-96990633",
               "question": "JIT, vaulting, ephemeral creds for admin accounts",
               "answer": "Privileged access management tools"
+            },
+            {
+              "id": "4.6-732a2b86",
+              "question": "same credentials typed into every app, each app checks the directory separately",
+              "answer": "Same sign-on (LDAP alone), not SSO"
+            },
+            {
+              "id": "4.6-cc697e62",
+              "question": "log in once, seamless access to many apps, even internal ones + integrates with LDAP/AD",
+              "answer": "SAML (IdP backed by the directory)"
+            },
+            {
+              "id": "4.6-749b8171",
+              "question": "encrypted directory queries",
+              "answer": "LDAPS (port 636); plain LDAP = 389"
+            },
+            {
+              "id": "4.6-a7cddade",
+              "question": "central service that checks credentials once and vouches for the user to apps",
+              "answer": "Identity provider (IdP)"
             }
           ]
         },
@@ -2706,6 +2881,11 @@
           "title": "Explain appropriate incident response activities.",
           "cards": [
             {
+              "id": "4.8-53ad4eff",
+              "question": "attack already discovered, attacker \"suspected,\" exfiltration ongoing (select two)",
+              "answer": "Analysis (confirm/scope) + Containment/eradication (stop it); detection is done, recovery is premature"
+            },
+            {
               "id": "4.8-a177bd8d",
               "question": "order of steps",
               "answer": "Preparation → Detection → Analysis → Containment → Eradication → Recovery → Lessons learned"
@@ -2799,6 +2979,26 @@
               "id": "4.8-ca78e914",
               "question": "document forensic findings",
               "answer": "Reporting"
+            },
+            {
+              "id": "4.8-ae157e8a",
+              "question": "ransomware confirmed and actively spreading — what next?",
+              "answer": "Containment (detection and analysis already done)"
+            },
+            {
+              "id": "4.8-10060b89",
+              "question": "isolate, quarantine, disable account, block IP",
+              "answer": "Containment techniques (not phases)"
+            },
+            {
+              "id": "4.8-4f2599e8",
+              "question": "collect most short-lived evidence first: RAM before disk",
+              "answer": "Order of volatility"
+            },
+            {
+              "id": "4.8-7a3b80d7",
+              "question": "proactive search with no alert fired, assume breach",
+              "answer": "Threat hunting"
             }
           ]
         },
@@ -2809,6 +3009,11 @@
             {
               "id": "4.9-54ee383e",
               "question": "allowed/blocked connections",
+              "answer": "Firewall logs"
+            },
+            {
+              "id": "4.9-a08bf908",
+              "question": "rule triggered + timestamp + interface (eth0, WAN/LAN/DMZ)",
               "answer": "Firewall logs"
             },
             {
@@ -2860,6 +3065,16 @@
               "id": "4.9-b54d753c",
               "question": "scan results used as evidence",
               "answer": "Vulnerability scans"
+            },
+            {
+              "id": "4.9-0fbb4e21",
+              "question": "unauthorized activity on Linux servers",
+              "answer": "/var/log/auth.log (or /var/log/secure) + HIDS logs + SIEM"
+            },
+            {
+              "id": "4.9-c8d229ff",
+              "question": "Linux general system messages (excludes auth by default)",
+              "answer": "/var/log/syslog (Debian) / /var/log/messages (RHEL)"
             }
           ]
         }
@@ -2980,6 +3195,11 @@
               "answer": "Monitoring and revision"
             },
             {
+              "id": "5.1-df708e28",
+              "question": "keep guidelines/policies relevant (select two)",
+              "answer": "Periodic assessments + regular review (not \"continually update\")"
+            },
+            {
               "id": "5.1-0668777a",
               "question": "top leadership setting direction",
               "answer": "Boards"
@@ -3003,6 +3223,46 @@
               "id": "5.1-37f40314",
               "question": "law / industry rules / city-state, country, international",
               "answer": "Regulatory / Legal / Industry / Local-regional / National / Global"
+            },
+            {
+              "id": "5.1-f25ce7eb",
+              "question": "international standard for an information security management system (ISMS), certifiable",
+              "answer": "ISO/IEC 27001"
+            },
+            {
+              "id": "5.1-78cfc53c",
+              "question": "guidance on implementing security controls (best practices)",
+              "answer": "ISO/IEC 27002"
+            },
+            {
+              "id": "5.1-fcac011a",
+              "question": "security controls for cloud services",
+              "answer": "ISO/IEC 27017"
+            },
+            {
+              "id": "5.1-c410871d",
+              "question": "protecting PII in public clouds",
+              "answer": "ISO/IEC 27018"
+            },
+            {
+              "id": "5.1-d7c8aac3",
+              "question": "privacy management system, extension of 27001",
+              "answer": "ISO/IEC 27701"
+            },
+            {
+              "id": "5.1-25208f4a",
+              "question": "risk management guidelines (any kind of risk)",
+              "answer": "ISO 31000"
+            },
+            {
+              "id": "5.1-cda90b26",
+              "question": "ISO number ending in -001 (9001, 14001, 27001)",
+              "answer": "Core certifiable management system standard"
+            },
+            {
+              "id": "5.1-7a7dbf66",
+              "question": "US digital identity / authentication assurance",
+              "answer": "NIST SP 800-63"
             }
           ]
         },
@@ -3051,6 +3311,16 @@
               "answer": "Risk register"
             },
             {
+              "id": "5.2-a6f90d8d",
+              "question": "where a specific risk's likelihood, impact and existing countermeasures are documented",
+              "answer": "Risk register"
+            },
+            {
+              "id": "5.2-0f07c5f4",
+              "question": "grid/chart coloring risks by likelihood × impact",
+              "answer": "Risk heat map (a qualitative visual of the register)"
+            },
+            {
               "id": "5.2-9d468bf3",
               "question": "metric warning that risk is rising",
               "answer": "Key risk indicator (KRI)"
@@ -3074,6 +3344,11 @@
               "id": "5.2-e2bc541b",
               "question": "overall amount of risk willing to pursue; aggressive / cautious / balanced",
               "answer": "Risk appetite (Expansionary / Conservative / Neutral)"
+            },
+            {
+              "id": "5.2-cde7412e",
+              "question": "balances mitigating risk and exploiting opportunity, without bias (even if called a \"strategy\")",
+              "answer": "Neutral"
             },
             {
               "id": "5.2-36f71c8b",
@@ -3346,6 +3621,36 @@
               "id": "5.4-cc1b1eab",
               "question": "who owns the data",
               "answer": "Ownership"
+            },
+            {
+              "id": "5.4-5393a413",
+              "question": "GDPR: how soon to report a breach to the regulator",
+              "answer": "Within 72 hours of becoming aware"
+            },
+            {
+              "id": "5.4-682022f7",
+              "question": "GDPR maximum fine",
+              "answer": "€20M or 4% of global annual turnover, whichever is higher"
+            },
+            {
+              "id": "5.4-6b3ae2cb",
+              "question": "GDPR applies to a non-EU company because…",
+              "answer": "It targets/monitors people located IN the EU (location, not citizenship)"
+            },
+            {
+              "id": "5.4-107fdaf4",
+              "question": "US healthcare breach notification to individuals",
+              "answer": "HIPAA: within 60 days of discovery"
+            },
+            {
+              "id": "5.4-a2860133",
+              "question": "payment card standard enforced by card brands, not law",
+              "answer": "PCI DSS (contractual impacts)"
+            },
+            {
+              "id": "5.4-0160bf51",
+              "question": "deletion request vs. legal duty to keep records",
+              "answer": "Right to be forgotten, applied with its legal-obligation exception"
             }
           ]
         },
@@ -3434,6 +3739,11 @@
               "answer": "Compliance"
             },
             {
+              "id": "5.5-d258cb06",
+              "question": "internal check that practices align with laws/regulations/policies; find noncompliance",
+              "answer": "Compliance (internal), not generic self-assessment"
+            },
+            {
               "id": "5.5-6dea1c42",
               "question": "audits run by outside parties",
               "answer": "External"
@@ -3447,6 +3757,16 @@
               "id": "5.5-ce0196fc",
               "question": "outside evaluation of controls",
               "answer": "Assessment"
+            },
+            {
+              "id": "5.5-bdf4323c",
+              "question": "board needs assurance new controls work, before a public statement",
+              "answer": "Internal audit (reports to the audit committee)"
+            },
+            {
+              "id": "5.5-dfa70894",
+              "question": "audit for regulators, customers or partners (outside audiences)",
+              "answer": "External audit"
             }
           ]
         },
@@ -3454,6 +3774,11 @@
           "id": "5.6",
           "title": "Given a scenario, implement security awareness practices.",
           "cards": [
+            {
+              "id": "5.6-28e0101b",
+              "question": "just finished deploying/building the program or tool; next: run it and validate its effectiveness",
+              "answer": "Execution (deploying/building = development)"
+            },
             {
               "id": "5.6-33d6da26",
               "question": "send simulated phishing emails to train staff",

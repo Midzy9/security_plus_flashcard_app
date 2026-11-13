@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 venv/
 *.egg-info/
+
+# Copyrighted reference material (keep local only)
+CompTIA-Security-Plus-SY0-701-Exam-Objectives.pdf

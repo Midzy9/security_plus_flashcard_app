@@ -40,10 +40,10 @@ To stop the server, press `Ctrl+C` in the terminal.
 
 ## Rebuilding the Deck
 
-Cards are generated from `comptia_keyword_cheatsheet.md` (one card per table row):
+Cards are generated from `source/comptia_keyword_cheatsheet.md` (one card per table row). This is a copy of the master cheat sheet kept in the repo so the deck can be rebuilt anywhere:
 
 ```bash
-python3 tools/build_cards.py /mnt/nas/Notes/certifications/security_plus/comptia_keyword_cheatsheet.md
+python3 tools/build_cards.py source/comptia_keyword_cheatsheet.md
 ```
 
 Card IDs are derived from each row's content, so rebuilding after adding rows keeps your Known marks. Editing a row's text resets that card to Still learning.
